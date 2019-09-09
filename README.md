@@ -1,21 +1,33 @@
 ## SDA bibliography
 Please follow the steps below in order to add your bib entries on sda bibliography.
 
-* Fork the repository
-* Clone a forked repository
+* Fork the repository.
+* Clone the forked repository.
     ```bash
     git clone https://github.com/YourGitHubAccount/SDA-Publications.git
     cd SDA-Publications
     ```
 * Open sda.bib with [**JabRef**](http://www.jabref.org/) or a compatible editor and add your entries.
-* Entries must contain the keyword tag, which must contain your publication tag (see http://sda.cs.uni-bonn.de/people/prof-dr-jens-lehmann/ - publications). The tag included in the Keywords could be per-person (e.g `lehmann`), per-project (e.g `sansa`: http://sda.cs.uni-bonn.de/projects/sansa-stack/), per-group (e.g. `dsa`: http://sda.cs.uni-bonn.de/research-topic/distributed-semantic-analytics/)
-Entries should contain the URL tag with a free and direct PDF link (use a preprint version if the published one is not openly available).
-* Push your changes in your fork of the repository
+* Entries must contain the keyword tag and the entries must follow the guidelines described in the Section "Keyword Usage".
+* Entries should contain the URL tag with a free and direct PDF link (use a preprint version if the published one is not openly available).
+* Push your changes to your fork of the repository **after you are sure that *sda.bib* is still valid bibtex.**
     ```bash
     git add sda.bib
     git commit -m "Add paperX bib entry"
     git push
-    ```  
-    <sub>After you are sure that __sda.bib__ is still valid bibtex.</sub>
+    ```
 * Submit a pull request (PR).
 
+## Keyword Usage
+
+The keywords are used to render a list of publications on the SDA website for each person, each project and each project. In order for publications to show up in the correct lists, please pick a consistent keyword schema:
+
+* All papers from one person should have a common keyword, for example the last name.
+* All papers from one project should have a common keyword, such as the project name or an abbreviation thereof.
+* All papers from one group should have a common keyword, for example
+    * Distributed Semantic Analytics -> **DSA**
+    * Semantic Question Answering -> **SQA**
+    * Structured Machine Learning -> **SML**
+    * Knowledge Graph Analysis -> **KGA**
+    * Software Engineering for Data Science -> **SEEDS**
+    * Semantic Data Management -> **SDM**

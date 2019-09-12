@@ -8,6 +8,7 @@ Please follow the steps below in order to add your bib entries on sda bibliograp
     cd SDA-Publications
     ```
 * Open sda.bib with [**JabRef**](http://www.jabref.org/) or a compatible editor and add your entries.
+
 * Entries must contain the *keywords* tag and the entries must follow the guidelines described in the section "Keyword Usage".
 * Entries should contain the *URL* tag with a free and direct PDF link (use a preprint version if the published one is not openly available).
 * New entries should follow roughly the formatting of existing entries. If you add them with JabRef this will be taken care of automatically. Different versions of JabRef may produce a slightly different layout, but that is OK.

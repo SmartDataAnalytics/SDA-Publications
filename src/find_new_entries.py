@@ -33,6 +33,10 @@ def getIgnoredTitles() -> Set[str]:
     ]
 
     blacklisted_titles = parseBlacklistedTitles()
+    print("Blacklisted titles:\n")
+    for title in blacklisted_titles:
+        print(title)
+    print("\n========================================\n")
 
     ignored_titles = set()
     ignored_titles = ignored_titles.union(existing_titles)
@@ -61,7 +65,7 @@ def parseBlacklistedTitles() -> Set[str]:
 
 def normalizeTitle(title: str) -> str:
     lower_unicode = latex_to_unicode(title).lower()
-    no_punctuation = re.sub(r"[-,;:.!?/\\]", " ", lower_unicode)
+    no_punctuation = re.sub(r"[-,;:.!?/\\'\"]", " ", lower_unicode)
     normalized_whitespace = re.sub(r"[\n\r\s]+", " ", no_punctuation).strip()
     return normalized_whitespace
 
@@ -88,17 +92,24 @@ def parseBibtexString(s: str) -> List[Dict]:
 
 
 def printCandidates(candidates: List[Dict]):
-    writer = BibTexWriter()
-    writer.align_values = True
-    writer.indent = "  "
+    count = len(candidates)
+    if count == 0:
+        print("No suggestions.")
+    else:
+        if count == 1:
+            print("One suggestion:\n")
+        else:
+            print(f"{count} suggestions.\n")
 
-    db = BibDatabase()
-    db.entries = candidates
+        writer = BibTexWriter()
+        writer.align_values = True
+        writer.indent = "  "
 
-    print(f"{len(candidates)} suggestions:\n")
+        db = BibDatabase()
+        db.entries = candidates
 
-    output = writer.write(db)
-    print(output)
+        output = writer.write(db)
+        print(output)
 
 
 if __name__ == '__main__':

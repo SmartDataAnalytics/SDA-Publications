@@ -77,7 +77,7 @@ def fetchCandidatePublications(ignored_titles: Set[str]) -> List[Dict]:
         batch = fetchFromDBLP(url)
         for entry in batch:
             normalized_title = normalizeTitle(entry["title"])
-            if normalized_title not in ignored_titles:
+            if "author" in entry and normalized_title not in ignored_titles:
                 result.append(entry)
                 ignored_titles.add(normalized_title)
     return result

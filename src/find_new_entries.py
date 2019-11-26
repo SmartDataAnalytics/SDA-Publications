@@ -60,15 +60,10 @@ def parseBlacklistedTitles() -> Set[str]:
 
 
 def normalizeTitle(title: str) -> str:
-    unicode = latex_to_unicode(title)
-
-    intermediate = unicode \
-        .strip() \
-        .lower() \
-        .replace("---", "-") \
-        .replace("--", "-")
-
-    return re.sub(r"[\n\r\s]+", " ", intermediate)
+    lower_unicode = latex_to_unicode(title).lower()
+    no_punctuation = re.sub(r"[-,;:.!?]", " ", lower_unicode)
+    normalized_whitespace = re.sub(r"[\n\r\s]+", " ", no_punctuation).strip()
+    return normalized_whitespace
 
 
 def fetchCandidatePublications(ignored_titles: Set[str]) -> List[Dict]:

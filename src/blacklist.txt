@@ -1,0 +1,6 @@
+a refinement operator based learning algorithm for the emphalc description logic
+extraktion mapping und verlinkung von daten im web phasen im lebenszyklus von linked data
+killing two birds with one stone querying property graphs using sparql via gremlinator
+ideal downward refinement in the emphel description logic
+improving response selection in multi turn dialogue systems
+publishing and interlinking the global health observatory dataset towards increasing transparency in global health

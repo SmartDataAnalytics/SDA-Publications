@@ -7,7 +7,7 @@ Please follow the steps below in order to add your bib entries on sda bibliograp
     git clone https://github.com/YourGitHubAccount/SDA-Publications.git
     cd SDA-Publications
     ```
-* Open sda.bib with [**JabRef**](http://www.jabref.org/) or a compatible editor and add your missing entries. You can fetch your entries automatically from DBLP using the Python script "src/find_new_entries.py". Simply replace Jens's DBLP URL in line 12 by your own and run the script. **Note that you must still add keywords yourself, as outlined in the next step.**
+* Open sda.bib with [**JabRef**](http://www.jabref.org/) or a compatible editor and add your missing entries. You can fetch your missing entries automatically from DBLP using the Python script "src/find_new_entries.py". Simply replace Jens's DBLP URL in line 12 by your own and run the script. **Note that you must still add keywords yourself, as outlined in the next step.**
 * Entries **must contain the *keywords* tag** and the entries must follow the guidelines described below.
     - The keywords are used to render a list of publications on the SDA website for each person, group and each project. In order for publications to show up in the correct lists, please pick a consistent keyword schema:
         * All _papers from one person_ should have a common keyword, for example the last name.

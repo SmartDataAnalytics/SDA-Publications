@@ -9,7 +9,24 @@ from bibtexparser.customization import homogenize_latex_encoding, latex_to_unico
 
 # See https://dblp.org/faq/How+can+I+fetch+all+publications+of+one+specific+author on how to obtain these URLs.
 author_urls = [
-    "https://dblp.org/pid/71/4882.bib",  # Jens Lehmann
+    "https://dblp.org/pid/71/4882",  # Jens Lehmann
+    "https://dblp.org/pid/180/1858",  # Mohnish Dubey
+    "https://dblp.org/pid/143/9337",  # Patrick Westphal
+    "https://dblp.org/pid/185/1477",  # Fathoni Musyaffa
+    "https://dblp.org/pid/205/3220",  # Said Fathalla
+    "https://dblp.org/pid/183/0983",  # Tobias Grubenmann
+    "https://dblp.org/pid/160/8154",  # Mikhail Galkin
+    "https://dblp.org/pid/187/1650",  # Najmeh
+    "https://dblp.org/pid/228/9241",  # Shimaa Ibrahim
+    "https://dblp.org/pid/143/6365",  # Elisa Sibarani
+    "https://dblp.org/pid/213/7337",  # Debanjan Chaudhuri
+    "https://dblp.org/pid/160/8802",  # Priyansh Trivedi
+    "https://dblp.org/pid/67/10152",  # Gaurav Maheshwari
+    "https://dblp.org/pid/251/0778",  # Md Rashad Al Hasan Rony
+    "https://dblp.org/pid/227/6127",  # Mayesha Tasnim
+    "https://dblp.org/pid/65/9656",  # Ricardo Usbeck
+    "https://dblp.org/pid/162/8992",  # Liubov Kovriguina
+    "https://dblp.org/pid/169/3503"  # Klaudia Thellmann
 ]
 
 existing = "../sda.bib"
@@ -83,7 +100,7 @@ def fetchCandidatePublications(ignored_titles: Set[str]) -> List[Dict]:
 
 
 def fetchFromDBLP(url: str) -> List[Dict]:
-    bibtex_string = requests.get(url).content.decode("utf-8")
+    bibtex_string = requests.get(f"{url}.bib").content.decode("utf-8")
     return parseBibtexString(bibtex_string)
 
 
@@ -99,7 +116,7 @@ def printCandidates(candidates: List[Dict]):
         if count == 1:
             print("One suggestion:\n")
         else:
-            print(f"{count} suggestions.\n")
+            print(f"{count} suggestions:\n")
 
         writer = BibTexWriter()
         writer.align_values = True

@@ -1,5 +1,7 @@
 import pickle
 import os.path
+from typing import List
+
 from googleapiclient.discovery import build
 from google_auth_oauthlib.flow import InstalledAppFlow
 from google.auth.transport.requests import Request
@@ -56,9 +58,9 @@ def get_credentials():
     return creds
 
 
-def has_dblp_profile(entry):
+def has_dblp_profile(entry: List) -> bool:
     return len(entry) == 3 and entry[2] != "no profile"
 
 
 if __name__ == '__main__':
-    get_publication_fetching_data()
+    print(list(get_publication_fetching_data()))

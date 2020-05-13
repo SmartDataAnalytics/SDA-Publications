@@ -6,28 +6,9 @@ from bibtexparser.bibdatabase import BibDatabase
 from bibtexparser.bparser import BibTexParser
 from bibtexparser.bwriter import BibTexWriter
 from bibtexparser.customization import homogenize_latex_encoding, latex_to_unicode
+from src.get_publication_fetching_data import get_publication_fetching_data
 
-# See https://dblp.org/faq/How+can+I+fetch+all+publications+of+one+specific+author on how to obtain these IDs.
-author_ids = [
-    "71/4882",  # Jens Lehmann
-    "180/1858",  # Mohnish Dubey
-    "143/9337",  # Patrick Westphal
-    "185/1477",  # Fathoni Musyaffa
-    "205/3220",  # Said Fathalla
-    "183/0983",  # Tobias Grubenmann
-    "160/8154",  # Mikhail Galkin
-    "187/1650",  # Najmeh
-    "228/9241",  # Shimaa Ibrahim
-    "143/6365",  # Elisa Sibarani
-    "213/7337",  # Debanjan Chaudhuri
-    "160/8802",  # Priyansh Trivedi
-    "67/10152",  # Gaurav Maheshwari
-    "251/0778",  # Md Rashad Al Hasan Rony
-    "227/6127",  # Mayesha Tasnim
-    "65/9656",  # Ricardo Usbeck
-    "162/8992",  # Liubov Kovriguina
-    "169/3503"  # Klaudia Thellmann
-]
+author_ids = map(lambda it: it[2].replace('-', "/"),  get_publication_fetching_data())
 
 existing = "../sda.bib"
 blacklist = "blacklist.txt"

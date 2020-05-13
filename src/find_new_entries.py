@@ -1,5 +1,5 @@
 import re
-from typing import List, Dict, Set
+from typing import List, Dict, Set, Any
 
 import requests
 from bibtexparser.bibdatabase import BibDatabase
@@ -7,27 +7,13 @@ from bibtexparser.bparser import BibTexParser
 from bibtexparser.bwriter import BibTexWriter
 from bibtexparser.customization import homogenize_latex_encoding, latex_to_unicode
 
-# See https://dblp.org/faq/How+can+I+fetch+all+publications+of+one+specific+author on how to obtain these IDs.
-author_ids = [
-    "71/4882",  # Jens Lehmann
-    "180/1858",  # Mohnish Dubey
-    "143/9337",  # Patrick Westphal
-    "185/1477",  # Fathoni Musyaffa
-    "205/3220",  # Said Fathalla
-    "183/0983",  # Tobias Grubenmann
-    "160/8154",  # Mikhail Galkin
-    "187/1650",  # Najmeh
-    "228/9241",  # Shimaa Ibrahim
-    "143/6365",  # Elisa Sibarani
-    "213/7337",  # Debanjan Chaudhuri
-    "160/8802",  # Priyansh Trivedi
-    "67/10152",  # Gaurav Maheshwari
-    "251/0778",  # Md Rashad Al Hasan Rony
-    "227/6127",  # Mayesha Tasnim
-    "65/9656",  # Ricardo Usbeck
-    "162/8992",  # Liubov Kovriguina
-    "169/3503"  # Klaudia Thellmann
-]
+from src.get_publication_fetching_data import get_publication_fetching_data
+
+# To run this script, you need to download a file credentials.json from
+# https://developers.google.com/sheets/api/quickstart/python and put it into the folder "secret" on the same level as the
+# "src" folder.
+
+publication_fetching_data = get_publication_fetching_data()
 
 existing = "../sda.bib"
 blacklist = "blacklist.txt"
@@ -61,6 +47,7 @@ def get_ignored_titles() -> Set[str]:
 
     return ignored_titles
 
+
 def parse_bibtex_file(path: str) -> List[Dict]:
     with open(path, "r", encoding="UTF-8") as file:
         return create_bibtex_parser().parse_file(file).entries
@@ -89,22 +76,31 @@ def normalize_title(title: str) -> str:
 def fetch_candidate_publications(ignored_titles: Set[str]) -> List[Dict]:
     result = []
     normalized_title_to_author_ids = {}
-    for author_id in author_ids:
+    sda_publications = set()
+
+    for entry in publication_fetching_data:
+        start_year, end_year, author_id = entry[0], entry[1], entry[2]
+
         batch = fetch_from_dblp(author_id)
-        for entry in batch:
-            normalized_title = normalize_title(entry["title"])
+        for publication in batch:
+            normalized_title = normalize_title(publication["title"])
+
             remember_author_id(normalized_title, author_id, normalized_title_to_author_ids)
-            if "author" in entry and normalized_title not in ignored_titles:
-                result.append(entry)
+            if is_sda_publication(publication, start_year, end_year):
+                sda_publications.add(normalized_title)
+
+            if "author" in publication and normalized_title not in ignored_titles:
+                result.append(publication)
                 ignored_titles.add(normalized_title)
 
-    add_author_ids_as_keywords(result, normalized_title_to_author_ids)
+    add_author_ids_as_keywords(result, normalized_title_to_author_ids, sda_publications)
 
     return result
 
 
 def fetch_from_dblp(author_id: str) -> List[Dict]:
-    bibtex_string = requests.get(f"https://dblp.org/pid/{author_id}.bib").content.decode("utf-8")
+    author_path = author_id.replace("-", "/")
+    bibtex_string = requests.get(f"https://dblp.org/pid/{author_path}.bib").content.decode("utf-8")
     return parse_bibtex_string(bibtex_string)
 
 
@@ -116,21 +112,41 @@ def remember_author_id(normalized_title: str, author_id: str, normalized_title_t
     if normalized_title not in normalized_title_to_author_ids:
         normalized_title_to_author_ids[normalized_title] = set()
 
-    author_id_with_hyphen = author_id.replace("/", "-")
-    normalized_title_to_author_ids[normalized_title].add(author_id_with_hyphen)
+    normalized_title_to_author_ids[normalized_title].add(author_id)
 
 
-def add_author_ids_as_keywords(publications: List[Dict], normalized_title_to_author_ids: Dict[str, Set]):
+def is_sda_publication(publication, start_year_string: str, end_year_string: str) -> bool:
+    if not is_valid_year(publication["year"]):
+        return True
+
+    publication_year = int(publication["year"])
+    start_year = int(start_year_string) if is_valid_year(start_year_string) else 0
+    end_year = int(end_year_string) if is_valid_year(end_year_string) else 9999
+
+    return start_year <= publication_year <= end_year
+
+
+def is_valid_year(value: Any) -> bool:
+    return type(value) == str and value.isnumeric()
+
+
+def add_author_ids_as_keywords(publications: List[Dict], normalized_title_to_author_ids: Dict[str, Set],
+                               sda_publications: Set[str]):
     for entry in publications:
         normalized_title = normalize_title(entry["title"])
         author_ids = normalized_title_to_author_ids[normalized_title]
 
+        # Add author IDs as keywords
         if "keywords" not in entry:
             entry["keywords"] = ""
         else:
             entry["keywords"] += " "
-
         entry["keywords"] += " ".join(author_ids)
+
+        # Mark SDA publications using a keyword
+        if normalized_title in sda_publications:
+            entry["keywords"] += " " + "sda-pub"
+
         entry["keywords"].replace(",", " ")
 
 

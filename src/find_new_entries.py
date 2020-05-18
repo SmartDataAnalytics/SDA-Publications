@@ -172,6 +172,9 @@ def print_candidates(candidates: List[Dict]):
 
 
 def bibtex_entries_to_string(entries: List[Dict]):
+    if len(entries) == 0:
+        return ""
+
     writer = BibTexWriter()
     writer.align_values = True
     writer.indent = "  "

@@ -127,7 +127,7 @@ def is_sda_publication(publication, start_year_string: str, end_year_string: str
         return True
 
     publication_year = int(publication["year"])
-    start_year = int(start_year_string) if is_valid_year(start_year_string) else 0
+    start_year = int(start_year_string) if is_valid_year(start_year_string) else 9999
     end_year = int(end_year_string) if is_valid_year(end_year_string) else 9999
 
     return start_year <= publication_year <= end_year

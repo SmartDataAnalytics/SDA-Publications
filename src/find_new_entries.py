@@ -24,6 +24,10 @@ def get_candidate_publications():
     candidate_publications = fetch_candidate_publications(ignored_titles)
     print_candidates(candidate_publications)
 
+    with open(existing, "a") as bib:
+        new_entries = bibtex_entries_to_string(candidate_publications)
+        bib.write(new_entries)
+
 
 def get_ignored_titles() -> Set[str]:
     """Returns the titles of publications that we already included in our list or that we explicitly ignore."""
@@ -49,8 +53,11 @@ def get_ignored_titles() -> Set[str]:
 
 
 def parse_bibtex_file(path: str) -> List[Dict]:
-    with open(path, "r", encoding="UTF-8") as file:
-        return create_bibtex_parser().parse_file(file).entries
+    try:
+        with open(path, "r", encoding="UTF-8") as file:
+            return create_bibtex_parser().parse_file(file).entries
+    except IndexError:
+        return []
 
 
 def create_bibtex_parser() -> BibTexParser:
@@ -160,15 +167,22 @@ def print_candidates(candidates: List[Dict]):
         else:
             print(f"{count} suggestions:\n")
 
-        writer = BibTexWriter()
-        writer.align_values = True
-        writer.indent = "  "
+    output = bibtex_entries_to_string(candidates)
+    print(output)
 
-        db = BibDatabase()
-        db.entries = candidates
 
-        output = writer.write(db)
-        print(output)
+def bibtex_entries_to_string(entries: List[Dict]):
+    if len(entries) == 0:
+        return ""
+
+    writer = BibTexWriter()
+    writer.align_values = True
+    writer.indent = "  "
+
+    db = BibDatabase()
+    db.entries = entries
+
+    return writer.write(db)
 
 
 if __name__ == '__main__':

@@ -5,8 +5,8 @@ from src.find_new_entries import parse_bibtex_file, normalize_title, print_candi
 
 
 def compare_publication_lists(db1: List[Dict], db2: List[Dict]):
-    # print("In first list, but not in second:\n")
-    # entry_in_first_but_not_second(db1, db2)
+    print("In first list, but not in second:\n")
+    entry_in_first_but_not_second(db1, db2)
 
     print("\n--------------------------------------------------\n")
     print("In second list, but not in first:\n")

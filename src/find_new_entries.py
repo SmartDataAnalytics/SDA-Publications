@@ -24,7 +24,7 @@ def get_candidate_publications():
     candidate_publications = fetch_candidate_publications(ignored_titles)
     print_candidates(candidate_publications)
 
-    with open("../sda.bib", "a") as bib:
+    with open(existing, "a") as bib:
         new_entries = bibtex_entries_to_string(candidate_publications)
         bib.write(new_entries)
 
@@ -53,8 +53,11 @@ def get_ignored_titles() -> Set[str]:
 
 
 def parse_bibtex_file(path: str) -> List[Dict]:
-    with open(path, "r", encoding="UTF-8") as file:
-        return create_bibtex_parser().parse_file(file).entries
+    try:
+        with open(path, "r", encoding="UTF-8") as file:
+            return create_bibtex_parser().parse_file(file).entries
+    except IndexError:
+        return []
 
 
 def create_bibtex_parser() -> BibTexParser:

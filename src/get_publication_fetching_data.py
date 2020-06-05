@@ -11,7 +11,7 @@ SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly']
 
 # The ID and range of a sample spreadsheet.
 SAMPLE_SPREADSHEET_ID = '1YJCn0a30M6aQBra9LgcfrNZ9rGudpjU62SiaBVyFgec'
-SAMPLE_RANGE_NAME = 'Data!C2:E'
+SAMPLE_RANGE_NAME = 'Data!B2:E'
 
 
 def get_publication_fetching_data():
@@ -59,7 +59,7 @@ def get_credentials():
 
 
 def has_dblp_profile(entry: List) -> bool:
-    return len(entry) == 3 and entry[2] != "no profile"
+    return len(entry) == 4 and entry[0] != "no profile"
 
 
 if __name__ == '__main__':

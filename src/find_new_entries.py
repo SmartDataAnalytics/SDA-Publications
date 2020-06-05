@@ -86,9 +86,9 @@ def fetch_candidate_publications(ignored_titles: Set[str]) -> List[Dict]:
     sda_publications = set()
 
     for entry in publication_fetching_data:
-        start_year, end_year, author_id = entry[0], entry[1], entry[2]
+        dblp_url, start_year, end_year, author_id = entry[0], entry[1], entry[2], entry[3]
 
-        batch = fetch_from_dblp(author_id)
+        batch = fetch_from_dblp(dblp_url)
         for publication in batch:
             normalized_title = normalize_title(publication["title"])
 
@@ -105,9 +105,8 @@ def fetch_candidate_publications(ignored_titles: Set[str]) -> List[Dict]:
     return result
 
 
-def fetch_from_dblp(author_id: str) -> List[Dict]:
-    author_path = author_id.replace("-", "/")
-    bibtex_string = requests.get(f"https://dblp.org/pid/{author_path}.bib").content.decode("utf-8")
+def fetch_from_dblp(dblp_url: str) -> List[Dict]:
+    bibtex_string = requests.get(f"{dblp_url}.bib").content.decode("utf-8")
     return parse_bibtex_string(bibtex_string)
 
 

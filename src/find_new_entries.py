@@ -96,6 +96,9 @@ def fetch_candidate_publications(ignored_titles: Set[str]) -> List[Dict]:
             if is_sda_publication(publication, start_year, end_year):
                 sda_publications.add(normalized_title)
 
+            if "editor" in publication:
+                del publication["editor"]
+
             if "author" in publication and normalized_title not in ignored_titles:
                 result.append(publication)
                 ignored_titles.add(normalized_title)

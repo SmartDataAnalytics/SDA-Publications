@@ -1,6 +1,13 @@
+let the margin slide (^ mbox (± ) ) for knowledge graph embeddings via a correntropy objective function
 a refinement operator based learning algorithm for the emphalc description logic
 extraktion mapping und verlinkung von daten im web phasen im lebenszyklus von linked data
+n (³ ) a collection of datasets for named entity recognition and disambiguation in the nlp interchange format
+s (^ mboxt )e (^ mboxx )+ a system for flexible formalization of linked data
+dc (^ mbox2 )s (^ mbox2 ) designing crowd powered creativity support systems
+krextor an extensible xml textgreaterrdf extraction framework
 killing two birds with one stone querying property graphs using sparql via gremlinator
-ideal downward refinement in the emphel description logic
-improving response selection in multi turn dialogue systems
 publishing and interlinking the global health observatory dataset towards increasing transparency in global health
+improving response selection in multi turn dialogue systems
+dbpedia flexifusion the best of wikipedia textgreater wikidata textgreater your data
+a comment on rcc from rcc to rcc (^ mbox++ )
+ideal downward refinement in the emphel description logic

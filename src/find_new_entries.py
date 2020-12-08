@@ -91,6 +91,8 @@ def fetch_candidate_publications(ignored_titles: Set[str]) -> List[Dict]:
         batch = fetch_from_dblp(dblp_url)
         for publication in batch:
             normalized_title = normalize_title(publication["title"])
+            if skipPublication(publication, normalized_title, ignored_titles):
+                continue
 
             remember_author_id(normalized_title, author_id, normalized_title_to_author_ids)
             if is_sda_publication(publication, start_year, end_year):
@@ -99,13 +101,18 @@ def fetch_candidate_publications(ignored_titles: Set[str]) -> List[Dict]:
             if "editor" in publication:
                 del publication["editor"]
 
-            if "author" in publication and normalized_title not in ignored_titles:
-                result.append(publication)
-                ignored_titles.add(normalized_title)
+            result.append(publication)
+            ignored_titles.add(normalized_title)
 
-    add_author_ids_as_keywords(result, normalized_title_to_author_ids, sda_publications)
+    add_keywords(result, normalized_title_to_author_ids, sda_publications)
 
     return result
+
+
+def skipPublication(publication, normalized_title: str, ignored_titles: Set[str]):
+    return "author" not in publication or normalized_title in ignored_titles or (
+        "archiveprefix" in publication and publication["archiveprefix"].lower() == "arxiv"
+    )
 
 
 def fetch_from_dblp(dblp_url: str) -> List[Dict]:
@@ -139,8 +146,8 @@ def is_valid_year(value: Any) -> bool:
     return type(value) == str and value.isnumeric()
 
 
-def add_author_ids_as_keywords(publications: List[Dict], normalized_title_to_author_ids: Dict[str, Set],
-                               sda_publications: Set[str]):
+def add_keywords(publications: List[Dict], normalized_title_to_author_ids: Dict[str, Set],
+                 sda_publications: Set[str]):
     for entry in publications:
         normalized_title = normalize_title(entry["title"])
         author_ids = normalized_title_to_author_ids[normalized_title]

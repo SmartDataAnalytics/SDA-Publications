@@ -1,23 +1,21 @@
-## SDA bibliography
-Please follow the steps below in order to add your bib entries on sda bibliography.
+## Installation
 
-* Fork the repository.
-* Clone the forked repository.
-    ```bash
-    git clone https://github.com/YourGitHubAccount/SDA-Publications.git
-    cd SDA-Publications
-    ```
-* Open sda.bib with [**JabRef**](http://www.jabref.org/) or a compatible editor and add your missing entries. You can fetch your missing entries automatically from DBLP using the Python script "src/find_new_entries.py". Simply replace Jens's DBLP URL in line 12 by your own and run the script. **Note that you must still add keywords yourself, as outlined in the next step.**
-* Entries **must contain the *keywords* tag** and the entries must follow the guidelines described below.
-    - The keywords are used to render a list of publications on the SDA website for each person, group and each project. In order for publications to show up in the correct lists, please pick a consistent keyword schema:
-        * All _papers from one person_ should have a common keyword, which you can find in the columns "Keyword for Bibbase" in [this spreadsheet](https://docs.google.com/spreadsheets/d/1YJCn0a30M6aQBra9LgcfrNZ9rGudpjU62SiaBVyFgec/edit#gid=0).
+1. Install Python 3.8 or above.
+2. Run the following command from the root directory of the repository to install all dependencies:
+```
+pip install -r src/requirements.txt
+```
+3. Follow the instructions in Step 1 of the [Google Sheets Python Quickstart guide](https://developers.google.com/sheets/api/quickstart/python) to get a credentials.json file. Save the file as secret/credentials.json relative to the root directory of the repository.
+4. **Optional:** If you want to start from scratch:
+    * Empty the file sda.bib (contains all valid publications)
+    * Empty the file src/blacklist.txt (contains the titles of ignores publications)
+    * Change the SAMPLE_SPREADSHEET_ID in src/get_publication_fetching_data.py to the ID of the Google spreadsheet that contains the mapping from people to DBLP IDs.
 
-* Entries should contain the *URL* tag with a free and direct PDF link (use a preprint version if the published one is not openly available).
-* New entries should follow roughly the formatting of existing entries. If you add them with JabRef this will be taken care of automatically. Different versions of JabRef may produce a slightly different layout, but that is OK.
-* Push your changes to your fork of the repository **after you are sure that *sda.bib* is still valid bibtex.**
-    ```bash
-    git add sda.bib
-    git commit -m "Add paperX bib entry"
-    git push
-    ```
-* Submit a pull request (PR).
+## Importing new publications
+
+1. Run the following command from the root directory of the repository to fetch new publications:
+```
+python src/find_new_entries.py
+```
+2. Check the console output manually to ensure that all new entries are correct.
+3. Copy the BibTex output from the console into your tool of choice such as [teachPress](https://wordpress.org/plugins/teachpress/) for WordPress.

@@ -1,4 +1,4 @@
-% This file was created with teachPress 7.1.3
+% This file was created with teachPress 7.1.4
 % Encoding: UTF-8
 
 @article{DBLP:journals/fcsc/ChakrabortyM21,
@@ -35,6 +35,20 @@ pages = {101624},
 keywords = {25-7075, 71-4882, sda-pub},
 pubstate = {published},
 tppubtype = {article}
+}
+@phdthesis{handle:20.500.11811/8925,
+title = {Strategies for a Semantified Uniform Access to Large and Heterogeneous Data Sources},
+author = {Mohamed Nadjib Mami},
+url = {http://hdl.handle.net/20.500.11811/8925},
+year  = {2021},
+date = {2021-01-01},
+school = {Rheinische Friedrich-Wilhelms-Universität Bonn},
+abstract = {The remarkable advances achieved in both research and development of Data Management as well as the prevalence of high-speed Internet and technology in the last few decades have caused unprecedented data avalanche. Large volumes of data manifested in a multitude of types and formats are being generated and becoming the new norm. In this context, it is crucial to both leverage existing approaches and propose novel ones to overcome this data size and complexity, and thus facilitate data exploitation. In this thesis, we investigate two major approaches to addressing this challenge: Physical Data Integration and Logical Data Integration. The specific problem tackled is to enable querying large and heterogeneous data sources in an ad hoc manner.
+In the Physical Data Integration, data is physically and wholly transformed into a canonical unique format, which can then be directly and uniformly queried. In the Logical Data Integration, data remains in its original format and form and a middleware is posed above the data allowing to map various schemata elements to a high-level unifying formal model. The latter enables the querying of the underlying original data in an ad hoc and uniform way, a framework which we call Semantic Data Lake, SDL. Both approaches have their advantages and disadvantages. For example, in the former, a significant effort and cost are devoted to pre-processing and transforming the data to the unified canonical format. In the latter, the cost is shifted to the query processing phases, e.g., query analysis, relevant source detection and results reconciliation.
+In this thesis we investigate both directions and study their strengths and weaknesses. For each direction, we propose a set of approaches and demonstrate their feasibility via a proposed implementation. In both directions, we appeal to Semantic Web technologies, which provide a set of time-proven techniques and standards that are dedicated to Data Integration. In the Physical Integration, we suggest an end-to-end blueprint for the semantification of large and heterogeneous data sources, i.e., physically transforming the data to the Semantic Web data standard RDF (Resource Description Framework). A unified data representation, storage and query interface over the data are suggested. In the Logical Integration, we provide a description of the SDL architecture, which allows querying data sources right on their original form and format without requiring a prior transformation and centralization. For a number of reasons that we detail, we put more emphasis on the virtual approach. We present the effort behind an extensible implementation of the SDL, called Squerall, which leverages state-of-the-art Semantic and Big Data technologies, e.g., RML (RDF Mapping Language) mappings, FnO (Function Ontology) ontology, and Apache Spark. A series of evaluation is conducted to evaluate the implementation along with various metrics and input data scales. In particular, we describe an industrial real-world use case using our SDL implementation. In a preparation phase, we conduct a survey for the Query Translation methods in order to back some of our design choices.},
+keywords = {183-9290, phd-thesis, sda-pub},
+pubstate = {published},
+tppubtype = {phdthesis}
 }
 @phdthesis{gezim-sejdiu-2020-phd-thesis,
 title = {Efficient Distributed In-Memory Processing of RDF Datasets},
@@ -1116,24 +1130,6 @@ keywords = {144-0506, sda-pub},
 pubstate = {published},
 tppubtype = {inproceedings}
 }
-@inproceedings{DBLP:conf/emnlp/GalkinTMUL20,
-title = {Message Passing for Ħyper-Relational Knowledge Graphs},
-author = {Mikhail Galkin and
-Priyansh Trivedi and
-Gaurav Maheshwari and
-Ricardo Usbeck and
-Jens Lehmann},
-url = {https://www.aclweb.org/anthology/2020.emnlp-main.596/},
-year  = {2020},
-date = {2020-01-01},
-booktitle = {Proceedings of the 2020 Conference on Empirical Methods in Natural
-Language Processing, EMNLP 2020, Online, November 16-20, 2020},
-pages = {7346--7359},
-publisher = {Association for Computational Linguistics},
-keywords = {71-4882, sda-pub},
-pubstate = {published},
-tppubtype = {inproceedings}
-}
 @inproceedings{DBLP:conf/esws/ArmitageTTM020,
 title = {Training Multimodal Systems for Classification with Multiple Objectives},
 author = {Jason Armitage and
@@ -1212,63 +1208,6 @@ Communication Association, Virtual Event, Shanghai, China, 25-29 October
 pages = {4661--4665},
 publisher = {ISCA},
 keywords = {76-8485},
-pubstate = {published},
-tppubtype = {inproceedings}
-}
-@inproceedings{DBLP:conf/lrec/RehmGLPWUKDGFCF20,
-title = {Towards an Interoperable Ecosystem of AI and LT Platforms: A Roadmap for the Implementation of Đifferent Levels of Interoperability},
-author = {Georg Rehm and
-Dimitris Galanis and
-Penny Labropoulou and
-Stelios Piperidis and
-Martin Welß and
-Ricardo Usbeck and
-Joachim Köhler and
-Miltos Deligiannis and
-Katerina Gkirtzou and
-Johannes Fischer and
-Christian Chiarcos and
-Nils Feldhus and
-Julián Moreno Schneider and
-Florian Kintzel and
-Elena Montiel-Ponsoda and
-V{'i}ctor Rodr{'i}guez-Doncel and
-John Philip McCrae and
-David Laqua and
-Irina Patricia Theile and
-Christian Dittmar and
-Kalina Bontcheva and
-Ian Roberts and
-Andrejs Vasiljevs and
-Andis Lagzdins},
-url = {https://www.aclweb.org/anthology/2020.iwltp-1.15/},
-year  = {2020},
-date = {2020-01-01},
-booktitle = {Proceedings of the 1st International Workshop on Language Technology Platforms, IWLTP@LREC 2020, Marseille, France, May 2020},
-pages = {96--107},
-publisher = {European Language Resources Association},
-keywords = {65-9656, sda-pub},
-pubstate = {published},
-tppubtype = {inproceedings}
-}
-@inproceedings{DBLP:conf/semweb/BanerjeeCDL20,
-title = {PNEL: Pointer Network Based End-Ŧo-End Entity Linking over Knowledge
-Graphs},
-author = {Debayan Banerjee and
-Debanjan Chaudhuri and
-Mohnish Dubey and
-Jens Lehmann},
-url = {https://doi.org/10.1007/978-3-030-62419-4_2},
-doi = {10.1007/978-3-030-62419-4_2},
-year  = {2020},
-date = {2020-01-01},
-booktitle = {The Semantic Web - ISWC 2020 - 19th International Semantic Web Conference,
-Athens, Greece, November 2-6, 2020, Proceedings, Part I},
-volume = {12506},
-pages = {21--38},
-publisher = {Springer},
-series = {Lecture Notes in Computer Science},
-keywords = {213-7337, sda-pub},
 pubstate = {published},
 tppubtype = {inproceedings}
 }
@@ -1562,24 +1501,6 @@ volume = {6},
 number = {4},
 pages = {1218--1229},
 keywords = {141-0902, sda-pub},
-pubstate = {published},
-tppubtype = {article}
-}
-@article{DBLP:journals/vi/ChawlaHS20c,
-title = {Token-wise sentiment decomposition for ConŇet: Visualizing a sentiment
-classifier},
-author = {Piyush Chawla and
-Subhashis Hazarika and
-Han-Wei Shen},
-url = {https://doi.org/10.1016/j.visinf.2020.04.006},
-doi = {10.1016/j.visinf.2020.04.006},
-year  = {2020},
-date = {2020-01-01},
-journal = {Vis. Informatics},
-volume = {4},
-number = {2},
-pages = {132--141},
-keywords = {227-3228},
 pubstate = {published},
 tppubtype = {article}
 }
@@ -1878,24 +1799,6 @@ publisher = {IEEE},
 keywords = {183-0983, sda-pub},
 pubstate = {published},
 tppubtype = {inproceedings}
-}
-@article{DBLP:journals/vi/ChawlaHS20,
-title = {Token-wise sentiment decomposition for ConŇet: Visualizing a sentiment
-classifier},
-author = {Piyush Chawla and
-Subhashis Hazarika and
-Han-Wei Shen},
-url = {https://doi.org/10.1016/j.visinf.2020.04.006},
-doi = {10.1016/j.visinf.2020.04.006},
-year  = {2020},
-date = {2020-01-01},
-journal = {Vis. Informatics},
-volume = {4},
-number = {2},
-pages = {132--141},
-keywords = {227-3228},
-pubstate = {published},
-tppubtype = {article}
 }
 @inproceedings{DBLP:conf/mie/JahnBHGSSDKAW20,
 title = {Towards Precise Descriptions of Medical Free/Libre and Open Source
@@ -29473,3 +29376,384 @@ keywords = {auer, collarana, lucid},
 pubstate = {inpress},
 tppubtype = {inproceedings}
 }
+@inproceedings{DBLP:conf/bracis/BarellaGC19,
+  author    = {Victor H. Barella and
+Lu{\'\i}s Paulo F. Garcia and
+Andr{\'e} C. P. L. F. de Carvalho},
+  bibsource = {dblp computer science bibliography, https://dblp.org},
+  biburl    = {https://dblp.org/rec/conf/bracis/BarellaGC19.bib},
+  booktitle = {8th Brazilian Conference on Intelligent Systems, BRACIS 2019, Salvador,
+Brazil, October 15-18, 2019},
+  doi       = {10.1109/BRACIS.2019.00045},
+  keywords  = {25-7075 sda-pub},
+  pages     = {210--215},
+  publisher = {IEEE},
+  timestamp = {Wed, 20 Jan 2021 00:00:00 +0100},
+  title     = {{T}he {I}nfluence of {S}ampling on {I}mbalanced {D}ata {C}lassification},
+  url       = {https://doi.org/10.1109/BRACIS.2019.00045},
+  year      = {2019}
+}
+
+@inproceedings{DBLP:conf/esws/AlamJAM020,
+  author    = {Mirza Mohtashim Alam and
+Hajira Jabeen and
+Mehdi Ali and
+Karishma Mohiuddin and
+Jens Lehmann},
+  bibsource = {dblp computer science bibliography, https://dblp.org},
+  biburl    = {https://dblp.org/rec/conf/esws/AlamJAM020.bib},
+  booktitle = {Proceedings of the Workshop on Deep Learning for Knowledge Graphs
+(DL4KG2020) co-located with the 17th Extended Semantic Web Conference
+2020 (ESWC 2020), Heraklion, Greece, June 02, 2020 - moved online},
+  keywords  = {93-7184 sda-pub},
+  publisher = {CEUR-WS.org},
+  series    = {CEUR Workshop Proceedings},
+  timestamp = {Wed, 23 Dec 2020 14:58:23 +0100},
+  title     = {{A}ffinity {D}ependent {N}egative {S}ampling for {K}nowledge {G}raph {E}mbeddings},
+  url       = {http://ceur-ws.org/Vol-2635/paper8.pdf},
+  volume    = {2635},
+  year      = {2020}
+}
+
+@inproceedings{DBLP:conf/icacie/BanerjeeS19,
+  author    = {Debayan Banerjee and
+Jagannath Singh},
+  bibsource = {dblp computer science bibliography, https://dblp.org},
+  biburl    = {https://dblp.org/rec/conf/icacie/BanerjeeS19.bib},
+  booktitle = {Progress in Advanced Computing and Intelligent Engineering - Proceedings
+of ICACIE 2019, Volume 2},
+  doi       = {10.1007/978-981-15-6353-9\_2},
+  keywords  = {213-7475 sda-pub},
+  pages     = {12--24},
+  publisher = {Springer},
+  series    = {Advances in Intelligent Systems and Computing},
+  timestamp = {Wed, 27 Jan 2021 16:02:38 +0100},
+  title     = {{P}rediction of {S}troke {R}isk {F}actors for {B}etter {P}re-emptive {H}ealthcare:
+{A} Public-{S}urvey-{B}ased {A}pproach},
+  url       = {https://doi.org/10.1007/978-981-15-6353-9\_2},
+  volume    = {1199},
+  year      = {2019}
+}
+
+@inproceedings{DBLP:conf/iiwas/KhiatEFKBN20,
+  author    = {Abderrahmane Khiat and
+Mirette Elias and
+Ann Christina Foldenauer and
+Michaela K{\"o}hm and
+Irina Blumenstein and
+Giulio Napolitano},
+  bibsource = {dblp computer science bibliography, https://dblp.org},
+  biburl    = {https://dblp.org/rec/conf/iiwas/KhiatEFKBN20.bib},
+  booktitle = {iiWAS \textquotesingle 20: The 22nd International Conference on Information Integration
+and Web-based Applications \& Services, Virtual Event / Chiang Mai,
+Thailand, November 30 - December 2, 2020},
+  doi       = {10.1145/3428757.3429110},
+  keywords  = {153-5784},
+  pages     = {216--222},
+  publisher = {ACM},
+  timestamp = {Fri, 12 Feb 2021 10:47:32 +0100},
+  title     = {{T}owards an {O}ntology {R}epresenting {C}haracteristics of {I}nflammatory {B}owel
+{D}isease},
+  url       = {https://doi.org/10.1145/3428757.3429110},
+  year      = {2020}
+}
+
+@inproceedings{DBLP:conf/semweb/CollaranaGLSAV18,
+  author    = {Diego Collarana and
+Mikhail Galkin and
+Christoph Lange and
+Simon Scerri and
+S{\"o}ren Auer and
+Maria-Esther Vidal},
+  bibsource = {dblp computer science bibliography, https://dblp.org},
+  biburl    = {https://dblp.org/rec/conf/semweb/CollaranaGLSAV18.bib},
+  booktitle = {The Semantic Web - ISWC 2018 - 17th International Semantic Web Conference,
+Monterey, CA, USA, October 8-12, 2018, Proceedings, Part II},
+  doi       = {10.1007/978-3-030-00668-6\_22},
+  keywords  = {l-ChristophLange2 sda-pub},
+  pages     = {359--375},
+  publisher = {Springer},
+  series    = {Lecture Notes in Computer Science},
+  timestamp = {Mon, 15 Jun 2020 01:00:00 +0200},
+  title     = {{S}ynthesizing {K}nowledge {G}raphs from {W}eb {S}ources with the {M}IN{T}E \^{}+
++ {F}ramework},
+  url       = {https://doi.org/10.1007/978-3-030-00668-6\_22},
+  volume    = {11137},
+  year      = {2018}
+}
+
+@inproceedings{DBLP:conf/semweb/GeorgalaSN20,
+  author    = {Kleanthi Georgala and
+Mohamed Ahmed Sherif and
+Axel-Cyrille Ngonga Ngomo},
+  bibsource = {dblp computer science bibliography, https://dblp.org},
+  biburl    = {https://dblp.org/rec/conf/semweb/GeorgalaSN20.bib},
+  booktitle = {Proceedings of the 15th International Workshop on Ontology Matching
+co-located with the 19th International Semantic Web Conference (ISWC
+2020), Virtual conference (originally planned to be in Athens, Greece),
+November 2, 2020},
+  keywords  = {145-1160},
+  pages     = {87--91},
+  publisher = {CEUR-WS.org},
+  series    = {CEUR Workshop Proceedings},
+  timestamp = {Wed, 27 Jan 2021 00:00:00 +0100},
+  title     = {L{I}GE{R} - link discovery with partial recall},
+  url       = {http://ceur-ws.org/Vol-2788/om2020\_STpaper4.pdf},
+  volume    = {2788},
+  year      = {2020}
+}
+
+@inproceedings{DBLP:conf/semweb/GeorgalaSRN20,
+  author    = {Kleanthi Georgala and
+Mohamed Ahmed Sherif and
+Michael R{\"o}der and
+Axel-Cyrille Ngonga Ngomo},
+  bibsource = {dblp computer science bibliography, https://dblp.org},
+  biburl    = {https://dblp.org/rec/conf/semweb/GeorgalaSRN20.bib},
+  booktitle = {Proceedings of the 15th International Workshop on Ontology Matching
+co-located with the 19th International Semantic Web Conference (ISWC
+2020), Virtual conference (originally planned to be in Athens, Greece),
+November 2, 2020},
+  keywords  = {145-1160},
+  pages     = {36--47},
+  publisher = {CEUR-WS.org},
+  series    = {CEUR Workshop Proceedings},
+  timestamp = {Wed, 27 Jan 2021 16:31:51 +0100},
+  title     = {{A}pplying edge-counting semantic similarities to link discovery: scalability
+and accuracy},
+  url       = {http://ceur-ws.org/Vol-2788/om2020\_LTpaper4.pdf},
+  volume    = {2788},
+  year      = {2020}
+}
+
+@inproceedings{DBLP:conf/semweb/PanditGOJO020,
+  author    = {Harshvardhan J. Pandit and
+Damien Graux and
+Fabrizio Orlandi and
+Ademar Crotti Junior and
+Declan O\textquotesingle Sullivan and
+Dave Lewis},
+  bibsource = {dblp computer science bibliography, https://dblp.org},
+  biburl    = {https://dblp.org/rec/conf/semweb/PanditGOJO020.bib},
+  booktitle = {Proceedings of the 15th International Workshop on Ontology Matching
+co-located with the 19th International Semantic Web Conference (ISWC
+2020), Virtual conference (originally planned to be in Athens, Greece),
+November 2, 2020},
+  keywords  = {169-2697},
+  pages     = {13--23},
+  publisher = {CEUR-WS.org},
+  series    = {CEUR Workshop Proceedings},
+  timestamp = {Wed, 27 Jan 2021 16:31:51 +0100},
+  title     = {{S}emantic schema mapping for interoperable data-exchange},
+  url       = {http://ceur-ws.org/Vol-2788/om2020\_LTpaper2.pdf},
+  volume    = {2788},
+  year      = {2020}
+}
+
+@inproceedings{DBLP:conf/semweb/PourAAFFHHJJKKL20,
+  author    = {Mina Abd Nikooie Pour and
+Alsayed Algergawy and
+Reihaneh Amini and
+Daniel Faria and
+Irini Fundulaki and
+Ian Harrow and
+Sven Hertling and
+Ernesto Jim{\'e}nez-Ruiz and
+Cl{\'e}ment Jonquet and
+Naouel Karam and
+Abderrahmane Khiat and
+Amir Laadhar and
+Patrick Lambrix and
+Huanyu Li and
+Ying Li and
+Pascal Hitzler and
+Heiko Paulheim and
+Catia Pesquita and
+Tzanina Saveta and
+Pavel Shvaiko and
+Andrea Splendiani and
+{\'E}lodie Thi{\'e}blin and
+C{\'a}ssia Trojahn and
+Jana Vatascinov{\'a} and
+Beyza Yaman and
+Ondrej Zamazal and
+Lu Zhou},
+  bibsource = {dblp computer science bibliography, https://dblp.org},
+  biburl    = {https://dblp.org/rec/conf/semweb/PourAAFFHHJJKKL20.bib},
+  booktitle = {Proceedings of the 15th International Workshop on Ontology Matching
+co-located with the 19th International Semantic Web Conference (ISWC
+2020), Virtual conference (originally planned to be in Athens, Greece),
+November 2, 2020},
+  keywords  = {153-5784},
+  pages     = {92--138},
+  publisher = {CEUR-WS.org},
+  series    = {CEUR Workshop Proceedings},
+  timestamp = {Thu, 28 Jan 2021 00:00:00 +0100},
+  title     = {{R}esults of the {O}ntology {A}lignment {E}valuation {I}nitiative 2020},
+  url       = {http://ceur-ws.org/Vol-2788/oaei20\_paper0.pdf},
+  volume    = {2788},
+  year      = {2020}
+}
+
+@inproceedings{DBLP:conf/semweb/SherifDN20,
+  author    = {Mohamed Ahmed Sherif and
+Kevin Dre{\ss}ler and
+Axel-Cyrille Ngonga Ngomo},
+  bibsource = {dblp computer science bibliography, https://dblp.org},
+  biburl    = {https://dblp.org/rec/conf/semweb/SherifDN20.bib},
+  booktitle = {Proceedings of the 15th International Workshop on Ontology Matching
+co-located with the 19th International Semantic Web Conference (ISWC
+2020), Virtual conference (originally planned to be in Athens, Greece),
+November 2, 2020},
+  keywords  = {145-1160},
+  pages     = {48--59},
+  publisher = {CEUR-WS.org},
+  series    = {CEUR Workshop Proceedings},
+  timestamp = {Wed, 27 Jan 2021 00:00:00 +0100},
+  title     = {L{I}GO{N} - link discovery with noisy oracles},
+  url       = {http://ceur-ws.org/Vol-2788/om2020\_LTpaper5.pdf},
+  volume    = {2788},
+  year      = {2020}
+}
+
+@article{DBLP:journals/access/Fazeli-Varzaneh21,
+  author    = {Mohsen Fazeli-Varzaneh and
+Ali Ghorbi and
+Marcel Ausloos and
+Emanuel Sallinger and
+Sahar Vahdati},
+  bibsource = {dblp computer science bibliography, https://dblp.org},
+  biburl    = {https://dblp.org/rec/journals/access/Fazeli-Varzaneh21.bib},
+  doi       = {10.1109/ACCESS.2021.3052918},
+  journal   = {IEEE Access},
+  keywords  = {151-0980},
+  pages     = {21192--21205},
+  timestamp = {Tue, 02 Mar 2021 00:00:00 +0100},
+  title     = {{S}leeping {B}eauties of {C}oronavirus {R}esearch},
+  url       = {https://doi.org/10.1109/ACCESS.2021.3052918},
+  volume    = {9},
+  year      = {2021}
+}
+
+@article{DBLP:journals/datasci/Gonzalez-Beltran19,
+  author    = {Alejandra N. Gonz{\'a}lez-Beltr{\'a}n and
+Francesco Osborne and
+Silvio Peroni and
+Sahar Vahdati},
+  bibsource = {dblp computer science bibliography, https://dblp.org},
+  biburl    = {https://dblp.org/rec/journals/datasci/Gonzalez-Beltran19.bib},
+  doi       = {10.3233/ds-190023},
+  journal   = {Data Sci.},
+  keywords  = {151-0980 sda-pub},
+  number    = {1-2},
+  pages     = {177--179},
+  timestamp = {Thu, 21 Jan 2021 00:00:00 +0100},
+  title     = {{E}ditorial: {S}pecial {I}ssue on {S}cholarly {D}ata {A}nalysis ({S}emantics, {A}nalytics,
+{V}isualisation)},
+  url       = {https://doi.org/10.3233/ds-190023},
+  volume    = {2},
+  year      = {2019}
+}
+
+@article{DBLP:journals/iotj/ChakrabortyLMLW21,
+  author    = {Nilesh Chakraborty and
+Jian-Qiang Li and
+Samrat Mondal and
+Chengwen Luo and
+Huihui Wang and
+Mamoun Alazab and
+Fei Chen and
+Yi Pan},
+  bibsource = {dblp computer science bibliography, https://dblp.org},
+  biburl    = {https://dblp.org/rec/journals/iotj/ChakrabortyLMLW21.bib},
+  doi       = {10.1109/JIOT.2020.3025274},
+  journal   = {IEEE Internet Things J.},
+  keywords  = {141-0902},
+  number    = {5},
+  pages     = {3255--3267},
+  timestamp = {Tue, 02 Mar 2021 00:00:00 +0100},
+  title     = {{O}n {D}esigning a {L}esser {O}btrusive {A}uthentication {P}rotocol to {P}revent
+{M}achine-{L}earning-{B}ased {T}hreats in {I}nternet of {T}hings},
+  url       = {https://doi.org/10.1109/JIOT.2020.3025274},
+  volume    = {8},
+  year      = {2021}
+}
+
+@article{DBLP:journals/isci/BarellaGSLC21,
+  author    = {Victor H. Barella and
+Lu{\'\i}s Paulo F. Garcia and
+Marcilio C. P. de Souto and
+Ana Carolina Lorena and
+Andr{\'e} C. P. L. F. de Carvalho},
+  bibsource = {dblp computer science bibliography, https://dblp.org},
+  biburl    = {https://dblp.org/rec/journals/isci/BarellaGSLC21.bib},
+  doi       = {10.1016/j.ins.2020.12.006},
+  journal   = {Inf. Sci.},
+  keywords  = {25-7075},
+  pages     = {83--109},
+  timestamp = {Wed, 20 Jan 2021 00:00:00 +0100},
+  title     = {{A}ssessing the data complexity of imbalanced datasets},
+  url       = {https://doi.org/10.1016/j.ins.2020.12.006},
+  volume    = {553},
+  year      = {2021}
+}
+
+@article{DBLP:journals/scientometrics/VahdatiFLBSSA21,
+  author    = {Sahar Vahdati and
+Said Fathalla and
+Christoph Lange and
+Andreas Behrend and
+Aysegul Say and
+Zeynep Say and
+S{\"o}ren Auer},
+  bibsource = {dblp computer science bibliography, https://dblp.org},
+  biburl    = {https://dblp.org/rec/journals/scientometrics/VahdatiFLBSSA21.bib},
+  doi       = {10.1007/s11192-020-03758-1},
+  journal   = {Scientometrics},
+  keywords  = {l-ChristophLange2},
+  number    = {1},
+  pages     = {641--682},
+  timestamp = {Tue, 26 Jan 2021 00:00:00 +0100},
+  title     = {{A} comprehensive quality assessment framework for scientific events},
+  url       = {https://doi.org/10.1007/s11192-020-03758-1},
+  volume    = {126},
+  year      = {2021}
+}
+
+@article{DBLP:journals/semweb/HoffnerML16,
+  author    = {Konrad H{\"o}ffner and
+Michael Martin and
+Jens Lehmann},
+  bibsource = {dblp computer science bibliography, https://dblp.org},
+  biburl    = {https://dblp.org/rec/journals/semweb/HoffnerML16.bib},
+  doi       = {10.3233/SW-150172},
+  journal   = {Semantic Web},
+  keywords  = {71-4882 sda-pub},
+  number    = {1},
+  pages     = {95--104},
+  timestamp = {Sat, 05 Sep 2020 01:00:00 +0200},
+  title     = {{L}inked{S}pending: {O}pen{S}pending becomes {L}inked {O}pen {D}ata},
+  url       = {https://doi.org/10.3233/SW-150172},
+  volume    = {7},
+  year      = {2016}
+}
+
+@article{DBLP:journals/vi/ChawlaHS20,
+  author    = {Piyush Chawla and
+Subhashis Hazarika and
+Han-Wei Shen},
+  bibsource = {dblp computer science bibliography, https://dblp.org},
+  biburl    = {https://dblp.org/rec/journals/vi/ChawlaHS20.bib},
+  doi       = {10.1016/j.visinf.2020.04.006},
+  journal   = {Vis. Informatics},
+  keywords  = {227-3228},
+  number    = {2},
+  pages     = {132--141},
+  timestamp = {Wed, 10 Jun 2020 01:00:00 +0200},
+  title     = {{T}oken-wise sentiment decomposition for {C}onv{N}et: {V}isualizing a sentiment
+classifier},
+  url       = {https://doi.org/10.1016/j.visinf.2020.04.006},
+  volume    = {4},
+  year      = {2020}
+}
+

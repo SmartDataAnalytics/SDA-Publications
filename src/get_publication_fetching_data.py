@@ -15,6 +15,11 @@ SAMPLE_RANGE_NAME = 'Data!B2:E'
 
 
 def get_publication_fetching_data():
+    """
+    Returns an iterator with one entry per author. Each entry is a list with this shape:
+        [dblp_url, start_year, end_year, author_id]
+    """
+
     data = fetch_data_from_google()
     if not data:
         print('Error: Could not load the DBLP spreadsheet from Google.')

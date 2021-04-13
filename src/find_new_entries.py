@@ -13,8 +13,6 @@ from src.get_publication_fetching_data import get_publication_fetching_data
 # https://developers.google.com/sheets/api/quickstart/python and put it into the folder "secret" on the same level as the
 # "src" folder.
 
-publication_fetching_data = get_publication_fetching_data()
-
 existing = "../sda.bib"
 blacklist = "blacklist.txt"
 
@@ -85,7 +83,7 @@ def fetch_candidate_publications(ignored_titles: Set[str]) -> List[Dict]:
     normalized_title_to_author_ids = {}
     sda_publications = set()
 
-    for entry in publication_fetching_data:
+    for entry in get_publication_fetching_data():
         dblp_url, start_year, end_year, author_id = entry[0], entry[1], entry[2], entry[3]
 
         batch = fetch_from_dblp(dblp_url)

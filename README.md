@@ -9,7 +9,7 @@ pip install -r src/requirements.txt
 4. **Optional:** If you want to start from scratch:
     * Empty the file sda.bib (contains all valid publications)
     * Empty the file src/blacklist.txt (contains the titles of ignores publications)
-    * Change the SAMPLE_SPREADSHEET_ID in src/get_publication_fetching_data.py to the ID of the Google spreadsheet that contains the mapping from people to DBLP IDs.
+    * Change the SAMPLE_SPREADSHEET_ID in src/get_publication_fetching_data.py to the ID of the Google spreadsheet that contains the mapping from people to DBLP IDs. An example for such a spreadsheet can be found under `examples/dblpSpreadsheet.xlsx`.
 
 ## Importing new publications
 

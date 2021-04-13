@@ -15,7 +15,8 @@ pip install -r src/requirements.txt
 
 1. Run the following command from the root directory of the repository to fetch new publications:
 ```
-python src/find_new_entries.py
+cd src
+python find_new_entries.py
 ```
 2. Check the console output manually to ensure that all new entries are correct.
 3. Copy the BibTex output from the console into your tool of choice such as [teachPress](https://wordpress.org/plugins/teachpress/) for WordPress.

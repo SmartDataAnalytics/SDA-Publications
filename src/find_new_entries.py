@@ -170,11 +170,10 @@ def print_candidates(candidates: List[Dict]):
     count = len(candidates)
     if count == 0:
         print("No suggestions.")
+    elif count == 1:
+        print("One suggestion:\n")
     else:
-        if count == 1:
-            print("One suggestion:\n")
-        else:
-            print(f"{count} suggestions:\n")
+        print(f"{count} suggestions:\n")
 
     output = bibtex_entries_to_string(candidates)
     print(output)

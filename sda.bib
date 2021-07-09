@@ -1,6 +1,30 @@
-% This file was created with teachPress 7.1.4
+% This file was created with teachPress 7.1.6
 % Encoding: UTF-8
 
+@phdthesis{,
+title = {Knowledge Extraction Methods for the Analysis of Contractual Agreements},
+author = {Najmeh Mousavinezhad},
+year  = {2021},
+date = {2021-05-31},
+school = {Rheinische Friedrich-Wilhelms-Universität Bonn},
+abstract = {The ubiquitous availability of the Internet results in a massive number of apps, software, and online services with accompanying contractual agreements in the form of end-user license agreement' andprivacy policy’. Often the textual documents describing rights, policies, and conditions comprise many pages and can not be reasonably assumed to be read and understood by humans. Although everyone is exposed to such consent forms, the majority tend to ignore them due to their length and complexity. However, the cost of ignoring terms and conditions is not always negligible, and occasionally people have to pay (money or other means) as a result of their oversight. In this thesis, we focus on the interpretation of contractual agreements for the benefit of end-users. Contractual agreements encompass both the privacy policies and the general terms and conditions related to software and services. The main characteristics of such agreements are their use of legal terminologies and limited vocabulary. This feature has pros and cons. On one hand, the clear structure and legal language facilitate the mapping between the human-readable agreements and machine-processable concepts. On the other hand, the legal terminologies make the contractual agreement complex, subjective, and, therefore, open to interpretation. This thesis addresses the problem of contractual agreement analysis from both perspectives. In order to provide a structured presentation of contractual agreements, we apply text mining and semantic technologies to develop approaches that extract important information from the agreements and retrieve helpful links and resources for better comprehension. Our approaches are based on ontology-based information extraction, machine learning, and semantic similarity and aim to deliver tedious consent forms in a user friendly and visualized format. The ontology-based information extraction approach processes the human-readable license agreement guided by a domain ontology to extract deontic modalities and presents a summarized output to the end-user. In the extraction phase, we focus on three key rights and conditions: permission, prohibition, duty and cluster the extracted excerpts according to their similarities. The clustering is based on semantic similarity employing a distributional semantics approach on large word embeddings database. The machine learning method employs deep neural networks to classify a privacy policy’s paragraphs into pre-defined categories. Since the prediction results of the trained model are promising, we further use the predicted classes to assign five risk colors (Green, Yellow, Red) to five privacy icons (Expected Use, Expected Collection, Precise Location, Data Retention and Children Privacy). Furthermore, given that any contractual agreement must comply with the relevant legislation, we utilize text semantic similarity to map an agreement’s content to regulatory documents. The semantic similarity-based approach finds candidate sentences in an agreement that are potentially related to specific articles in the regulation. Then, for each candidate sentence, the relevant article and provision is found according to their semantic similarity. The achieved results from our proposed approaches allow us to conclude that although semi-automatic approaches lead to information loss, they save time and effort by producing instant results and facilitate the end-users understanding of legal texts.},
+keywords = {187-1650, sda-pub},
+pubstate = {published},
+tppubtype = {phdthesis}
+}
+@phdthesis{mohnishthesis,
+title = {Towards Complex Question Answering over Knowledge Graphs},
+author = {Mohnish Dubey},
+url = {https://bonndoc.ulb.uni-bonn.de/xmlui/handle/20.500.11811/9122},
+year  = {2021},
+date = {2021-01-19},
+school = {University of Bonn },
+abstract = {Over the past decade, Knowledge Graphs (KG) have emerged as a prominent repository for storing facts about the world in a linked data architecture. Providing machines with the capability of exploring such Knowledge Graphs and answering natural language questions over them, has been an active area of research. The purpose of this work, is to delve further into the research of retrieving information stored in KGs, based on the natural language questions posed by the user. Knowledge Graph Question Answering (KGQA) aims to produce a concise answer to a user question, such that the user is exempt from using KG vocabulary and overheads of learning a formal query language. Existing KGQA systems have achieved excellent results over Simple Questions, where the information required is limited to a single triple and a single formal query pattern. Our motivation is to improve the performance of KGQA over Complex Questions, where formal query patterns significantly vary, and a single triple is not confining for all the required information. Complex KGQA provides several challenges such as understanding semantics and syntactic structure of questions, Entity Linking, Relation Linking and Answer Representation. Lack of suitable datasets for complex question answering further adds to research gaps. Hence, in this thesis, we focus the research objective of laying the foundations for the advancement of the state-of-the-art for Complex Question Answering over Knowledge Graphs, by providing techniques to solve various challenges and provide resources to fill the research gaps.
+First, we propose Normalized Query Structure (NQS), which is a linguistic analyzer module that helps the QA system to detect inputs and intents and the relation between them in the users’ question. NQS acts like an intermediate language between natural language questions and formal expressions to ease the process of query formulation for complex questions. We then developed a framework named LC-QuAD to generate large scale question answering dataset by reversing the process of question answering, thereby translating natural language questions from the formal query using intermediate templates. Our goal is to use this framework for high variations in the query patterns and create a large size dataset with minimum human effort. The first version of the dataset consists of 5,000 complex questions. By extending the LC-QuAD framework to support Reified KGs and crowd-sourcing, we published the second version of the dataset as LC-QuAD 2.0, consisting of 30,000 questions with their paraphrases and has higher complexity and new variations in the questions. To overcome the problem of Entity Linking and Relation Linking in KGQA, we develop EARL, a module performing these two tasks as a single joint task for complex question answering. We develop approaches for this module, first by formalizing the task as an instance of the Generalized Traveling Salesman Problem (GTSP) and the second approach uses machine learning to exploit the connection density between nodes in the Knowledge Graph. Lastly, we create another large scale dataset to answer verbalization and provide results for multiple baseline systems on it. The Verbalization dataset is introduced to make the system’s response more human-like. The NQS based KGQA system was next to the best system in terms of accuracy on the QALD-5 dataset. We empirically prove that NQS is robust to tackle paraphrases of the questions. EARL achieves the state of the art results in Entity Linking and Relation Linking for question answering on several KGQA datasets. The dataset curated in this thesis has helped the research community to move forward in the direction of improving the accuracy of complex question answering as a task as other researchers too developed several KGQA systems and modules around these published datasets. With the large-scale datasets, we have encouraged the use of large scale machine learning, deep learning and emergence of new techniques to advance the state-of-the-art in complex question answering over knowledge graphs. We further developed core components for the KGQA pipeline to overcome the challenges of Question Understanding, Entity-Relation Linking and Answer Verbalization and thus achieve our research objective. All the proposed approaches mentioned in this thesis and the published resources are available at https://github.com/AskNowQA and are released under the umbrella project AskNow.},
+keywords = {180-1858, sda-pub},
+pubstate = {published},
+tppubtype = {phdthesis}
+}
 @article{DBLP:journals/fcsc/ChakrabortyM21,
 title = {On designing an unaided authentication service with threat detection and leakage control for defeating opportunistic adversaries},
 author = {Nilesh Chakraborty and
@@ -50,6 +74,98 @@ keywords = {183-9290, phd-thesis, sda-pub},
 pubstate = {published},
 tppubtype = {phdthesis}
 }
+@article{DBLP:journals/access/Fazeli-Varzaneh21,
+title = {Sleeping Beauties of Coronavirus Research},
+author = {Mohsen Fazeli-Varzaneh and
+Ali Ghorbi and
+Marcel Ausloos and
+Emanuel Sallinger and
+Sahar Vahdati},
+url = {https://doi.org/10.1109/ACCESS.2021.3052918},
+doi = {10.1109/ACCESS.2021.3052918},
+year  = {2021},
+date = {2021-01-01},
+journal = {IEEE Access},
+volume = {9},
+pages = {21192--21205},
+keywords = {151-0980},
+pubstate = {published},
+tppubtype = {article}
+}
+@article{DBLP:journals/iotj/ChakrabortyLMLW21,
+title = {On Designing a Lesser Obtrusive Authentication Protocol to Prevent
+Machine-Learning-Based Threats in Internet of Things},
+author = {Nilesh Chakraborty and
+Jian-Qiang Li and
+Samrat Mondal and
+Chengwen Luo and
+Huihui Wang and
+Mamoun Alazab and
+Fei Chen and
+Yi Pan},
+url = {https://doi.org/10.1109/JIOT.2020.3025274},
+doi = {10.1109/JIOT.2020.3025274},
+year  = {2021},
+date = {2021-01-01},
+journal = {IEEE Internet Things J.},
+volume = {8},
+number = {5},
+pages = {3255--3267},
+keywords = {141-0902},
+pubstate = {published},
+tppubtype = {article}
+}
+@article{DBLP:journals/isci/BarellaGSLC21,
+title = {Assessing the data complexity of imbalanced datasets},
+author = {Victor H. Barella and
+Luís Paulo F. Garcia and
+Marcilio C. P. de Souto and
+Ana Carolina Lorena and
+André C. P. L. F. de Carvalho},
+url = {https://doi.org/10.1016/j.ins.2020.12.006},
+doi = {10.1016/j.ins.2020.12.006},
+year  = {2021},
+date = {2021-01-01},
+journal = {Inf. Sci.},
+volume = {553},
+pages = {83--109},
+keywords = {25-7075},
+pubstate = {published},
+tppubtype = {article}
+}
+@article{DBLP:journals/scientometrics/VahdatiFLBSSA21,
+title = {A comprehensive quality assessment framework for scientific events},
+author = {Sahar Vahdati and
+Said Fathalla and
+Christoph Lange and
+Andreas Behrend and
+Aysegul Say and
+Zeynep Say and
+Sören Auer},
+url = {https://doi.org/10.1007/s11192-020-03758-1},
+doi = {10.1007/s11192-020-03758-1},
+year  = {2021},
+date = {2021-01-01},
+journal = {Scientometrics},
+volume = {126},
+number = {1},
+pages = {641--682},
+keywords = {l-ChristophLange2},
+pubstate = {published},
+tppubtype = {article}
+}
+@phdthesis{handle:20.500.11811/9083,
+title = {On Supporting Interoperability between RDF and Property Graph Databases},
+author = {Harsh Vrajeshkumar Thakker},
+url = {http://hdl.handle.net/20.500.11811/9083},
+year  = {2021},
+date = {2021-01-01},
+school = {Rheinische Friedrich-Wilhelms-Universität Bonn},
+abstract = {Over the last few years, the amount and availability of machine-readable Open, Linked, and Big data on the web has increased. Simultaneously, several data management systems have emerged to deal with the increased amounts of this structured data. RDF and Graph databases are two popular approaches for data management based on modeling, storing, and querying graph-like data. RDF database systems are based on the W3C standard RDF data model and use the W3C standard SPARQL as their defacto query language. Most graph database systems are based on the Property Graph (PG) data model and use the Gremlin language as their query language due to its popularity amongst vendors. Given that both of these approaches have distinct and complementary characteristics – RDF is suited for distributed data integration with built-in world-wide unique identifiers and vocabularies; PGs, on the other hand, support horizontally scalable storage and querying, and are widely used for modern data analytics applications, – it becomes necessary to support interoperability amongst them. The main objective of this dissertation is to study and address this interoperability issue. We identified three research challenges that are concerned with the data interoperability, query interoperability, and benchmarking of these databases. First, we tackle the data interoperability problem. We propose three direct mappings (schema-dependent and schema-independent) for transforming an RDF database into a property graph database. We show that the proposed mappings satisfy the desired properties of semantics preservation and information preservation. Based on our analysis (both formal and empirical), we argue that any RDF database can be transformed into a PG database using our approach. Second, we propose a novel approach for querying PG databases using SPARQL using Gremlin traversals – GREMLINATOR to tackle the query interoperability problem. In doing so, we first formalize the declarative constructs of Gremlin language using a consolidated graph relational algebra and define mappings to translate SPARQL queries into Gremlin traversals. GREMLINATOR has been officially integrated as a plugin for the Apache TinkerPop graph computing framework (as sparql-gremlin), which enables users to execute SPARQL queries over a wide variety of OLTP graph databases and OLAP graph processing frameworks. Finally, we tackle the third, benchmarking (performance evaluation), problem. We propose a novel framework – LITMUS Benchmark Suite that allows a choke-point driven performance comparison and analysis of various databases (PG and RDF-based) using various third-party real and synthetic datasets and queries. We also studied a variety of intrinsic and extrinsic factors – data and system-specific metrics and Key Performance Indicators (KPIs) that influence a given system’s performance. LITMUS incorporates various memory, processor, data quality, indexing, query typology, and data-based metrics for providing a fine-grained evaluation of the benchmark. In conclusion, by filling the research gaps, addressed by this dissertation, we have laid a solid formal and practical foundation for supporting interoperability between the RDF and Property graph database technology stacks. The artifacts produced during the term of this dissertation have been integrated into various academic and industrial projects.},
+keywords = {43-11366, sda-pub},
+pubstate = {published},
+tppubtype = {phdthesis}
+}
 @phdthesis{gezim-sejdiu-2020-phd-thesis,
 title = {Efficient Distributed In-Memory Processing of RDF Datasets},
 author = {Gezim Sejdiu},
@@ -81,6 +197,7 @@ tppubtype = {article}
 @phdthesis{ZafarThesis,
 title = {Semantic Question Answering Over Knowledge Graphs: Pitfalls and Pearls},
 author = {Hamid Zafartavanaelmi},
+url = {https://bonndoc.ulb.uni-bonn.de/xmlui/bitstream/handle/20.500.11811/9125/6154.pdf?sequence=1&amp;isAllowed=y},
 year  = {2020},
 date = {2020-01-01},
 school = {University of Bonn},
@@ -951,7 +1068,7 @@ date = {2020-01-01},
 journal = {IEEE Access},
 volume = {8},
 pages = {196459--196471},
-keywords = {151-0980, 203-6666, 71-4882, sda-pub},
+keywords = {151-0980, 203-6666, 267-4877, 71-4882, sda-pub},
 pubstate = {published},
 tppubtype = {article}
 }
@@ -1302,26 +1419,6 @@ keywords = {71-4882, sda-pub},
 pubstate = {published},
 tppubtype = {inproceedings}
 }
-@inproceedings{DBLP:conf/esws/AlamJAM020,
-title = {Sffinity Dependent Negative Sampling for Knowledge Graph Embeddings},
-author = {Mirza Mohtashim Alam and
-Hajira Jabeen and
-Mehdi Ali and
-Karishma Mohiuddin and
-Jens Lehmann},
-url = {http://ceur-ws.org/Vol-2635/paper8.pdf},
-year  = {2020},
-date = {2020-01-01},
-booktitle = {Proceedings of the Workshop on Deep Learning for Knowledge Graphs
-(DL4KG2020) co-located with the 17th Extended Semantic Web Conference
-2020 (ESWC 2020), Heraklion, Greece, June 02, 2020 - moved online},
-volume = {2635},
-publisher = {CEUR-WS.org},
-series = {CEUR Workshop Proceedings},
-keywords = {93-7184, sda-pub},
-pubstate = {published},
-tppubtype = {inproceedings}
-}
 @inproceedings{DBLP:conf/wsdm/GrubenmannCL20,
 title = {TSA: A Truthful Mechanism for Social Advertising},
 author = {Tobias Grubenmann and
@@ -1504,6 +1601,68 @@ keywords = {141-0902, sda-pub},
 pubstate = {published},
 tppubtype = {article}
 }
+@inproceedings{DBLP:conf/esws/AlamJAM020b,
+title = {Affinity Dependent Negative Sampling for Knowledge Graph Embeddings},
+author = {Mirza Mohtashim Alam and
+Hajira Jabeen and
+Mehdi Ali and
+Karishma Mohiuddin and
+Jens Lehmann},
+url = {http://ceur-ws.org/Vol-2635/paper8.pdf},
+year  = {2020},
+date = {2020-01-01},
+booktitle = {Proceedings of the Workshop on Deep Learning for Knowledge Graphs
+(DL4KG2020) co-located with the 17th Extended Semantic Web Conference
+2020 (ESWC 2020), Heraklion, Greece, June 02, 2020 - moved online},
+volume = {2635},
+publisher = {CEUR-WS.org},
+series = {CEUR Workshop Proceedings},
+keywords = {267-4877, 93-7184, sda-pub},
+pubstate = {published},
+tppubtype = {inproceedings}
+}
+@inproceedings{DBLP:conf/iiwas/KhiatEFKBN20,
+title = {Towards an Ontology Representing Characteristics of Inflammatory Bowel
+Disease},
+author = {Abderrahmane Khiat and
+Mirette Elias and
+Ann Christina Foldenauer and
+Michaela Köhm and
+Irina Blumenstein and
+Giulio Napolitano},
+url = {https://doi.org/10.1145/3428757.3429110},
+doi = {10.1145/3428757.3429110},
+year  = {2020},
+date = {2020-01-01},
+booktitle = {iiWAS textquotesingle 20: The 22nd International Conference on Information Integration
+and Web-based Applications &amp; Services, Virtual Event / Chiang Mai,
+Thailand, November 30 - December 2, 2020},
+pages = {216--222},
+publisher = {ACM},
+keywords = {153-5784},
+pubstate = {published},
+tppubtype = {inproceedings}
+}
+@inproceedings{DBLP:conf/semweb/GeorgalaSN20,
+title = {LIGER - link discovery with partial recall},
+author = {Kleanthi Georgala and
+Mohamed Ahmed Sherif and
+Axel-Cyrille Ngonga Ngomo},
+url = {http://ceur-ws.org/Vol-2788/om2020_STpaper4.pdf},
+year  = {2020},
+date = {2020-01-01},
+booktitle = {Proceedings of the 15th International Workshop on Ontology Matching
+co-located with the 19th International Semantic Web Conference (ISWC
+2020), Virtual conference (originally planned to be in Athens, Greece),
+November 2, 2020},
+volume = {2788},
+pages = {87--91},
+publisher = {CEUR-WS.org},
+series = {CEUR Workshop Proceedings},
+keywords = {145-1160},
+pubstate = {published},
+tppubtype = {inproceedings}
+}
 @incollection{DBLP:series/ssw/RoderS0CN20,
 title = {Benchmarking the Lifecycle of Knowledge Graphs},
 author = {Michael Röder and
@@ -1524,6 +1683,133 @@ series = {Studies on the Semantic Web},
 keywords = {145-1160},
 pubstate = {published},
 tppubtype = {incollection}
+}
+@inproceedings{DBLP:conf/semweb/GeorgalaSRN20,
+title = {Applying edge-counting semantic similarities to link discovery: scalability
+and accuracy},
+author = {Kleanthi Georgala and
+Mohamed Ahmed Sherif and
+Michael Röder and
+Axel-Cyrille Ngonga Ngomo},
+url = {http://ceur-ws.org/Vol-2788/om2020_LTpaper4.pdf},
+year  = {2020},
+date = {2020-01-01},
+booktitle = {Proceedings of the 15th International Workshop on Ontology Matching
+co-located with the 19th International Semantic Web Conference (ISWC
+2020), Virtual conference (originally planned to be in Athens, Greece),
+November 2, 2020},
+volume = {2788},
+pages = {36--47},
+publisher = {CEUR-WS.org},
+series = {CEUR Workshop Proceedings},
+keywords = {145-1160},
+pubstate = {published},
+tppubtype = {inproceedings}
+}
+@inproceedings{DBLP:conf/semweb/PanditGOJO020,
+title = {Semantic schema mapping for interoperable data-exchange},
+author = {Harshvardhan J. Pandit and
+Damien Graux and
+Fabrizio Orlandi and
+Ademar Crotti Junior and
+Declan Otextquotesingle Sullivan and
+Dave Lewis},
+url = {http://ceur-ws.org/Vol-2788/om2020_LTpaper2.pdf},
+year  = {2020},
+date = {2020-01-01},
+booktitle = {Proceedings of the 15th International Workshop on Ontology Matching
+co-located with the 19th International Semantic Web Conference (ISWC
+2020), Virtual conference (originally planned to be in Athens, Greece),
+November 2, 2020},
+volume = {2788},
+pages = {13--23},
+publisher = {CEUR-WS.org},
+series = {CEUR Workshop Proceedings},
+keywords = {169-2697},
+pubstate = {published},
+tppubtype = {inproceedings}
+}
+@inproceedings{DBLP:conf/semweb/PourAAFFHHJJKKL20,
+title = {Results of the Ontology Alignment Evaluation Initiative 2020},
+author = {Mina Abd Nikooie Pour and
+Alsayed Algergawy and
+Reihaneh Amini and
+Daniel Faria and
+Irini Fundulaki and
+Ian Harrow and
+Sven Hertling and
+Ernesto Jiménez-Ruiz and
+Clément Jonquet and
+Naouel Karam and
+Abderrahmane Khiat and
+Amir Laadhar and
+Patrick Lambrix and
+Huanyu Li and
+Ying Li and
+Pascal Hitzler and
+Heiko Paulheim and
+Catia Pesquita and
+Tzanina Saveta and
+Pavel Shvaiko and
+Andrea Splendiani and
+{É}lodie Thiéblin and
+Cássia Trojahn and
+Jana Vatascinová and
+Beyza Yaman and
+Ondrej Zamazal and
+Lu Zhou},
+url = {http://ceur-ws.org/Vol-2788/oaei20_paper0.pdf},
+year  = {2020},
+date = {2020-01-01},
+booktitle = {Proceedings of the 15th International Workshop on Ontology Matching
+co-located with the 19th International Semantic Web Conference (ISWC
+2020), Virtual conference (originally planned to be in Athens, Greece),
+November 2, 2020},
+volume = {2788},
+pages = {92--138},
+publisher = {CEUR-WS.org},
+series = {CEUR Workshop Proceedings},
+keywords = {153-5784},
+pubstate = {published},
+tppubtype = {inproceedings}
+}
+@inproceedings{DBLP:conf/semweb/SherifDN20,
+title = {LIGON - link discovery with noisy oracles},
+author = {Mohamed Ahmed Sherif and
+Kevin Dreßler and
+Axel-Cyrille Ngonga Ngomo},
+url = {http://ceur-ws.org/Vol-2788/om2020_LTpaper5.pdf},
+year  = {2020},
+date = {2020-01-01},
+booktitle = {Proceedings of the 15th International Workshop on Ontology Matching
+co-located with the 19th International Semantic Web Conference (ISWC
+2020), Virtual conference (originally planned to be in Athens, Greece),
+November 2, 2020},
+volume = {2788},
+pages = {48--59},
+publisher = {CEUR-WS.org},
+series = {CEUR Workshop Proceedings},
+keywords = {145-1160},
+pubstate = {published},
+tppubtype = {inproceedings}
+}
+@article{DBLP:journals/vi/ChawlaHS20b,
+title = {Token-wise sentiment decomposition for ConvNet: Visualizing a sentiment
+classifier},
+author = {Piyush Chawla and
+Subhashis Hazarika and
+Han-Wei Shen},
+url = {https://doi.org/10.1016/j.visinf.2020.04.006},
+doi = {10.1016/j.visinf.2020.04.006},
+year  = {2020},
+date = {2020-01-01},
+journal = {Vis. Informatics},
+volume = {4},
+number = {2},
+pages = {132--141},
+keywords = {227-3228},
+pubstate = {published},
+tppubtype = {article}
 }
 @inproceedings{DBLP:conf/sac/FathallaA020,
 title = {Towards the semantic formalization of science},
@@ -1995,7 +2281,7 @@ tppubtype = {phdthesis}
 @phdthesis{EstevesThesis,
 title = {Automating the Fact-Checking Task: Challenges and Directions},
 author = {Diego Esteves},
-url = {http://hss.ulb.uni-bonn.de/2019/5500/5500.pdf},
+url = {http://hdl.handle.net/20.500.11811/8030},
 year  = {2019},
 date = {2019-01-01},
 school = {University of Bonn},
@@ -2793,26 +3079,6 @@ keywords = {93-7184, sda-pub},
 pubstate = {published},
 tppubtype = {inproceedings}
 }
-@inproceedings{DBLP:conf/semweb/DubeyBA019b,
-title = {LC-QAD 2.0: A Large Dataset for Complex Question Answering over Wikidata and DBpedia},
-author = {Mohnish Dubey and
-Debayan Banerjee and
-Abdelrahman Abdelkawi and
-Jens Lehmann},
-url = {https://doi.org/10.1007/978-3-030-30796-7_5},
-doi = {10.1007/978-3-030-30796-7_5},
-year  = {2019},
-date = {2019-01-01},
-booktitle = {The Semantic Web - ISWC 2019 - 18th International Semantic Web Conference,
-Auckland, New Zealand, October 26-30, 2019, Proceedings, Part II},
-volume = {11779},
-pages = {69--78},
-publisher = {Springer},
-series = {Lecture Notes in Computer Science},
-keywords = {213-7475, sda-pub},
-pubstate = {published},
-tppubtype = {inproceedings}
-}
 @inproceedings{DBLP:conf/semweb/KubitzaBG19c,
 title = {Towards Semantically Structuring GitHub},
 author = {Dennis Oliver Kubitza and
@@ -3082,27 +3348,6 @@ keywords = {144-0506, sda-pub},
 pubstate = {published},
 tppubtype = {phdthesis}
 }
-@inproceedings{DBLP:conf/semweb/DubeyBA019c,
-title = {LC-QuAD 2.0: A Large Dataset for Complex Question Answering over
-Wikidata and DBpedia},
-author = {Mohnish Dubey and
-Debayan Banerjee and
-Abdelrahman Abdelkawi and
-Jens Lehmann},
-url = {https://doi.org/10.1007/978-3-030-30796-7_5},
-doi = {10.1007/978-3-030-30796-7_5},
-year  = {2019},
-date = {2019-01-01},
-booktitle = {The Semantic Web - ISWC 2019 - 18th International Semantic Web Conference,
-Auckland, New Zealand, October 26-30, 2019, Proceedings, Part II},
-volume = {11779},
-pages = {69--78},
-publisher = {Springer},
-series = {Lecture Notes in Computer Science},
-keywords = {213-7475, sda-pub},
-pubstate = {published},
-tppubtype = {inproceedings}
-}
 @inproceedings{sejdiu-2019-sansa-dist-quality-assessment-iswc,
 title = {A Scalable Framework for Quality Assessment of RDF Datasets},
 author = {Gezim Sejdiu and Anisa Rula and Jens Lehmann and Hajira Jabeen},
@@ -3171,6 +3416,23 @@ keywords = {210-4225, 71-4882, 81-4530-1, sda-pub},
 pubstate = {published},
 tppubtype = {inproceedings}
 }
+@inproceedings{DBLP:conf/bracis/BarellaGC19,
+title = {The Influence of Sampling on Imbalanced Data Classification},
+author = {Victor H. Barella and
+Luís Paulo F. Garcia and
+André C. P. L. F. de Carvalho},
+url = {https://doi.org/10.1109/BRACIS.2019.00045},
+doi = {10.1109/BRACIS.2019.00045},
+year  = {2019},
+date = {2019-01-01},
+booktitle = {8th Brazilian Conference on Intelligent Systems, BRACIS 2019, Salvador,
+Brazil, October 15-18, 2019},
+pages = {210--215},
+publisher = {IEEE},
+keywords = {25-7075, sda-pub},
+pubstate = {published},
+tppubtype = {inproceedings}
+}
 @inproceedings{DBLP:conf/nldb/AhmedSN19,
 title = {LSVS: Link Specification Verbalization and Summarization},
 author = {Abdullah Fathi Ahmed and
@@ -3188,6 +3450,24 @@ pages = {66--78},
 publisher = {Springer},
 series = {Lecture Notes in Computer Science},
 keywords = {145-1160},
+pubstate = {published},
+tppubtype = {inproceedings}
+}
+@inproceedings{DBLP:conf/icacie/BanerjeeS19,
+title = {Prediction of Stroke Risk Factors for Better Pre-emptive Healthcare: A Public-Survey-Based Approach},
+author = {Debayan Banerjee and
+Jagannath Singh},
+url = {https://doi.org/10.1007/978-981-15-6353-9_2},
+doi = {10.1007/978-981-15-6353-9_2},
+year  = {2019},
+date = {2019-01-01},
+booktitle = {Progress in Advanced Computing and Intelligent Engineering - Proceedings
+of ICACIE 2019, Volume 2},
+volume = {1199},
+pages = {12--24},
+publisher = {Springer},
+series = {Advances in Intelligent Systems and Computing},
+keywords = {213-7475, sda-pub},
 pubstate = {published},
 tppubtype = {inproceedings}
 }
@@ -3252,6 +3532,25 @@ series = {Communications in Computer and Information Science},
 keywords = {151-0980, 249-1460, 71-4882, sda-pub},
 pubstate = {published},
 tppubtype = {inproceedings}
+}
+@article{DBLP:journals/datasci/Gonzalez-Beltran19b,
+title = {Editorial: Special Issue on Scholarly Data Analysis (Semantics, Analytics,
+Visualisation)},
+author = {Alejandra N. González-Beltrán and
+Francesco Osborne and
+Silvio Peroni and
+Sahar Vahdati},
+url = {https://doi.org/10.3233/ds-190023},
+doi = {10.3233/ds-190023},
+year  = {2019},
+date = {2019-01-01},
+journal = {Data Sci.},
+volume = {2},
+number = {1-2},
+pages = {177--179},
+keywords = {151-0980, sda-pub},
+pubstate = {published},
+tppubtype = {article}
 }
 @inproceedings{DBLP:conf/pkdd/Sadeghi019,
 title = {Linking Physicians to Medical Research Results via Knowledge Graph
@@ -3664,8 +3963,7 @@ pubstate = {published},
 tppubtype = {inproceedings}
 }
 @inproceedings{DBLP:conf/semweb/DubeyBA019,
-title = {LC-QĂD 2.0: A Large Dataset for Complex Question Answering over
-Wikidata and DBpedia},
+title = {LC-QAD 2.0: A Large Dataset for Complex Question Answering over Wikidata and DBpedia},
 author = {Mohnish Dubey and
 Debayan Banerjee and
 Abdelrahman Abdelkawi and
@@ -4175,7 +4473,7 @@ booktitle = {ICIAI 2019: The 3rd International Conference on Innovation in Artif
 Intelligence, Suzhou, China, March 15-18, 2019},
 pages = {131--137},
 publisher = {ACM},
-keywords = {251-0778, sda-pub},
+keywords = {251-0778, 267-4877, sda-pub},
 pubstate = {published},
 tppubtype = {inproceedings}
 }
@@ -4442,7 +4740,7 @@ tppubtype = {article}
 @phdthesis{GalkinThesis,
 title = {Strategies for Managing Linked Enterprise Data},
 author = {Mikhail Galkin},
-url = {http://hss.ulb.uni-bonn.de/2019/5335/5335.pdf},
+url = {http://hdl.handle.net/20.500.11811/7856},
 year  = {2018},
 date = {2018-01-01},
 school = {University of Bonn},
@@ -4752,8 +5050,7 @@ pubstate = {published},
 tppubtype = {inproceedings}
 }
 @inproceedings{DBLP:conf/icmv/RonyA18,
-title = {Hand gesture recognition using image segmentation and deep neural
-network},
+title = {Hand gesture recognition using image segmentation and deep neural network},
 author = {Md. Rashad Al Hasan Rony and
 Mirza Mohtashim Alam},
 url = {https://doi.org/10.1117/12.2522845},
@@ -4766,7 +5063,7 @@ volume = {11041},
 pages = {1104115},
 publisher = {SPIE},
 series = {SPIE Proceedings},
-keywords = {251-0778},
+keywords = {251-0778, 267-4877},
 pubstate = {published},
 tppubtype = {inproceedings}
 }
@@ -5631,6 +5928,28 @@ pages = {69--75},
 publisher = {Springer},
 series = {Communications in Computer and Information Science},
 keywords = {48-5611, 65-9656, sda-pub},
+pubstate = {published},
+tppubtype = {inproceedings}
+}
+@inproceedings{DBLP:conf/semweb/CollaranaGLSAV18d,
+title = {Synthesizing Knowledge Graphs from Web Sources with the MINTE++ Framework},
+author = {Diego Collarana and
+Mikhail Galkin and
+Christoph Lange and
+Simon Scerri and
+Sören Auer and
+Maria-Esther Vidal},
+url = {https://doi.org/10.1007/978-3-030-00668-6_22},
+doi = {10.1007/978-3-030-00668-6_22},
+year  = {2018},
+date = {2018-01-01},
+booktitle = {The Semantic Web - ISWC 2018 - 17th International Semantic Web Conference,
+Monterey, CA, USA, October 8-12, 2018, Proceedings, Part II},
+volume = {11137},
+pages = {359--375},
+publisher = {Springer},
+series = {Lecture Notes in Computer Science},
+keywords = {l-ChristophLange2, sda-pub},
 pubstate = {published},
 tppubtype = {inproceedings}
 }
@@ -8129,26 +8448,6 @@ keywords = {144-0506, 160-8154, l-ChristophLange2, sda-pub},
 pubstate = {published},
 tppubtype = {inproceedings}
 }
-@inproceedings{DBLP:conf/semweb/TrivediMDL17b,
-title = {LC-QAD: A Corpus for Complex Question Answering over Knowledge Graphs},
-author = {Priyansh Trivedi and
-Gaurav Maheshwari and
-Mohnish Dubey and
-Jens Lehmann},
-url = {https://doi.org/10.1007/978-3-319-68204-4_22},
-doi = {10.1007/978-3-319-68204-4_22},
-year  = {2017},
-date = {2017-01-01},
-booktitle = {The Semantic Web - ISWC 2017 - 16th International Semantic Web Conference,
-Vienna, Austria, October 21-25, 2017, Proceedings, Part II},
-volume = {10588},
-pages = {210--218},
-publisher = {Springer},
-series = {Lecture Notes in Computer Science},
-keywords = {71-4882, sda-pub},
-pubstate = {published},
-tppubtype = {inproceedings}
-}
 @article{bengio2017stdp,
 title = {STDP-Compatible Approximation of Back-Propagation in an Energy-Based Model},
 author = {Yoshua Bengio and Thomas Mesnard and Asja Fischer and Saizheng Zhang and Yuhuai Wu},
@@ -8335,27 +8634,6 @@ school = {Leipzig University, Germany},
 keywords = {65-9656, sda-pub},
 pubstate = {published},
 tppubtype = {phdthesis}
-}
-@inproceedings{DBLP:conf/semweb/TrivediMDL17c,
-title = {LC-QuAD: A Corpus for Complex Question Answering over Knowledge
-Graphs},
-author = {Priyansh Trivedi and
-Gaurav Maheshwari and
-Mohnish Dubey and
-Jens Lehmann},
-url = {https://doi.org/10.1007/978-3-319-68204-4_22},
-doi = {10.1007/978-3-319-68204-4_22},
-year  = {2017},
-date = {2017-01-01},
-booktitle = {The Semantic Web - ISWC 2017 - 16th International Semantic Web Conference,
-Vienna, Austria, October 21-25, 2017, Proceedings, Part II},
-volume = {10588},
-pages = {210--218},
-publisher = {Springer},
-series = {Lecture Notes in Computer Science},
-keywords = {71-4882, sda-pub},
-pubstate = {published},
-tppubtype = {inproceedings}
 }
 @proceedings{Capadisli2017,
 title = {Joint Proceedings of the 1st International Workshop on Scientometrics and 1st International Workshop on Enabling Decentralised Scholarly Communication},
@@ -9801,13 +10079,12 @@ tppubtype = {misc}
 @phdthesis{Sherif-thesis-2016,
 title = {Automating Geospatial RDF Dataset Integration and Enrichment},
 author = {Mohamed Ahmed Sherif},
-url = {http://www.qucosa.de/recherche/frontdoor/?tx_slubopus4frontend[id]=21570},
+url = {https://nbn-resolving.org/urn:nbn:de:bsz:15-qucosa-215708},
 year  = {2016},
 date = {2016-12-01},
 address = {Leipzig, Germany},
 school = {University of Leipzig},
 abstract = {Over the last years, the Linked Open Data (LOD) has evolved from a mere 12 to more than 10, 000 knowledge bases. These knowledge bases come from diverse domains including (but not limited to) publications, life sciences, social networking, government, media, linguistics. Moreover, the LOD cloud also contains a large number of crossdomain knowledge bases such as DBpedia and Yago2. These knowledge bases are commonly managed in a decentralized fashion and contain partly overlapping information. This architectural choice has led to knowledge pertaining to the same domain being published by independent entities in the LOD cloud. For example, information on drugs can be found in Diseasome as well as DBpedia and Drugbank. Furthermore, certain knowledge bases such as DBLP have been published by several bodies, which in turn has lead to duplicated content in the LOD. In addition, large amounts of geo-spatial information have been made available with the growth of heterogeneous Web of Data. The concurrent publication of knowledge bases containing related information promises to become a phenomenon of increasing importance with the growth of the number of independent data providers. Enabling the joint use of the knowledge bases published by these providers for tasks such as federated queries, cross-ontology question answering and data integration is most commonly tackled by creating links between the resources described within these knowledge bases. Within this thesis, we spur the transition from isolated knowledge bases to enriched Linked Data sets where information can be easily integrated and processed. To achieve this goal, we provide concepts, approaches and use cases that facilitate the integration and enrichment of information with other data types that are already present on the Linked Data Web with a focus on geo-spatial data. The first challenge that motivates our work is the lack of measures that use the geographic data for linking geo-spatial knowledge bases. This is partly due to the geo-spatial resources being described by the means of vector geometry. In particular, discrepancies in granularity and error measurements across knowledge bases render the selection of appropriate distance measures for geo-spatial resources difficult. We address this challenge by evaluating existing literature for pointset measures that can be used to measure the similarity of vector geometries. Then, we present and evaluate the ten measures that we derived from the literature on samples of three real knowledge bases. The second challenge we address in this thesis is the lack of automatic Link Discovery (LD) approaches capable of dealing with geospatial knowledge bases with missing and erroneous data. To this end,we present Colibri, an unsupervised approach that allows discovering links between knowledge bases while improving the quality of the instance data in these knowledge bases. A Colibri iteration begins by generating links between knowledge bases. Then, the approach makes use of these links to detect resources with probably erroneous or missing information. This erroneous or missing infor- mation detected by the approach is finally corrected or added. The third challenge we address is the lack of scalable LD approaches for tackling big geo-spatial knowledge bases. Thus, we present Deterministic Particle-Swarm Optimization (DPSO), a novel load balancing technique for LD on parallel hardware based on particle-swarm optimization. We combine this approach with the Orchid algorithm for geo-spatial linking and evaluate it on real and artificial data sets. The lack of approaches for automatic updating of links of an evolving knowledge base is our fourth challenge. This challenge is addressed in this thesis by the Wombat algorithm. Wombat is a novel approach for the discovery of links between knowledge bases that relies exclusively on positive examples. Wombat is based on generalisation via an upward refinement operator to traverse the space of Link Specifications (LS). We study the theoretical characteristics of Wombat and evaluate it on different benchmark data sets. The last challenge addressed herein is the lack of automatic approaches for geo-spatial knowledge base enrichment. Thus, we propose Deer, a supervised learning approach based on a refinement operator for enriching Resource Description Framework (RDF) data sets. We show how we can use exemplary descriptions of enriched resources to generate accurate enrichment pipelines. We evaluate our approach against manually defined enrichment pipelines and show that our approach can learn accurate pipelines even when provided with a small number of training examples. Each of the proposed approaches is implemented and evaluated against state-of-the-art approaches on real and/or artificial data sets. Moreover, all approaches are peer-reviewed and published in a con- ference or a journal paper. Throughout this thesis, we detail the ideas, implementation and the evaluation of each of the approaches. Moreover, we discuss each approach and present lessons learned. Finally, we conclude this thesis by presenting a set of possible future extensions and use cases for each of the proposed approaches.},
-note = {rulhttp://www.qucosa.de/recherche/frontdoor/?tx_slubopus4frontend[id]=21570},
 keywords = {2016, deer, geoknow, group_aksw, lehmann, mole, ngonga, sda-pub, sherif, SIMBA, sys:relevantFor:bis, sys:relevantFor:geoknow, sys:relevantFor:infai},
 pubstate = {published},
 tppubtype = {phdthesis}
@@ -11529,6 +11806,23 @@ key = {Krextor},
 keywords = {},
 pubstate = {published},
 tppubtype = {misc}
+}
+@article{DBLP:journals/semweb/HoffnerML16d,
+title = {LinkedSpending: OpenSpending becomes Linked Open Data},
+author = {Konrad Höffner and
+Michael Martin and
+Jens Lehmann},
+url = {https://doi.org/10.3233/SW-150172},
+doi = {10.3233/SW-150172},
+year  = {2016},
+date = {2016-01-01},
+journal = {Semantic Web},
+volume = {7},
+number = {1},
+pages = {95--104},
+keywords = {71-4882, sda-pub},
+pubstate = {published},
+tppubtype = {article}
 }
 @inproceedings{DBLP:conf/esws/SinghBDSC016,
 title = {Qanary - The Fast Track to Creating a Question Answering System with
@@ -29376,86 +29670,535 @@ keywords = {auer, collarana, lucid},
 pubstate = {inpress},
 tppubtype = {inproceedings}
 }
-@inproceedings{DBLP:conf/bracis/BarellaGC19,
-  author    = {Victor H. Barella and
-Lu{\'\i}s Paulo F. Garcia and
-Andr{\'e} C. P. L. F. de Carvalho},
-  bibsource = {dblp computer science bibliography, https://dblp.org},
-  biburl    = {https://dblp.org/rec/conf/bracis/BarellaGC19.bib},
-  booktitle = {8th Brazilian Conference on Intelligent Systems, BRACIS 2019, Salvador,
-Brazil, October 15-18, 2019},
-  doi       = {10.1109/BRACIS.2019.00045},
-  keywords  = {25-7075 sda-pub},
-  pages     = {210--215},
-  publisher = {IEEE},
-  timestamp = {Wed, 20 Jan 2021 00:00:00 +0100},
-  title     = {{T}he {I}nfluence of {S}ampling on {I}mbalanced {D}ata {C}lassification},
-  url       = {https://doi.org/10.1109/BRACIS.2019.00045},
-  year      = {2019}
-}
-
-@inproceedings{DBLP:conf/esws/AlamJAM020,
-  author    = {Mirza Mohtashim Alam and
-Hajira Jabeen and
-Mehdi Ali and
-Karishma Mohiuddin and
+@inproceedings{DBLP:conf/aaai/NayyeriVA021,
+  author    = {Mojtaba Nayyeri and
+Sahar Vahdati and
+Can Aykul and
 Jens Lehmann},
   bibsource = {dblp computer science bibliography, https://dblp.org},
-  biburl    = {https://dblp.org/rec/conf/esws/AlamJAM020.bib},
-  booktitle = {Proceedings of the Workshop on Deep Learning for Knowledge Graphs
-(DL4KG2020) co-located with the 17th Extended Semantic Web Conference
-2020 (ESWC 2020), Heraklion, Greece, June 02, 2020 - moved online},
-  keywords  = {93-7184 sda-pub},
-  publisher = {CEUR-WS.org},
-  series    = {CEUR Workshop Proceedings},
-  timestamp = {Wed, 23 Dec 2020 14:58:23 +0100},
-  title     = {{A}ffinity {D}ependent {N}egative {S}ampling for {K}nowledge {G}raph {E}mbeddings},
-  url       = {http://ceur-ws.org/Vol-2635/paper8.pdf},
-  volume    = {2635},
-  year      = {2020}
+  biburl    = {https://dblp.org/rec/conf/aaai/NayyeriVA021.bib},
+  booktitle = {Thirty-Fifth AAAI Conference on Artificial Intelligence, AAAI
+2021, Thirty-Third Conference on Innovative Applications of Artificial
+Intelligence, IAAI 2021, The Eleventh Symposium on Educational Advances
+in Artificial Intelligence, EAAI 2021, Virtual Event, February 2-9,
+2021},
+  keywords  = {71-4882 sda-pub},
+  pages     = {9064--9072},
+  publisher = {AAAI Press},
+  timestamp = {Sat, 05 Jun 2021 01:00:00 +0200},
+  title     = {5\ast  {K}nowledge {G}raph {E}mbeddings with {P}rojective {T}ransformations},
+  url       = {https://ojs.aaai.org/index.php/AAAI/article/view/17095},
+  year      = {2021}
 }
 
-@inproceedings{DBLP:conf/icacie/BanerjeeS19,
-  author    = {Debayan Banerjee and
-Jagannath Singh},
+@inproceedings{DBLP:conf/aime/GuluzadeKM21,
+  author    = {Aynur Guluzade and
+Endri Kacupaj and
+Maria Maleshkova},
   bibsource = {dblp computer science bibliography, https://dblp.org},
-  biburl    = {https://dblp.org/rec/conf/icacie/BanerjeeS19.bib},
-  booktitle = {Progress in Advanced Computing and Intelligent Engineering - Proceedings
-of ICACIE 2019, Volume 2},
-  doi       = {10.1007/978-981-15-6353-9\_2},
-  keywords  = {213-7475 sda-pub},
-  pages     = {12--24},
+  biburl    = {https://dblp.org/rec/conf/aime/GuluzadeKM21.bib},
+  booktitle = {Artificial Intelligence in Medicine - 19th International Conference
+on Artificial Intelligence in Medicine, AIME 2021, Virtual Event,
+June 15-18, 2021, Proceedings},
+  doi       = {10.1007/978-3-030-77211-6\_48},
+  keywords  = {56-7514 sda-pub},
+  pages     = {408--417},
   publisher = {Springer},
-  series    = {Advances in Intelligent Systems and Computing},
-  timestamp = {Wed, 27 Jan 2021 16:02:38 +0100},
-  title     = {{P}rediction of {S}troke {R}isk {F}actors for {B}etter {P}re-emptive {H}ealthcare:
-{A} Public-{S}urvey-{B}ased {A}pproach},
-  url       = {https://doi.org/10.1007/978-981-15-6353-9\_2},
-  volume    = {1199},
-  year      = {2019}
+  series    = {Lecture Notes in Computer Science},
+  timestamp = {Tue, 15 Jun 2021 01:00:00 +0200},
+  title     = {{D}emographic {A}ware {P}robabilistic {M}edical {K}nowledge {G}raph {E}mbeddings
+of {E}lectronic {M}edical {R}ecords},
+  url       = {https://doi.org/10.1007/978-3-030-77211-6\_48},
+  volume    = {12721},
+  year      = {2021}
 }
 
-@inproceedings{DBLP:conf/iiwas/KhiatEFKBN20,
-  author    = {Abderrahmane Khiat and
-Mirette Elias and
-Ann Christina Foldenauer and
-Michaela K{\"o}hm and
-Irina Blumenstein and
-Giulio Napolitano},
+@inproceedings{DBLP:conf/aistats/0001FI21,
+  author    = {Kai Br{\"u}gge and
+Asja Fischer and
+Christian Igel},
   bibsource = {dblp computer science bibliography, https://dblp.org},
-  biburl    = {https://dblp.org/rec/conf/iiwas/KhiatEFKBN20.bib},
-  booktitle = {iiWAS \textquotesingle 20: The 22nd International Conference on Information Integration
-and Web-based Applications \& Services, Virtual Event / Chiang Mai,
-Thailand, November 30 - December 2, 2020},
-  doi       = {10.1145/3428757.3429110},
-  keywords  = {153-5784},
-  pages     = {216--222},
-  publisher = {ACM},
-  timestamp = {Fri, 12 Feb 2021 10:47:32 +0100},
-  title     = {{T}owards an {O}ntology {R}epresenting {C}haracteristics of {I}nflammatory {B}owel
-{D}isease},
-  url       = {https://doi.org/10.1145/3428757.3429110},
+  biburl    = {https://dblp.org/rec/conf/aistats/0001FI21.bib},
+  booktitle = {The 24th International Conference on Artificial Intelligence and Statistics,
+AISTATS 2021, April 13-15, 2021, Virtual Event},
+  keywords  = {76-8485},
+  pages     = {469--477},
+  publisher = {PMLR},
+  series    = {Proceedings of Machine Learning Research},
+  timestamp = {Wed, 14 Apr 2021 16:51:37 +0200},
+  title     = {{O}n the convergence of the {M}etropolis algorithm with fixed-order updates
+for multivariate binary probability distributions},
+  url       = {http://proceedings.mlr.press/v130/brugge21a.html},
+  volume    = {130},
+  year      = {2021}
+}
+
+@inproceedings{DBLP:conf/aistats/LaszkiewiczLF21,
+  author    = {Mike Laszkiewicz and
+Johannes Lederer and
+Asja Fischer},
+  bibsource = {dblp computer science bibliography, https://dblp.org},
+  biburl    = {https://dblp.org/rec/conf/aistats/LaszkiewiczLF21.bib},
+  booktitle = {The 24th International Conference on Artificial Intelligence and Statistics,
+AISTATS 2021, April 13-15, 2021, Virtual Event},
+  keywords  = {76-8485},
+  pages     = {1864--1872},
+  publisher = {PMLR},
+  series    = {Proceedings of Machine Learning Research},
+  timestamp = {Wed, 14 Apr 2021 01:00:00 +0200},
+  title     = {{T}hresholded {A}daptive {V}alidation: {T}uning the {G}raphical {L}asso for {G}raph
+{R}ecovery},
+  url       = {http://proceedings.mlr.press/v130/laszkiewicz21a.html},
+  volume    = {130},
+  year      = {2021}
+}
+
+@inproceedings{DBLP:conf/eacl/KacupajPSTLM21,
+  author    = {Endri Kacupaj and
+Joan Plepi and
+Kuldeep Singh and
+Harsh Thakkar and
+Jens Lehmann and
+Maria Maleshkova},
+  bibsource = {dblp computer science bibliography, https://dblp.org},
+  biburl    = {https://dblp.org/rec/conf/eacl/KacupajPSTLM21.bib},
+  booktitle = {Proceedings of the 16th Conference of the European Chapter of the
+Association for Computational Linguistics: Main Volume, EACL 2021,
+Online, April 19 - 23, 2021},
+  keywords  = {43-11366 sda-pub},
+  pages     = {850--862},
+  publisher = {Association for Computational Linguistics},
+  timestamp = {Fri, 23 Apr 2021 17:25:49 +0200},
+  title     = {{C}onversational {Q}uestion {A}nswering over {K}nowledge {G}raphs with {T}ransformer
+and {G}raph {A}ttention {N}etworks},
+  url       = {https://www.aclweb.org/anthology/2021.eacl-main.72/},
+  year      = {2021}
+}
+
+@inproceedings{DBLP:conf/eacl/RaviSMSHL21,
+  author    = {Manoj Prabhakar Kannan Ravi and
+Kuldeep Singh and
+Isaiah Onando Mulang and
+Saeedeh Shekarpour and
+Johannes Hoffart and
+Jens Lehmann},
+  bibsource = {dblp computer science bibliography, https://dblp.org},
+  biburl    = {https://dblp.org/rec/conf/eacl/RaviSMSHL21.bib},
+  booktitle = {Proceedings of the 16th Conference of the European Chapter of the
+Association for Computational Linguistics: Main Volume, EACL 2021,
+Online, April 19 - 23, 2021},
+  keywords  = {210-4225 sda-pub},
+  pages     = {504--514},
+  publisher = {Association for Computational Linguistics},
+  timestamp = {Fri, 23 Apr 2021 17:25:49 +0200},
+  title     = {C{H}OL{A}N: {A} Modular {A}pproach for {N}eural {E}ntity {L}inking on {W}ikipedia
+and {W}ikidata},
+  url       = {https://www.aclweb.org/anthology/2021.eacl-main.40/},
+  year      = {2021}
+}
+
+@inproceedings{DBLP:conf/ecir/NayyeriVSAYL21,
+  author    = {Mojtaba Nayyeri and
+Sahar Vahdati and
+Emanuel Sallinger and
+Mirza Mohtashim Alam and
+Hamed Shariat Yazdi and
+Jens Lehmann},
+  bibsource = {dblp computer science bibliography, https://dblp.org},
+  biburl    = {https://dblp.org/rec/conf/ecir/NayyeriVSAYL21.bib},
+  booktitle = {Advances in Information Retrieval - 43rd European Conference on IR
+Research, ECIR 2021, Virtual Event, March 28 - April 1, 2021, Proceedings,
+Part I},
+  doi       = {10.1007/978-3-030-72113-8\_32},
+  keywords  = {03-6770},
+  pages     = {483--496},
+  publisher = {Springer},
+  series    = {Lecture Notes in Computer Science},
+  timestamp = {Tue, 30 Mar 2021 18:55:01 +0200},
+  title     = {{P}attern-{A}ware and {N}oise-{R}esilient {E}mbedding {M}odels},
+  url       = {https://doi.org/10.1007/978-3-030-72113-8\_32},
+  volume    = {12656},
+  year      = {2021}
+}
+
+@inproceedings{DBLP:conf/esws/ChaudhuriR021,
+  author    = {Debanjan Chaudhuri and
+Md. Rashad Al Hasan Rony and
+Jens Lehmann},
+  bibsource = {dblp computer science bibliography, https://dblp.org},
+  biburl    = {https://dblp.org/rec/conf/esws/ChaudhuriR021.bib},
+  booktitle = {The Semantic Web - 18th International Conference, ESWC 2021, Virtual
+Event, June 6-10, 2021, Proceedings},
+  doi       = {10.1007/978-3-030-77385-4\_19},
+  keywords  = {213-7337 sda-pub},
+  pages     = {323--339},
+  publisher = {Springer},
+  series    = {Lecture Notes in Computer Science},
+  timestamp = {Tue, 22 Jun 2021 14:39:38 +0200},
+  title     = {{G}rounding {D}ialogue {S}ystems via {K}nowledge {G}raph {A}ware {D}ecoding with
+{P}re-trained {T}ransformers},
+  url       = {https://doi.org/10.1007/978-3-030-77385-4\_19},
+  volume    = {12731},
+  year      = {2021}
+}
+
+@inproceedings{DBLP:conf/esws/HalilajDLR21,
+  author    = {Lavdim Halilaj and
+Ishan Dindorkar and
+J{\"u}rgen L{\"u}ttin and
+Susanne Rothermel},
+  bibsource = {dblp computer science bibliography, https://dblp.org},
+  biburl    = {https://dblp.org/rec/conf/esws/HalilajDLR21.bib},
+  booktitle = {The Semantic Web - 18th International Conference, ESWC 2021, Virtual
+Event, June 6-10, 2021, Proceedings},
+  doi       = {10.1007/978-3-030-77385-4\_42},
+  keywords  = {172-1478},
+  pages     = {699--716},
+  publisher = {Springer},
+  series    = {Lecture Notes in Computer Science},
+  timestamp = {Tue, 22 Jun 2021 01:00:00 +0200},
+  title     = {{A} Knowledge {G}raph-{B}ased {A}pproach for {S}ituation {C}omprehension in {D}riving
+{S}cenarios},
+  url       = {https://doi.org/10.1007/978-3-030-77385-4\_42},
+  volume    = {12731},
+  year      = {2021}
+}
+
+@inproceedings{DBLP:conf/esws/KacupajB0L21,
+  author    = {Endri Kacupaj and
+Barshana Banerjee and
+Kuldeep Singh and
+Jens Lehmann},
+  bibsource = {dblp computer science bibliography, https://dblp.org},
+  biburl    = {https://dblp.org/rec/conf/esws/KacupajB0L21.bib},
+  booktitle = {The Semantic Web - 18th International Conference, ESWC 2021, Virtual
+Event, June 6-10, 2021, Proceedings},
+  doi       = {10.1007/978-3-030-77385-4\_36},
+  keywords  = {71-4882 sda-pub},
+  pages     = {598--613},
+  publisher = {Springer},
+  series    = {Lecture Notes in Computer Science},
+  timestamp = {Tue, 22 Jun 2021 01:00:00 +0200},
+  title     = {{P}ara{Q}A: {A} Question {A}nswering {D}ataset with {P}araphrase {R}esponses for
+{S}ingle-{T}urn {C}onversation},
+  url       = {https://doi.org/10.1007/978-3-030-77385-4\_36},
+  volume    = {12731},
+  year      = {2021}
+}
+
+@inproceedings{DBLP:conf/esws/PlepiK0T021,
+  author    = {Joan Plepi and
+Endri Kacupaj and
+Kuldeep Singh and
+Harsh Thakkar and
+Jens Lehmann},
+  bibsource = {dblp computer science bibliography, https://dblp.org},
+  biburl    = {https://dblp.org/rec/conf/esws/PlepiK0T021.bib},
+  booktitle = {The Semantic Web - 18th International Conference, ESWC 2021, Virtual
+Event, June 6-10, 2021, Proceedings},
+  doi       = {10.1007/978-3-030-77385-4\_21},
+  keywords  = {43-11366 sda-pub},
+  pages     = {356--371},
+  publisher = {Springer},
+  series    = {Lecture Notes in Computer Science},
+  timestamp = {Tue, 22 Jun 2021 14:39:38 +0200},
+  title     = {{C}ontext {T}ransformer with {S}tacked {P}ointer {N}etworks for {C}onversational
+{Q}uestion {A}nswering over {K}nowledge {G}raphs},
+  url       = {https://doi.org/10.1007/978-3-030-77385-4\_21},
+  volume    = {12731},
+  year      = {2021}
+}
+
+@inproceedings{DBLP:conf/esws/WernerRHL21,
+  author    = {Simon Werner and
+Achim Rettinger and
+Lavdim Halilaj and
+J{\"u}rgen L{\"u}ttin},
+  bibsource = {dblp computer science bibliography, https://dblp.org},
+  biburl    = {https://dblp.org/rec/conf/esws/WernerRHL21.bib},
+  booktitle = {The Semantic Web - 18th International Conference, ESWC 2021, Virtual
+Event, June 6-10, 2021, Proceedings},
+  doi       = {10.1007/978-3-030-77385-4\_25},
+  keywords  = {172-1478},
+  pages     = {425--440},
+  publisher = {Springer},
+  series    = {Lecture Notes in Computer Science},
+  timestamp = {Tue, 22 Jun 2021 14:39:38 +0200},
+  title     = {R{E}TR{A}: {R}ecurrent {T}ransformers for {L}earning {T}emporally {C}ontextualized
+{K}nowledge {G}raph {E}mbeddings},
+  url       = {https://doi.org/10.1007/978-3-030-77385-4\_25},
+  volume    = {12731},
+  year      = {2021}
+}
+
+@inproceedings{DBLP:conf/iclr/TrimmelPS21,
+  author    = {Martin Trimmel and
+Henning Petzka and
+Cristian Sminchisescu},
+  bibsource = {dblp computer science bibliography, https://dblp.org},
+  biburl    = {https://dblp.org/rec/conf/iclr/TrimmelPS21.bib},
+  booktitle = {9th International Conference on Learning Representations, ICLR 2021,
+Virtual Event, Austria, May 3-7, 2021},
+  keywords  = {206-6748},
+  publisher = {OpenReview.net},
+  timestamp = {Wed, 23 Jun 2021 17:36:39 +0200},
+  title     = {{T}rop{E}x: {A}n {A}lgorithm for {E}xtracting {L}inear {T}erms in {D}eep {N}eural {N}etworks},
+  url       = {https://openreview.net/forum?id=IqtonxWI0V3},
+  year      = {2021}
+}
+
+@inproceedings{DBLP:conf/icsoc/RimazHEM20,
+  author    = {Mohammad Hossein Rimaz and
+Reza Hosseini and
+Mehdi Elahi and
+Farshad Bakhshandegan Moghaddam},
+  bibsource = {dblp computer science bibliography, https://dblp.org},
+  biburl    = {https://dblp.org/rec/conf/icsoc/RimazHEM20.bib},
+  booktitle = {Service-Oriented Computing - ICSOC 2020 Workshops - AIOps, CFTIC,
+STRAPS, AI-PA, AI-IOTS, and Satellite Events, Dubai, United Arab Emirates,
+December 14-17, 2020, Proceedings},
+  doi       = {10.1007/978-3-030-76352-7\_35},
+  keywords  = {128-4609 sda-pub},
+  pages     = {365--378},
+  publisher = {Springer},
+  series    = {Lecture Notes in Computer Science},
+  timestamp = {Tue, 15 Jun 2021 01:00:00 +0200},
+  title     = {{A}udio{L}ens: {A}udio-{A}ware {V}ideo {R}ecommendation for {M}itigating {N}ew {I}tem
+{P}roblem},
+  url       = {https://doi.org/10.1007/978-3-030-76352-7\_35},
+  volume    = {12632},
   year      = {2020}
+}
+
+@inproceedings{DBLP:conf/icwe/Jaradeh0SBA21,
+  author    = {Mohamad Yaser Jaradeh and
+Kuldeep Singh and
+Markus Stocker and
+Andreas Both and
+S{\"o}ren Auer},
+  bibsource = {dblp computer science bibliography, https://dblp.org},
+  biburl    = {https://dblp.org/rec/conf/icwe/Jaradeh0SBA21.bib},
+  booktitle = {Web Engineering - 21st International Conference, ICWE 2021, Biarritz,
+France, May 18-21, 2021, Proceedings},
+  doi       = {10.1007/978-3-030-74296-6\_19},
+  keywords  = {81-4530-1},
+  pages     = {240--254},
+  publisher = {Springer},
+  series    = {Lecture Notes in Computer Science},
+  timestamp = {Tue, 15 Jun 2021 01:00:00 +0200},
+  title     = {{B}etter {C}all the {P}lumber: {O}rchestrating {D}ynamic {I}nformation {E}xtraction
+{P}ipelines},
+  url       = {https://doi.org/10.1007/978-3-030-74296-6\_19},
+  volume    = {12706},
+  year      = {2021}
+}
+
+@inproceedings{DBLP:conf/ida/EstevesMCF021,
+  author    = {Diego Esteves and
+Jos{\'e} Marcelino and
+Piyush Chawla and
+Asja Fischer and
+Jens Lehmann},
+  bibsource = {dblp computer science bibliography, https://dblp.org},
+  biburl    = {https://dblp.org/rec/conf/ida/EstevesMCF021.bib},
+  booktitle = {Advances in Intelligent Data Analysis XIX - 19th International Symposium
+on Intelligent Data Analysis, IDA 2021, Porto, Portugal, April 26-28,
+2021, Proceedings},
+  doi       = {10.1007/978-3-030-74251-5\_8},
+  keywords  = {76-8485},
+  pages     = {89--100},
+  publisher = {Springer},
+  series    = {Lecture Notes in Computer Science},
+  timestamp = {Wed, 14 Apr 2021 14:05:44 +0200},
+  title     = {H{O}RU{S}-N{E}R: {A} Multimodal {N}amed {E}ntity {R}ecognition {F}ramework for
+{N}oisy {D}ata},
+  url       = {https://doi.org/10.1007/978-3-030-74251-5\_8},
+  volume    = {12695},
+  year      = {2021}
+}
+
+@inproceedings{DBLP:conf/iticse/GrauxJJS21,
+  author    = {Damien Graux and
+Valentina Janev and
+Hajira Jabeen and
+Emanuel Sallinger},
+  bibsource = {dblp computer science bibliography, https://dblp.org},
+  biburl    = {https://dblp.org/rec/conf/iticse/GrauxJJS21.bib},
+  booktitle = {ITiCSE 2021: 26th ACM Conference on Innovation and Technology in
+Computer Science Education, Virtual Event, Germany, June 26 - July
+1, 2021},
+  doi       = {10.1145/3430665.3456325},
+  keywords  = {169-2697},
+  pages     = {491--497},
+  publisher = {ACM},
+  timestamp = {Mon, 21 Jun 2021 14:35:40 +0200},
+  title     = {{D}eploying a {S}trategy to {U}nlock {B}ig {D}ata {R}esearch and {T}eaching {A}ctivities
+in the {W}est {B}alkan {R}egion},
+  url       = {https://doi.org/10.1145/3430665.3456325},
+  year      = {2021}
+}
+
+@inproceedings{DBLP:conf/iticse/GrauxJJS21a,
+  author    = {Damien Graux and
+Valentina Janev and
+Hajira Jabeen and
+Emanuel Sallinger},
+  bibsource = {dblp computer science bibliography, https://dblp.org},
+  biburl    = {https://dblp.org/rec/conf/iticse/GrauxJJS21a.bib},
+  booktitle = {ITiCSE 2021: 26th ACM Conference on Innovation and Technology in
+Computer Science Education, Virtual Event, Germany, June 26 - July
+1, 2021 - Working Group Reports},
+  doi       = {10.1145/3456565.3460026},
+  keywords  = {169-2697},
+  pages     = {617--618},
+  publisher = {ACM},
+  timestamp = {Mon, 21 Jun 2021 14:29:32 +0200},
+  title     = {{A} Big {D}ata {L}earning {P}latform for the {W}est {B}alkans and {B}eyond},
+  url       = {https://doi.org/10.1145/3456565.3460026},
+  year      = {2021}
+}
+
+@inproceedings{DBLP:conf/lak/TavakoliEKA21,
+  author    = {MohammadReza Tavakoli and
+Mirette Elias and
+G{\'a}bor Kismih{\'o}k and
+S{\"o}ren Auer},
+  bibsource = {dblp computer science bibliography, https://dblp.org},
+  biburl    = {https://dblp.org/rec/conf/lak/TavakoliEKA21.bib},
+  booktitle = {LAK\textquotesingle 21: 11th International Learning Analytics and Knowledge Conference,
+Irvine, CA, USA, April 12-16, 2021},
+  doi       = {10.1145/3448139.3448208},
+  keywords  = {185-3581 sda-pub},
+  pages     = {626--631},
+  publisher = {ACM},
+  timestamp = {Mon, 12 Apr 2021 08:35:30 +0200},
+  title     = {{M}etadata {A}nalysis of {O}pen {E}ducational {R}esources},
+  url       = {https://doi.org/10.1145/3448139.3448208},
+  year      = {2021}
+}
+
+@inproceedings{DBLP:conf/naacl/XuCNL21,
+  author    = {Chengjin Xu and
+Yung-Yu Chen and
+Mojtaba Nayyeri and
+Jens Lehmann},
+  bibsource = {dblp computer science bibliography, https://dblp.org},
+  biburl    = {https://dblp.org/rec/conf/naacl/XuCNL21.bib},
+  booktitle = {Proceedings of the 2021 Conference of the North American Chapter of
+the Association for Computational Linguistics: Human Language Technologies,
+NAACL-HLT 2021, Online, June 6-11, 2021},
+  keywords  = {247-6268 sda-pub},
+  pages     = {2569--2578},
+  publisher = {Association for Computational Linguistics},
+  timestamp = {Fri, 04 Jun 2021 19:47:03 +0200},
+  title     = {{T}emporal {K}nowledge {G}raph {C}ompletion using a {L}inear {T}emporal {R}egularizer
+and {M}ultivector {E}mbeddings},
+  url       = {https://www.aclweb.org/anthology/2021.naacl-main.202/},
+  year      = {2021}
+}
+
+@inproceedings{DBLP:conf/pakdd/NayyeriXYVAY021,
+  author    = {Mojtaba Nayyeri and
+Chengjin Xu and
+Yadollah Yaghoobzadeh and
+Sahar Vahdati and
+Mirza Mohtashim Alam and
+Hamed Shariat Yazdi and
+Jens Lehmann},
+  bibsource = {dblp computer science bibliography, https://dblp.org},
+  biburl    = {https://dblp.org/rec/conf/pakdd/NayyeriXYVAY021.bib},
+  booktitle = {Advances in Knowledge Discovery and Data Mining - 25th Pacific-Asia
+Conference, PAKDD 2021, Virtual Event, May 11-14, 2021, Proceedings,
+Part III},
+  doi       = {10.1007/978-3-030-75768-7\_7},
+  keywords  = {247-6268 sda-pub},
+  pages     = {77--89},
+  publisher = {Springer},
+  series    = {Lecture Notes in Computer Science},
+  timestamp = {Fri, 14 May 2021 15:17:47 +0200},
+  title     = {{L}oss-{A}ware {P}attern {I}nference: {A} Correction on the {W}rongly {C}laimed
+{L}imitations of {E}mbedding {M}odels},
+  url       = {https://doi.org/10.1007/978-3-030-75768-7\_7},
+  volume    = {12714},
+  year      = {2021}
+}
+
+@inproceedings{DBLP:conf/sac/HalilajLRAD21,
+  author    = {Lavdim Halilaj and
+J{\"u}rgen L{\"u}ttin and
+Susanne Rothermel and
+Santhosh Kumar Arumugam and
+Ishan Dindorkar},
+  bibsource = {dblp computer science bibliography, https://dblp.org},
+  biburl    = {https://dblp.org/rec/conf/sac/HalilajLRAD21.bib},
+  booktitle = {SAC \textquotesingle 21: The 36th ACM/SIGAPP Symposium on Applied Computing, Virtual
+Event, Republic of Korea, March 22-26, 2021},
+  doi       = {10.1145/3412841.3442056},
+  keywords  = {172-1478},
+  pages     = {1846--1854},
+  publisher = {ACM},
+  timestamp = {Mon, 03 May 2021 14:34:56 +0200},
+  title     = {{T}owards a knowledge graph-based approach for context-aware points-of-interest
+recommendations},
+  url       = {https://doi.org/10.1145/3412841.3442056},
+  year      = {2021}
+}
+
+@inproceedings{DBLP:conf/semco/AthreyaBNU21,
+  author    = {Ram G. Athreya and
+Srividya Bansal and
+Axel-Cyrille Ngonga Ngomo and
+Ricardo Usbeck},
+  bibsource = {dblp computer science bibliography, https://dblp.org},
+  biburl    = {https://dblp.org/rec/conf/semco/AthreyaBNU21.bib},
+  booktitle = {15th IEEE International Conference on Semantic Computing, ICSC
+2021, Laguna Hills, CA, USA, January 27-29, 2021},
+  doi       = {10.1109/ICSC50631.2021.00041},
+  keywords  = {65-9656 sda-pub},
+  pages     = {195--198},
+  publisher = {IEEE},
+  timestamp = {Wed, 10 Mar 2021 15:03:04 +0100},
+  title     = {{T}emplate-based {Q}uestion {A}nswering using {R}ecursive {N}eural {N}etworks},
+  url       = {https://doi.org/10.1109/ICSC50631.2021.00041},
+  year      = {2021}
+}
+
+@inproceedings{DBLP:conf/semco/DraschnerLJ21,
+  author    = {Carsten Felix Draschner and
+Jens Lehmann and
+Hajira Jabeen},
+  bibsource = {dblp computer science bibliography, https://dblp.org},
+  biburl    = {https://dblp.org/rec/conf/semco/DraschnerLJ21.bib},
+  booktitle = {15th IEEE International Conference on Semantic Computing, ICSC
+2021, Laguna Hills, CA, USA, January 27-29, 2021},
+  doi       = {10.1109/ICSC50631.2021.00062},
+  keywords  = {93-7184},
+  pages     = {333--336},
+  publisher = {IEEE},
+  timestamp = {Wed, 10 Mar 2021 15:03:04 +0100},
+  title     = {{D}ist{S}im - {S}calable {D}istributed in-{M}emory {S}emantic {S}imilarity {E}stimation
+for {R}DF {K}nowledge {G}raphs},
+  url       = {https://doi.org/10.1109/ICSC50631.2021.00062},
+  year      = {2021}
+}
+
+@inproceedings{DBLP:conf/semco/OrlandiGO21,
+  author    = {Fabrizio Orlandi and
+Damien Graux and
+Declan O\textquotesingle Sullivan},
+  bibsource = {dblp computer science bibliography, https://dblp.org},
+  biburl    = {https://dblp.org/rec/conf/semco/OrlandiGO21.bib},
+  booktitle = {15th IEEE International Conference on Semantic Computing, ICSC
+2021, Laguna Hills, CA, USA, January 27-29, 2021},
+  doi       = {10.1109/ICSC50631.2021.00049},
+  keywords  = {169-2697},
+  pages     = {233--240},
+  publisher = {IEEE},
+  timestamp = {Wed, 10 Mar 2021 15:03:04 +0100},
+  title     = {{B}enchmarking {R}DF {M}etadata {R}epresentations: {R}eification, {S}ingleton
+{P}roperty and {R}DF},
+  url       = {https://doi.org/10.1109/ICSC50631.2021.00049},
+  year      = {2021}
 }
 
 @inproceedings{DBLP:conf/semweb/CollaranaGLSAV18,
@@ -29482,278 +30225,272 @@ Monterey, CA, USA, October 8-12, 2018, Proceedings, Part II},
   year      = {2018}
 }
 
-@inproceedings{DBLP:conf/semweb/GeorgalaSN20,
-  author    = {Kleanthi Georgala and
-Mohamed Ahmed Sherif and
-Axel-Cyrille Ngonga Ngomo},
+@inproceedings{DBLP:conf/semweb/DubeyBA019,
+  author    = {Mohnish Dubey and
+Debayan Banerjee and
+Abdelrahman Abdelkawi and
+Jens Lehmann},
   bibsource = {dblp computer science bibliography, https://dblp.org},
-  biburl    = {https://dblp.org/rec/conf/semweb/GeorgalaSN20.bib},
-  booktitle = {Proceedings of the 15th International Workshop on Ontology Matching
-co-located with the 19th International Semantic Web Conference (ISWC
-2020), Virtual conference (originally planned to be in Athens, Greece),
-November 2, 2020},
-  keywords  = {145-1160},
-  pages     = {87--91},
-  publisher = {CEUR-WS.org},
-  series    = {CEUR Workshop Proceedings},
-  timestamp = {Wed, 27 Jan 2021 00:00:00 +0100},
-  title     = {L{I}GE{R} - link discovery with partial recall},
-  url       = {http://ceur-ws.org/Vol-2788/om2020\_STpaper4.pdf},
-  volume    = {2788},
-  year      = {2020}
-}
-
-@inproceedings{DBLP:conf/semweb/GeorgalaSRN20,
-  author    = {Kleanthi Georgala and
-Mohamed Ahmed Sherif and
-Michael R{\"o}der and
-Axel-Cyrille Ngonga Ngomo},
-  bibsource = {dblp computer science bibliography, https://dblp.org},
-  biburl    = {https://dblp.org/rec/conf/semweb/GeorgalaSRN20.bib},
-  booktitle = {Proceedings of the 15th International Workshop on Ontology Matching
-co-located with the 19th International Semantic Web Conference (ISWC
-2020), Virtual conference (originally planned to be in Athens, Greece),
-November 2, 2020},
-  keywords  = {145-1160},
-  pages     = {36--47},
-  publisher = {CEUR-WS.org},
-  series    = {CEUR Workshop Proceedings},
-  timestamp = {Wed, 27 Jan 2021 16:31:51 +0100},
-  title     = {{A}pplying edge-counting semantic similarities to link discovery: scalability
-and accuracy},
-  url       = {http://ceur-ws.org/Vol-2788/om2020\_LTpaper4.pdf},
-  volume    = {2788},
-  year      = {2020}
-}
-
-@inproceedings{DBLP:conf/semweb/PanditGOJO020,
-  author    = {Harshvardhan J. Pandit and
-Damien Graux and
-Fabrizio Orlandi and
-Ademar Crotti Junior and
-Declan O\textquotesingle Sullivan and
-Dave Lewis},
-  bibsource = {dblp computer science bibliography, https://dblp.org},
-  biburl    = {https://dblp.org/rec/conf/semweb/PanditGOJO020.bib},
-  booktitle = {Proceedings of the 15th International Workshop on Ontology Matching
-co-located with the 19th International Semantic Web Conference (ISWC
-2020), Virtual conference (originally planned to be in Athens, Greece),
-November 2, 2020},
-  keywords  = {169-2697},
-  pages     = {13--23},
-  publisher = {CEUR-WS.org},
-  series    = {CEUR Workshop Proceedings},
-  timestamp = {Wed, 27 Jan 2021 16:31:51 +0100},
-  title     = {{S}emantic schema mapping for interoperable data-exchange},
-  url       = {http://ceur-ws.org/Vol-2788/om2020\_LTpaper2.pdf},
-  volume    = {2788},
-  year      = {2020}
-}
-
-@inproceedings{DBLP:conf/semweb/PourAAFFHHJJKKL20,
-  author    = {Mina Abd Nikooie Pour and
-Alsayed Algergawy and
-Reihaneh Amini and
-Daniel Faria and
-Irini Fundulaki and
-Ian Harrow and
-Sven Hertling and
-Ernesto Jim{\'e}nez-Ruiz and
-Cl{\'e}ment Jonquet and
-Naouel Karam and
-Abderrahmane Khiat and
-Amir Laadhar and
-Patrick Lambrix and
-Huanyu Li and
-Ying Li and
-Pascal Hitzler and
-Heiko Paulheim and
-Catia Pesquita and
-Tzanina Saveta and
-Pavel Shvaiko and
-Andrea Splendiani and
-{\'E}lodie Thi{\'e}blin and
-C{\'a}ssia Trojahn and
-Jana Vatascinov{\'a} and
-Beyza Yaman and
-Ondrej Zamazal and
-Lu Zhou},
-  bibsource = {dblp computer science bibliography, https://dblp.org},
-  biburl    = {https://dblp.org/rec/conf/semweb/PourAAFFHHJJKKL20.bib},
-  booktitle = {Proceedings of the 15th International Workshop on Ontology Matching
-co-located with the 19th International Semantic Web Conference (ISWC
-2020), Virtual conference (originally planned to be in Athens, Greece),
-November 2, 2020},
-  keywords  = {153-5784},
-  pages     = {92--138},
-  publisher = {CEUR-WS.org},
-  series    = {CEUR Workshop Proceedings},
-  timestamp = {Thu, 28 Jan 2021 00:00:00 +0100},
-  title     = {{R}esults of the {O}ntology {A}lignment {E}valuation {I}nitiative 2020},
-  url       = {http://ceur-ws.org/Vol-2788/oaei20\_paper0.pdf},
-  volume    = {2788},
-  year      = {2020}
-}
-
-@inproceedings{DBLP:conf/semweb/SherifDN20,
-  author    = {Mohamed Ahmed Sherif and
-Kevin Dre{\ss}ler and
-Axel-Cyrille Ngonga Ngomo},
-  bibsource = {dblp computer science bibliography, https://dblp.org},
-  biburl    = {https://dblp.org/rec/conf/semweb/SherifDN20.bib},
-  booktitle = {Proceedings of the 15th International Workshop on Ontology Matching
-co-located with the 19th International Semantic Web Conference (ISWC
-2020), Virtual conference (originally planned to be in Athens, Greece),
-November 2, 2020},
-  keywords  = {145-1160},
-  pages     = {48--59},
-  publisher = {CEUR-WS.org},
-  series    = {CEUR Workshop Proceedings},
-  timestamp = {Wed, 27 Jan 2021 00:00:00 +0100},
-  title     = {L{I}GO{N} - link discovery with noisy oracles},
-  url       = {http://ceur-ws.org/Vol-2788/om2020\_LTpaper5.pdf},
-  volume    = {2788},
-  year      = {2020}
-}
-
-@article{DBLP:journals/access/Fazeli-Varzaneh21,
-  author    = {Mohsen Fazeli-Varzaneh and
-Ali Ghorbi and
-Marcel Ausloos and
-Emanuel Sallinger and
-Sahar Vahdati},
-  bibsource = {dblp computer science bibliography, https://dblp.org},
-  biburl    = {https://dblp.org/rec/journals/access/Fazeli-Varzaneh21.bib},
-  doi       = {10.1109/ACCESS.2021.3052918},
-  journal   = {IEEE Access},
-  keywords  = {151-0980},
-  pages     = {21192--21205},
-  timestamp = {Tue, 02 Mar 2021 00:00:00 +0100},
-  title     = {{S}leeping {B}eauties of {C}oronavirus {R}esearch},
-  url       = {https://doi.org/10.1109/ACCESS.2021.3052918},
-  volume    = {9},
-  year      = {2021}
-}
-
-@article{DBLP:journals/datasci/Gonzalez-Beltran19,
-  author    = {Alejandra N. Gonz{\'a}lez-Beltr{\'a}n and
-Francesco Osborne and
-Silvio Peroni and
-Sahar Vahdati},
-  bibsource = {dblp computer science bibliography, https://dblp.org},
-  biburl    = {https://dblp.org/rec/journals/datasci/Gonzalez-Beltran19.bib},
-  doi       = {10.3233/ds-190023},
-  journal   = {Data Sci.},
-  keywords  = {151-0980 sda-pub},
-  number    = {1-2},
-  pages     = {177--179},
-  timestamp = {Thu, 21 Jan 2021 00:00:00 +0100},
-  title     = {{E}ditorial: {S}pecial {I}ssue on {S}cholarly {D}ata {A}nalysis ({S}emantics, {A}nalytics,
-{V}isualisation)},
-  url       = {https://doi.org/10.3233/ds-190023},
-  volume    = {2},
+  biburl    = {https://dblp.org/rec/conf/semweb/DubeyBA019.bib},
+  booktitle = {The Semantic Web - ISWC 2019 - 18th International Semantic Web Conference,
+Auckland, New Zealand, October 26-30, 2019, Proceedings, Part II},
+  doi       = {10.1007/978-3-030-30796-7\_5},
+  keywords  = {213-7475 sda-pub},
+  pages     = {69--78},
+  publisher = {Springer},
+  series    = {Lecture Notes in Computer Science},
+  timestamp = {Fri, 09 Apr 2021 18:46:51 +0200},
+  title     = {L{C}-Qu{A}D 2.0: {A} Large {D}ataset for {C}omplex {Q}uestion {A}nswering over
+{W}ikidata and {D}Bpedia},
+  url       = {https://doi.org/10.1007/978-3-030-30796-7\_5},
+  volume    = {11779},
   year      = {2019}
 }
 
-@article{DBLP:journals/iotj/ChakrabortyLMLW21,
-  author    = {Nilesh Chakraborty and
-Jian-Qiang Li and
-Samrat Mondal and
-Chengwen Luo and
-Huihui Wang and
-Mamoun Alazab and
-Fei Chen and
-Yi Pan},
-  bibsource = {dblp computer science bibliography, https://dblp.org},
-  biburl    = {https://dblp.org/rec/journals/iotj/ChakrabortyLMLW21.bib},
-  doi       = {10.1109/JIOT.2020.3025274},
-  journal   = {IEEE Internet Things J.},
-  keywords  = {141-0902},
-  number    = {5},
-  pages     = {3255--3267},
-  timestamp = {Tue, 02 Mar 2021 00:00:00 +0100},
-  title     = {{O}n {D}esigning a {L}esser {O}btrusive {A}uthentication {P}rotocol to {P}revent
-{M}achine-{L}earning-{B}ased {T}hreats in {I}nternet of {T}hings},
-  url       = {https://doi.org/10.1109/JIOT.2020.3025274},
-  volume    = {8},
-  year      = {2021}
-}
-
-@article{DBLP:journals/isci/BarellaGSLC21,
-  author    = {Victor H. Barella and
-Lu{\'\i}s Paulo F. Garcia and
-Marcilio C. P. de Souto and
-Ana Carolina Lorena and
-Andr{\'e} C. P. L. F. de Carvalho},
-  bibsource = {dblp computer science bibliography, https://dblp.org},
-  biburl    = {https://dblp.org/rec/journals/isci/BarellaGSLC21.bib},
-  doi       = {10.1016/j.ins.2020.12.006},
-  journal   = {Inf. Sci.},
-  keywords  = {25-7075},
-  pages     = {83--109},
-  timestamp = {Wed, 20 Jan 2021 00:00:00 +0100},
-  title     = {{A}ssessing the data complexity of imbalanced datasets},
-  url       = {https://doi.org/10.1016/j.ins.2020.12.006},
-  volume    = {553},
-  year      = {2021}
-}
-
-@article{DBLP:journals/scientometrics/VahdatiFLBSSA21,
-  author    = {Sahar Vahdati and
-Said Fathalla and
-Christoph Lange and
-Andreas Behrend and
-Aysegul Say and
-Zeynep Say and
-S{\"o}ren Auer},
-  bibsource = {dblp computer science bibliography, https://dblp.org},
-  biburl    = {https://dblp.org/rec/journals/scientometrics/VahdatiFLBSSA21.bib},
-  doi       = {10.1007/s11192-020-03758-1},
-  journal   = {Scientometrics},
-  keywords  = {l-ChristophLange2},
-  number    = {1},
-  pages     = {641--682},
-  timestamp = {Tue, 26 Jan 2021 00:00:00 +0100},
-  title     = {{A} comprehensive quality assessment framework for scientific events},
-  url       = {https://doi.org/10.1007/s11192-020-03758-1},
-  volume    = {126},
-  year      = {2021}
-}
-
-@article{DBLP:journals/semweb/HoffnerML16,
-  author    = {Konrad H{\"o}ffner and
-Michael Martin and
+@inproceedings{DBLP:conf/semweb/TrivediMDL17,
+  author    = {Priyansh Trivedi and
+Gaurav Maheshwari and
+Mohnish Dubey and
 Jens Lehmann},
   bibsource = {dblp computer science bibliography, https://dblp.org},
-  biburl    = {https://dblp.org/rec/journals/semweb/HoffnerML16.bib},
-  doi       = {10.3233/SW-150172},
-  journal   = {Semantic Web},
+  biburl    = {https://dblp.org/rec/conf/semweb/TrivediMDL17.bib},
+  booktitle = {The Semantic Web - ISWC 2017 - 16th International Semantic Web Conference,
+Vienna, Austria, October 21-25, 2017, Proceedings, Part II},
+  doi       = {10.1007/978-3-319-68204-4\_22},
   keywords  = {71-4882 sda-pub},
-  number    = {1},
-  pages     = {95--104},
-  timestamp = {Sat, 05 Sep 2020 01:00:00 +0200},
-  title     = {{L}inked{S}pending: {O}pen{S}pending becomes {L}inked {O}pen {D}ata},
-  url       = {https://doi.org/10.3233/SW-150172},
-  volume    = {7},
-  year      = {2016}
+  pages     = {210--218},
+  publisher = {Springer},
+  series    = {Lecture Notes in Computer Science},
+  timestamp = {Wed, 27 May 2020 01:00:00 +0200},
+  title     = {L{C}-Qu{A}D: {A} Corpus for {C}omplex {Q}uestion {A}nswering over {K}nowledge
+{G}raphs},
+  url       = {https://doi.org/10.1007/978-3-319-68204-4\_22},
+  volume    = {10588},
+  year      = {2017}
 }
 
-@article{DBLP:journals/vi/ChawlaHS20,
-  author    = {Piyush Chawla and
-Subhashis Hazarika and
-Han-Wei Shen},
+@inproceedings{DBLP:conf/um/ElahiMHRITTT21,
+  author    = {Mehdi Elahi and
+Farshad Bakhshandegan Moghaddam and
+Reza Hosseini and
+Mohammad Hossein Rimaz and
+Nabil El Ioini and
+Marko Tkalcic and
+Christoph Trattner and
+Tammam Tillo},
   bibsource = {dblp computer science bibliography, https://dblp.org},
-  biburl    = {https://dblp.org/rec/journals/vi/ChawlaHS20.bib},
-  doi       = {10.1016/j.visinf.2020.04.006},
-  journal   = {Vis. Informatics},
-  keywords  = {227-3228},
-  number    = {2},
-  pages     = {132--141},
-  timestamp = {Wed, 10 Jun 2020 01:00:00 +0200},
-  title     = {{T}oken-wise sentiment decomposition for {C}onv{N}et: {V}isualizing a sentiment
-classifier},
-  url       = {https://doi.org/10.1016/j.visinf.2020.04.006},
-  volume    = {4},
+  biburl    = {https://dblp.org/rec/conf/um/ElahiMHRITTT21.bib},
+  booktitle = {Adjunct Publication of the 29th ACM Conference on User Modeling,
+Adaptation and Personalization, UMAP 2021, Utrecht, The Netherlands,
+June 21-25, 2021},
+  doi       = {10.1145/3450614.3461687},
+  keywords  = {128-4609 sda-pub},
+  pages     = {54--60},
+  publisher = {ACM},
+  timestamp = {Thu, 24 Jun 2021 13:51:47 +0200},
+  title     = {{R}ecommending {V}ideos in {C}old {S}tart {W}ith {A}utomatic {V}isual {T}ags},
+  url       = {https://doi.org/10.1145/3450614.3461687},
+  year      = {2021}
+}
+
+@inproceedings{DBLP:conf/vehits/SchukraftRLH21,
+  author    = {Maximilian Schukraft and
+Susanne Rothermel and
+Juergen Luettin and
+Lavdim Halilaj},
+  bibsource = {dblp computer science bibliography, https://dblp.org},
+  biburl    = {https://dblp.org/rec/conf/vehits/SchukraftRLH21.bib},
+  booktitle = {Proceedings of the 7th International Conference on Vehicle Technology
+and Intelligent Transport Systems, VEHITS 2021, Online Streaming,
+April 28-30, 2021},
+  doi       = {10.5220/0010527807200730},
+  keywords  = {172-1478},
+  pages     = {720--730},
+  publisher = {SCITEPRESS},
+  timestamp = {Fri, 28 May 2021 17:22:35 +0200},
+  title     = {{T}owards a {R}ule-based {A}pproach for {E}stimating the {S}ituation {D}ifficulty
+in {D}riving {S}cenarios},
+  url       = {https://doi.org/10.5220/0010527807200730},
+  year      = {2021}
+}
+
+@inproceedings{DBLP:conf/webi/IbrahimF0J20,
+  author    = {Shimaa Ibrahim and
+Said Fathalla and
+Jens Lehmann and
+Hajira Jabeen},
+  bibsource = {dblp computer science bibliography, https://dblp.org},
+  biburl    = {https://dblp.org/rec/conf/webi/IbrahimF0J20.bib},
+  booktitle = {IEEE/WIC/ACM International Joint Conference on Web Intelligence
+and Intelligent Agent Technology, WI/IAT 2020, Melbourne, Australia,
+December 14-17, 2020},
+  doi       = {10.1109/WIIAT50758.2020.00020},
+  keywords  = {93-7184 sda-pub},
+  pages     = {113--120},
+  publisher = {IEEE},
+  timestamp = {Mon, 28 Jun 2021 11:58:10 +0200},
+  title     = {{M}ultilingual {O}ntology {M}erging {U}sing {C}ross-lingual {M}atching},
+  url       = {https://doi.org/10.1109/WIIAT50758.2020.00020},
   year      = {2020}
+}
+
+@inproceedings{DBLP:conf/webi/MohamedF0J20,
+  author    = {Heba Mohamed and
+Said Fathalla and
+Jens Lehmann and
+Hajira Jabeen},
+  bibsource = {dblp computer science bibliography, https://dblp.org},
+  biburl    = {https://dblp.org/rec/conf/webi/MohamedF0J20.bib},
+  booktitle = {IEEE/WIC/ACM International Joint Conference on Web Intelligence
+and Intelligent Agent Technology, WI/IAT 2020, Melbourne, Australia,
+December 14-17, 2020},
+  doi       = {10.1109/WIIAT50758.2020.00055},
+  keywords  = {93-7184 sda-pub},
+  pages     = {381--386},
+  publisher = {IEEE},
+  timestamp = {Mon, 28 Jun 2021 01:00:00 +0200},
+  title     = {O{W}LStats: {D}istributed {C}omputation of {O}WL {D}ataset {S}tatistics},
+  url       = {https://doi.org/10.1109/WIIAT50758.2020.00055},
+  year      = {2020}
+}
+
+@inproceedings{DBLP:conf/www/BastosN0MSHK21,
+  author    = {Anson Bastos and
+Abhishek Nadgeri and
+Kuldeep Singh and
+Isaiah Onando Mulang and
+Saeedeh Shekarpour and
+Johannes Hoffart and
+Manohar Kaul},
+  bibsource = {dblp computer science bibliography, https://dblp.org},
+  biburl    = {https://dblp.org/rec/conf/www/BastosN0MSHK21.bib},
+  booktitle = {WWW \textquotesingle 21: The Web Conference 2021, Virtual Event / Ljubljana, Slovenia,
+April 19-23, 2021},
+  doi       = {10.1145/3442381.3449917},
+  keywords  = {210-4225 sda-pub},
+  pages     = {1673--1685},
+  publisher = {ACM / IW3C2},
+  timestamp = {Mon, 07 Jun 2021 12:37:30 +0200},
+  title     = {R{E}CO{N}: {R}elation {E}xtraction using {K}nowledge {G}raph {C}ontext in a {G}raph
+{N}eural {N}etwork},
+  url       = {https://doi.org/10.1145/3442381.3449917},
+  year      = {2021}
+}
+
+@inproceedings{DBLP:conf/www/Grangel-Gonzalez21,
+  author    = {Irl{\'a}n Grangel-Gonz{\'a}lez and
+Maria-Esther Vidal},
+  bibsource = {dblp computer science bibliography, https://dblp.org},
+  biburl    = {https://dblp.org/rec/conf/www/Grangel-Gonzalez21.bib},
+  booktitle = {Companion of The Web Conference 2021, Virtual Event / Ljubljana, Slovenia,
+April 19-23, 2021},
+  doi       = {10.1145/3442442.3453542},
+  keywords  = {172-1459},
+  pages     = {16--25},
+  publisher = {ACM / IW3C2},
+  timestamp = {Mon, 07 Jun 2021 14:21:48 +0200},
+  title     = {{A}nalyzing a {K}nowledge {G}raph of {I}ndustry 4.0 {S}tandards},
+  url       = {https://doi.org/10.1145/3442442.3453542},
+  year      = {2021}
+}
+
+@inproceedings{DBLP:conf/www/Jaradeh0SA21,
+  author    = {Mohamad Yaser Jaradeh and
+Kuldeep Singh and
+Markus Stocker and
+S{\"o}ren Auer},
+  bibsource = {dblp computer science bibliography, https://dblp.org},
+  biburl    = {https://dblp.org/rec/conf/www/Jaradeh0SA21.bib},
+  booktitle = {Companion of The Web Conference 2021, Virtual Event / Ljubljana, Slovenia,
+April 19-23, 2021},
+  doi       = {10.1145/3442442.3458603},
+  keywords  = {81-4530-1},
+  pages     = {678--679},
+  publisher = {ACM / IW3C2},
+  timestamp = {Mon, 07 Jun 2021 14:21:48 +0200},
+  title     = {{P}lumber: {A} Modular {F}ramework to {C}reate {I}nformation {E}xtraction {P}ipelines},
+  url       = {https://doi.org/10.1145/3442442.3458603},
+  year      = {2021}
+}
+
+@article{DBLP:journals/dke/AhmedSMN21,
+  author    = {Abdullah Fathi Ahmed and
+Mohamed Ahmed Sherif and
+Diego Moussallem and
+Axel-Cyrille Ngonga Ngomo},
+  bibsource = {dblp computer science bibliography, https://dblp.org},
+  biburl    = {https://dblp.org/rec/journals/dke/AhmedSMN21.bib},
+  doi       = {10.1016/j.datak.2021.101874},
+  journal   = {Data Knowl. Eng.},
+  keywords  = {145-1160},
+  pages     = {101874},
+  timestamp = {Wed, 23 Jun 2021 01:00:00 +0200},
+  title     = {{M}ultilingual {V}erbalization and {S}ummarization for {E}xplainable {L}ink
+{D}iscovery},
+  url       = {https://doi.org/10.1016/j.datak.2021.101874},
+  volume    = {133},
+  year      = {2021}
+}
+
+@article{DBLP:journals/ijswis/AliFKH21,
+  author    = {Mohamed Hassan Mohamed Ali and
+Said Fathalla and
+Mohamed Kholief and
+Yasser Fouad Hassan},
+  bibsource = {dblp computer science bibliography, https://dblp.org},
+  biburl    = {https://dblp.org/rec/journals/ijswis/AliFKH21.bib},
+  doi       = {10.4018/IJSWIS.2021010105},
+  journal   = {Int. J. Semantic Web Inf. Syst.},
+  keywords  = {205-3220 sda-pub},
+  number    = {1},
+  pages     = {97--122},
+  timestamp = {Sun, 16 May 2021 01:00:00 +0200},
+  title     = {{L}earning {N}on-{T}axonomic {R}elations of {O}ntologies: {A} Systematic {R}eview},
+  url       = {https://doi.org/10.4018/IJSWIS.2021010105},
+  volume    = {17},
+  year      = {2021}
+}
+
+@article{DBLP:journals/tist/AdamczakDMKLM21,
+  author    = {Jens Adamczak and
+Yashar Deldjoo and
+Farshad Bakhshandegan Moghaddam and
+Peter Knees and
+Gerard Paul Leyson and
+Philipp Monreal},
+  bibsource = {dblp computer science bibliography, https://dblp.org},
+  biburl    = {https://dblp.org/rec/journals/tist/AdamczakDMKLM21.bib},
+  doi       = {10.1145/3412379},
+  journal   = {ACM Trans. Intell. Syst. Technol.},
+  keywords  = {128-4609 sda-pub},
+  number    = {1},
+  pages     = {1:1--1:20},
+  timestamp = {Thu, 11 Mar 2021 00:00:00 +0100},
+  title     = {{S}ession-based {H}otel {R}ecommendations {D}ataset: {A}s part of the {A}CM
+{R}ecommender {S}ystem {C}hallenge 2019},
+  url       = {https://doi.org/10.1145/3412379},
+  volume    = {12},
+  year      = {2021}
+}
+
+@article{DBLP:journals/widm/ChakrabortyLMTL21,
+  author    = {Nilesh Chakraborty and
+Denis Lukovnikov and
+Gaurav Maheshwari and
+Priyansh Trivedi and
+Jens Lehmann and
+Asja Fischer},
+  bibsource = {dblp computer science bibliography, https://dblp.org},
+  biburl    = {https://dblp.org/rec/journals/widm/ChakrabortyLMTL21.bib},
+  doi       = {10.1002/widm.1389},
+  journal   = {Wiley Interdiscip. Rev. Data Min. Knowl. Discov.},
+  keywords  = {76-8485},
+  number    = {3},
+  timestamp = {Tue, 01 Jun 2021 01:00:00 +0200},
+  title     = {{I}ntroduction to neural network-based question answering over knowledge
+graphs},
+  url       = {https://doi.org/10.1002/widm.1389},
+  volume    = {11},
+  year      = {2021}
 }
 

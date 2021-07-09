@@ -12,3 +12,6 @@ dbpedia flexifusion the best of wikipedia textgreater wikidata textgreater your 
 a comment on rcc from rcc to rcc (^ mbox++ )
 ideal downward refinement in the emphel description logic
 {D}etec{\c c}{\~a}o de ru{\'\i}dos em problemas de classifica{\c c}{\~a}o
+LC-QAD 2.0: A Large Dataset for Complex Question Answering over Wikidata and DBpedia
+LC-QAD: A Corpus for Complex Question Answering over Knowledge Graphs
+Synthesizing Knowledge Graphs from Web Sources with the MINTE ^+ + Framework

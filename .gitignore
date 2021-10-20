@@ -3,3 +3,4 @@
 __pycache__/
 /secret/
 /src/token.pickle
+venv/

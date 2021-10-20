@@ -73,9 +73,8 @@ def parse_blacklisted_titles() -> Set[str]:
 
 def normalize_title(title: str) -> str:
     lower_unicode = latex_to_unicode(title).lower()
-    no_punctuation = re.sub(r"[-,;:.!?/\\'\"]", " ", lower_unicode)
-    normalized_whitespace = re.sub(r"[\n\r\s]+", " ", no_punctuation).strip()
-    return normalized_whitespace
+    letters_only = re.sub(r"[^a-z]", "", lower_unicode)
+    return letters_only
 
 
 def fetch_candidate_publications(ignored_titles: Set[str]) -> List[Dict]:

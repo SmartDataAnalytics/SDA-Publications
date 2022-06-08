@@ -16,7 +16,7 @@ google-auth-oauthlib = "^0.5.1"
 requests = "^2.27.1"
 
 [tool.poetry.dev-dependencies]
-pytest = "^5.2"
+pytest = "^7.1"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

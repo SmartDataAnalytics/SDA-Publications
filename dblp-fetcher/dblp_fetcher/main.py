@@ -1,4 +1,4 @@
-from find_new_entries import get_candidate_publications
+from dblp_fetcher.find_new_entries import get_candidate_publications
 
 
 def main() -> None:

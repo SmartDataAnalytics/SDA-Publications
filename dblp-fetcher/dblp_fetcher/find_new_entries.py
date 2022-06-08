@@ -8,14 +8,14 @@ from bibtexparser.bparser import BibTexParser
 from bibtexparser.bwriter import BibTexWriter
 from bibtexparser.customization import homogenize_latex_encoding, latex_to_unicode
 
-from get_publication_fetching_data import get_publication_fetching_data
+from dblp_fetcher.get_publication_fetching_data import get_publication_fetching_data
 
 # To run this script, you need to download a file credentials.json from
 # https://developers.google.com/sheets/api/quickstart/python and put it into the folder "secret" on the same level as the
 # "src" folder.
 
-existing = "../data/sda.bib"
-blacklist = "../data/blacklist.txt"
+existing = "data/sda.bib"
+blacklist = "data/blacklist.txt"
 
 
 def get_candidate_publications():

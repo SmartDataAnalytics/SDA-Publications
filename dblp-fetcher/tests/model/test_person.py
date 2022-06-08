@@ -33,7 +33,7 @@ from dblp_fetcher.model import Person
         (
                 Person("person", "person", start_year=2019, end_year=None),
                 2020,
-                False
+                True
         ),
         (
                 Person("person", "person", start_year=None, end_year=2021),

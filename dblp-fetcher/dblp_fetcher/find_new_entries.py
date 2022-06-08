@@ -1,6 +1,5 @@
 import re
-from time import sleep
-from typing import List, Dict, Set, Any
+from typing import List, Dict, Set
 
 import requests
 from bibtexparser.bibdatabase import BibDatabase
@@ -8,11 +7,11 @@ from bibtexparser.bparser import BibTexParser
 from bibtexparser.bwriter import BibTexWriter
 from bibtexparser.customization import homogenize_latex_encoding, latex_to_unicode
 
-from dblp_fetcher.get_publication_fetching_data import get_publication_fetching_data
-
+from dblp_fetcher.fetch_sda_associates import fetch_sda_associates
 # To run this script, you need to download a file credentials.json from
 # https://developers.google.com/sheets/api/quickstart/python and put it into the folder "secret" on the same level as the
 # "src" folder.
+from dblp_fetcher.model import Person
 from dblp_fetcher.util import is_valid_year
 
 existing = "data/sda.bib"
@@ -84,17 +83,18 @@ def fetch_candidate_publications(ignored_titles: Set[str]) -> List[Dict]:
     normalized_title_to_author_ids = {}
     sda_publications = set()
 
-    for entry in get_publication_fetching_data():
-        dblp_url, start_year, end_year, author_id = entry[0], entry[1], entry[2], entry[3]
+    for person in fetch_sda_associates():
+        if not person.has_dblp_profile():
+            continue
 
-        batch = fetch_from_dblp(dblp_url)
+        batch = fetch_from_dblp(person.dblp_url)
         for publication in batch:
             normalized_title = normalize_title(publication["title"])
-            if skipPublication(publication, normalized_title, ignored_titles):
+            if skip_publication(publication, normalized_title, ignored_titles):
                 continue
 
-            remember_author_id(normalized_title, author_id, normalized_title_to_author_ids)
-            if is_sda_publication(publication, start_year, end_year):
+            remember_author_id(normalized_title, person.author_id, normalized_title_to_author_ids)
+            if is_sda_publication(publication, person):
                 sda_publications.add(normalized_title)
 
             if "editor" in publication:
@@ -102,14 +102,13 @@ def fetch_candidate_publications(ignored_titles: Set[str]) -> List[Dict]:
 
             result.append(publication)
             ignored_titles.add(normalized_title)
-        sleep(1)
 
     add_keywords(result, normalized_title_to_author_ids, sda_publications)
 
     return result
 
 
-def skipPublication(publication, normalized_title: str, ignored_titles: Set[str]):
+def skip_publication(publication, normalized_title: str, ignored_titles: Set[str]):
     return "author" not in publication or normalized_title in ignored_titles or (
             "archiveprefix" in publication and publication["archiveprefix"].lower() == "arxiv"
     )
@@ -131,15 +130,12 @@ def remember_author_id(normalized_title: str, author_id: str, normalized_title_t
     normalized_title_to_author_ids[normalized_title].add(author_id)
 
 
-def is_sda_publication(publication, start_year_string: str, end_year_string: str) -> bool:
+def is_sda_publication(publication, author: Person) -> bool:
     if not is_valid_year(publication["year"]):
         return True
-
     publication_year = int(publication["year"])
-    start_year = int(start_year_string) if is_valid_year(start_year_string) else 9999
-    end_year = int(end_year_string) if is_valid_year(end_year_string) else 9999
 
-    return start_year <= publication_year <= end_year
+    return author.was_sda_member_in_year(publication_year)
 
 
 def add_keywords(publications: List[Dict], normalized_title_to_author_ids: Dict[str, Set],

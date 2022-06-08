@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "dblp-fetcher"
+version = "0.1.0"
+description = ""
+authors = ["Lars Reimann <mail@larsreimann.com>"]
+
+[tool.poetry.scripts]
+parse-package = "dblp_fetcher.main:main"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+bibtexparser = "^1.2.0"
+google-api-python-client = "^2.50.0"
+google-auth-httplib2 = "^0.1.0"
+google-auth-oauthlib = "^0.5.1"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

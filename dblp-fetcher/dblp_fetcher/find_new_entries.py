@@ -1,4 +1,5 @@
 import re
+from time import sleep
 from typing import List, Dict, Set, Any
 
 import requests
@@ -13,8 +14,8 @@ from get_publication_fetching_data import get_publication_fetching_data
 # https://developers.google.com/sheets/api/quickstart/python and put it into the folder "secret" on the same level as the
 # "src" folder.
 
-existing = "../sda.bib"
-blacklist = "blacklist.txt"
+existing = "../data/sda.bib"
+blacklist = "../data/blacklist.txt"
 
 
 def get_candidate_publications():
@@ -100,6 +101,7 @@ def fetch_candidate_publications(ignored_titles: Set[str]) -> List[Dict]:
 
             result.append(publication)
             ignored_titles.add(normalized_title)
+        sleep(1)
 
     add_keywords(result, normalized_title_to_author_ids, sda_publications)
 
@@ -108,7 +110,7 @@ def fetch_candidate_publications(ignored_titles: Set[str]) -> List[Dict]:
 
 def skipPublication(publication, normalized_title: str, ignored_titles: Set[str]):
     return "author" not in publication or normalized_title in ignored_titles or (
-        "archiveprefix" in publication and publication["archiveprefix"].lower() == "arxiv"
+            "archiveprefix" in publication and publication["archiveprefix"].lower() == "arxiv"
     )
 
 
@@ -188,7 +190,3 @@ def bibtex_entries_to_string(entries: List[Dict]):
     db.entries = entries
 
     return writer.write(db)
-
-
-if __name__ == '__main__':
-    get_candidate_publications()

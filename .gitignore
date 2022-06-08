@@ -1,6 +1,7 @@
 *.bak
 .idea/
 __pycache__/
-/secret/
-/src/token.pickle
 venv/
+
+dblp-fetcher/secret/
+token.pickle

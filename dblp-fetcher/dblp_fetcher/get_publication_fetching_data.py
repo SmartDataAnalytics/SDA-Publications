@@ -6,6 +6,8 @@ from googleapiclient.discovery import build
 from google_auth_oauthlib.flow import InstalledAppFlow
 from google.auth.transport.requests import Request
 
+token_path = '../secret/token.pickle'
+
 # If modifying these scopes, delete the file token.pickle.
 SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly']
 
@@ -38,7 +40,6 @@ def fetch_data_from_google():
 
 
 def get_credentials():
-    token_path = '../secret/token.pickle'
     creds = None
 
     # The file token.pickle stores the user's access and refresh tokens, and is created automatically when the

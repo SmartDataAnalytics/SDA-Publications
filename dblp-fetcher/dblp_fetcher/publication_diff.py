@@ -1,7 +1,7 @@
 import argparse
 from typing import Dict, List
 
-from src.find_new_entries import parse_bibtex_file, normalize_title, print_candidates
+from dblp_fetcher.find_new_entries import parse_bibtex_file, normalize_title, print_candidates
 
 
 def compare_publication_lists(db1: List[Dict], db2: List[Dict]):

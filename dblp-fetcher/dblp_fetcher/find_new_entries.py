@@ -13,6 +13,7 @@ from dblp_fetcher.get_publication_fetching_data import get_publication_fetching_
 # To run this script, you need to download a file credentials.json from
 # https://developers.google.com/sheets/api/quickstart/python and put it into the folder "secret" on the same level as the
 # "src" folder.
+from dblp_fetcher.util import is_valid_year
 
 existing = "data/sda.bib"
 blacklist = "data/blacklist.txt"
@@ -139,10 +140,6 @@ def is_sda_publication(publication, start_year_string: str, end_year_string: str
     end_year = int(end_year_string) if is_valid_year(end_year_string) else 9999
 
     return start_year <= publication_year <= end_year
-
-
-def is_valid_year(value: Any) -> bool:
-    return type(value) == str and value.isnumeric()
 
 
 def add_keywords(publications: List[Dict], normalized_title_to_author_ids: Dict[str, Set],

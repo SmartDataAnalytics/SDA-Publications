@@ -9,11 +9,11 @@ from google.auth.transport.requests import Request
 token_path = 'secret/token.pickle'
 
 # If modifying these scopes, delete the file token.pickle.
-SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly']
+_SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly']
 
 # The ID and range of a sample spreadsheet.
-SAMPLE_SPREADSHEET_ID = '1YJCn0a30M6aQBra9LgcfrNZ9rGudpjU62SiaBVyFgec'
-SAMPLE_RANGE_NAME = 'Data!B2:E'
+_SPREADSHEET_ID = '1YJCn0a30M6aQBra9LgcfrNZ9rGudpjU62SiaBVyFgec'
+_RANGE_NAME = 'Data!B2:E'
 
 
 def get_publication_fetching_data():
@@ -35,7 +35,7 @@ def fetch_data_from_google():
 
     # Call the Sheets API
     sheet = service.spreadsheets()
-    result = sheet.values().get(spreadsheetId=SAMPLE_SPREADSHEET_ID, range=SAMPLE_RANGE_NAME).execute()
+    result = sheet.values().get(spreadsheetId=_SPREADSHEET_ID, range=_RANGE_NAME).execute()
     return result.get('values', [])
 
 
@@ -54,7 +54,7 @@ def get_credentials():
             creds.refresh(Request())
         else:
             flow = InstalledAppFlow.from_client_secrets_file(
-                '../secret/credentials.json', SCOPES)
+                '../secret/credentials.json', _SCOPES)
             creds = flow.run_local_server(port=0)
 
         # Save the credentials for the next run

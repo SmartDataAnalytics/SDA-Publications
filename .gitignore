@@ -1,7 +1,14 @@
-*.bak
+# IntelliJ
 .idea/
+*.iml
+
+# Python
 __pycache__/
 venv/
 
-dblp-fetcher/secret/
+# Secrets
+secret/
 token.pickle
+
+# Other
+*.bak

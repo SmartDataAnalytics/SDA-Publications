@@ -7,7 +7,7 @@
 cd dblp-fetcher
 poetry install
 ```
-4. Follow the instructions in Step 1 of the [Google Sheets Python Quickstart guide](https://developers.google.com/sheets/api/quickstart/python) to get a credentials.json file. Save the file as secret/credentials.json relative to the root directory of the repository.
+4. Follow the instructions in Step 1 of the [Google Sheets Python Quickstart guide](https://developers.google.com/sheets/api/quickstart/python) to get a `credentials.json` file. Save the file as `dblp-fetcher/secret/credentials.json` relative to the root of the repository. Make sure you never add this file to the repository.
 
 ## Importing new publications
 

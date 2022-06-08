@@ -1,6 +1,14 @@
-*.bak
+# IntelliJ
 .idea/
+*.iml
+
+# Python
 __pycache__/
-/secret/
-/src/token.pickle
 venv/
+
+# Secrets
+secret/
+token.pickle
+
+# Other
+*.bak

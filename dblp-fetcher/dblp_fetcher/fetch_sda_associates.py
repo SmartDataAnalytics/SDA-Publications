@@ -1,3 +1,5 @@
+import logging
+
 from dblp_fetcher.api_wrappers import fetch_data_from_google_sheets, get_credentials
 from dblp_fetcher.model import Person
 from dblp_fetcher.util import url_from_string, year_from_string
@@ -27,7 +29,7 @@ def fetch_sda_associates() -> list[Person]:
     )
 
     if not data:
-        print('Error: Could not load DBLP spreadsheet from Google.')
+        logging.error('Error: Could not load DBLP spreadsheet from Google.')
         exit(1)
 
     return [

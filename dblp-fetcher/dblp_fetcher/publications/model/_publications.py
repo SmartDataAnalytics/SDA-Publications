@@ -67,11 +67,12 @@ class Bibliography:
     def upsert_publication(self, publication: Publication) -> Bibliography:
         """
         Inserts a publication into this bibliography if no other publication with the same ID exists yet. Otherwise,
-        updates the existing publication. Returns this bibliography.
+        updates the existing publication unless the new publication is an arXiv preprint. Returns this bibliography.
         """
 
         if publication.id in self._publications:
-            self._publications[publication.id].update(publication)
+            if not publication.is_arxiv_preprint():
+                self._publications[publication.id].update(publication)
         else:
             self._publications[publication.id] = publication
 
@@ -206,6 +207,7 @@ class Publication:
             return True
 
         return False
+
 
 def _create_bibtex_parser() -> BibTexParser:
     """

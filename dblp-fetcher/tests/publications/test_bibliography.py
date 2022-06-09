@@ -58,9 +58,37 @@ def test_upsert_publication_with_existing_publication(bibliography: Bibliography
     assert publication.keywords == {"keyword1", "keyword2", "keyword3", "keyword4"}
 
 
+def test_upsert_publication_with_existing_publication_but_new_is_preprint(bibliography: Bibliography):
+    publication = Publication({
+        "title": "{T}itle",
+        "year": "2020",
+        "keyword": "keyword4 keyword1, keyword2",
+        "journal": "CoRR"
+    })
+
+    bibliography.upsert_publication(publication)
+    assert len(bibliography.publications) == 1
+
+    publication = bibliography.publications[0]
+    assert publication.author == "John Doe"
+    assert publication.title == "{T}itle"
+    assert publication.year == 2021
+    assert publication.keywords == {"keyword1", "keyword2", "keyword3"}
+
+
 def test_upsert_publication_with_new_publication(bibliography: Bibliography):
     publication = Publication({
         "title": "Title 2"
+    })
+
+    bibliography.upsert_publication(publication)
+    assert len(bibliography.publications) == 2
+
+
+def test_upsert_publication_with_new_publication_but_new_is_preprint(bibliography: Bibliography):
+    publication = Publication({
+        "title": "Title 2",
+        "eprinttype": "arxiv"
     })
 
     bibliography.upsert_publication(publication)

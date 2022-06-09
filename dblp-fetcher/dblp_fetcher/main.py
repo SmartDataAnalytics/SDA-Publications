@@ -77,7 +77,7 @@ def _remove_unwanted_publications(bibliography: Bibliography) -> None:
 def _is_unwanted(publication: Publication, blacklist: TitleBlacklist) -> bool:
     """
     Returns whether the given publication is unwanted. This is the case if the publication has no author or title, if
-    the title is blacklisted, or if the publication is an Arxiv preprint.
+    the title is blacklisted, or if the publication is an arXiv preprint.
     """
 
     return publication.author is None or publication.title is None or blacklist.is_blacklisted(publication.title) or \

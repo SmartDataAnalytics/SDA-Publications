@@ -118,12 +118,12 @@ class Publication:
             del self.bibtex_dict["keyword"]
 
     @property
-    def archiveprefix(self) -> Optional[str]:
-        return self.bibtex_dict.get("archiveprefix")
-
-    @property
     def author(self) -> Optional[str]:
         return self.bibtex_dict.get("author")
+
+    @property
+    def eprinttype(self) -> Optional[str]:
+        return self.bibtex_dict.get("eprinttype")
 
     @property
     def id(self) -> Optional[str]:

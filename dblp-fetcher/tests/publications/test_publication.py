@@ -10,7 +10,7 @@ def complete_publication() -> Publication:
         "title": "A 'title' - with_special - characters 2020",
         "year": "2020",
         "keyword": "keyword3 keyword1, keyword2",
-        "archiveprefix": "arxiv",
+        "eprinttype": "arxiv",
     })
 
 
@@ -23,20 +23,20 @@ def test_init_normalizes_keywords(complete_publication: Publication):
     assert complete_publication.bibtex_dict["keywords"] == "keyword1, keyword2, keyword3"
 
 
-def test_archiveprefix_complete(complete_publication: Publication):
-    assert complete_publication.archiveprefix == "arxiv"
-
-
-def test_archiveprefix_empty(empty_publication: Publication):
-    assert empty_publication.archiveprefix is None
-
-
 def test_author_complete(complete_publication: Publication):
     assert complete_publication.author == "John Doe"
 
 
 def test_author_empty(empty_publication: Publication):
     assert empty_publication.author is None
+
+
+def test_eprinttype_complete(complete_publication: Publication):
+    assert complete_publication.eprinttype == "arxiv"
+
+
+def test_eprinttype_empty(empty_publication: Publication):
+    assert empty_publication.eprinttype is None
 
 
 def test_id_complete(complete_publication: Publication):
@@ -108,4 +108,4 @@ def test_update(complete_publication: Publication):
     assert complete_publication.title == "A better title"
     assert complete_publication.year == 2022
     assert complete_publication.keywords == {"keyword1", "keyword2", "keyword3", "keyword4"}
-    assert complete_publication.archiveprefix == "arxiv"
+    assert complete_publication.eprinttype == "arxiv"

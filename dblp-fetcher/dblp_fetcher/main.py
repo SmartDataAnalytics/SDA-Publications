@@ -85,8 +85,8 @@ def _is_unwanted(publication: Publication, blacklist: TitleBlacklist) -> bool:
 
 
 def _is_arxiv_preprint(publication: Publication) -> bool:
-    archive = publication.eprinttype
-    return archive is not None and archive.lower() == "arxiv"
+    eprinttype = publication.eprinttype
+    return eprinttype is not None and eprinttype.lower() == "arxiv"
 
 
 def _read_blacklist() -> TitleBlacklist:

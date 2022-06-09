@@ -163,7 +163,9 @@ class Publication:
 
         keyword_set = self.keywords
         keyword_set.add(keyword)
-        self.bibtex_dict["keywords"] = ", ".join(keyword_set)
+
+        sorted_keywords = sorted(keyword_set)
+        self.bibtex_dict["keywords"] = ", ".join(sorted_keywords)
 
         return self
 

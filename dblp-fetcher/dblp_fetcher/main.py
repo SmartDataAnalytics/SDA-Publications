@@ -76,8 +76,13 @@ def _is_unwanted(publication: Publication, blacklist: TitleBlacklist) -> bool:
     the title is blacklisted, or if the publication is an Arxiv preprint.
     """
 
-    return publication.author is None or publication.title is None or publication.title in blacklist or \
-           publication.archiveprefix.lower() == "arxiv"
+    return publication.author is None or publication.title is None or blacklist.is_blacklisted(publication.title) or \
+           _is_arxiv_preprint(publication)
+
+
+def _is_arxiv_preprint(publication: Publication) -> bool:
+    archive = publication.archiveprefix
+    return archive is not None and archive.lower() == "arxiv"
 
 
 def _read_blacklist() -> TitleBlacklist:

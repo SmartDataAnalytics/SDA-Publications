@@ -75,11 +75,13 @@ def test_year_empty(empty_publication: Publication):
 def test_add_keyword_with_existing_keyword(complete_publication: Publication):
     complete_publication.add_keyword("keyword1")
     assert complete_publication.keywords == {"keyword1", "keyword2", "keyword3"}
+    assert complete_publication.bibtex_dict.get("keywords") == "keyword1, keyword2, keyword3"
 
 
 def test_add_keyword_with_new_keyword(empty_publication: Publication):
     empty_publication.add_keyword("keyword1")
     assert empty_publication.keywords == {"keyword1"}
+    assert empty_publication.bibtex_dict.get("keywords") == "keyword1"
 
 
 def test_remove_property_with_existing_property(complete_publication: Publication):

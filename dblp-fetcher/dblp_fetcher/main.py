@@ -117,6 +117,7 @@ def _run_global_replacements(bibliography: Bibliography) -> None:
         ("\\\\textbackslash\\s*", "\\\\textbackslash{}"),
         ("\\\\textendash\\s*", "\\\\textendash "),
         ("\\\\textquotesingle\\s*", "\\\\textquotesingle{}"),
+        ("\\\\ast\\s*", "* "),
     ]
 
     for publication in bibliography.publications:

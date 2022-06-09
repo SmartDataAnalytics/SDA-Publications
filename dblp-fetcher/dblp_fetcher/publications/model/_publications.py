@@ -7,9 +7,8 @@ from bibtexparser.bibdatabase import BibDatabase
 from bibtexparser.bparser import BibTexParser
 from bibtexparser.bwriter import BibTexWriter
 from bibtexparser.customization import homogenize_latex_encoding
-from bibtexparser.latexenc import latex_to_unicode
 
-from dblp_fetcher.util import year_from_string
+from dblp_fetcher.util import year_from_string, normalized_title
 
 
 class Bibliography:
@@ -53,6 +52,17 @@ class Bibliography:
         """
 
         return self._publications.get(publication_id)
+
+    def remove_publication_by_id(self, publication_id: str) -> Bibliography:
+        """
+        Removes the publication with the given ID from this bibliography. If no ID with the given ID exists, nothing
+        happens. Returns this bibliography.
+        """
+
+        if publication_id in self._publications:
+            del self._publications[publication_id]
+
+        return self
 
     def upsert_publication(self, publication: Publication) -> Bibliography:
         """
@@ -120,9 +130,7 @@ class Publication:
         if self.title is None:
             return None
 
-        lower_unicode = latex_to_unicode(self.title).lower()
-        letters_only = re.sub(r"[^a-z\d]", "", lower_unicode)
-        return letters_only
+        return normalized_title(self.title)
 
     @property
     def keywords(self) -> set[str]:

@@ -31,6 +31,16 @@ def test_from_bibtex(bibtex_string: str):
     assert publication.keywords == {"keyword1", "keyword2", "keyword3"}
 
 
+def test_remove_publication_by_id_with_existing_publication(bibliography: Bibliography):
+    bibliography.remove_publication_by_id("title")
+    assert len(bibliography.publications) == 0
+
+
+def test_remove_publication_by_id_with_missing_publication(bibliography: Bibliography):
+    bibliography.remove_publication_by_id("title2")
+    assert len(bibliography.publications) == 1
+
+
 def test_upsert_publication_with_existing_publication(bibliography: Bibliography):
     publication = Publication({
         "title": "{T}itle",

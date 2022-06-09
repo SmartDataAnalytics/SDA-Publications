@@ -81,12 +81,7 @@ def _is_unwanted(publication: Publication, blacklist: TitleBlacklist) -> bool:
     """
 
     return publication.author is None or publication.title is None or blacklist.is_blacklisted(publication.title) or \
-           _is_arxiv_preprint(publication)
-
-
-def _is_arxiv_preprint(publication: Publication) -> bool:
-    eprinttype = publication.eprinttype
-    return eprinttype is not None and eprinttype.lower() == "arxiv"
+           publication.is_arxiv_preprint()
 
 
 def _read_blacklist() -> TitleBlacklist:
@@ -95,7 +90,11 @@ def _read_blacklist() -> TitleBlacklist:
     """
 
     with open(_BLACKLIST_PATH, "r", encoding="UTF-8") as blacklist:
-        return TitleBlacklist(list(line.strip() for line in blacklist))
+        return TitleBlacklist([
+            line.strip()
+            for line in blacklist
+            if line.strip() != ""
+        ])
 
 
 def _remove_editor_property(bibliography) -> None:

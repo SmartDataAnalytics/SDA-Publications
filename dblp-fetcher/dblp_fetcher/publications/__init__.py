@@ -1,2 +1,1 @@
-from ._blacklist import TitleBlacklist
-from ._publications import Bibliography, Publication
+from dblp_fetcher.publications._fetch_publications import fetch_bibliography

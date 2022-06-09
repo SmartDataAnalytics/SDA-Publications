@@ -1,6 +1,6 @@
 import logging
 
-from ._person import Person
+from dblp_fetcher.persons.model._person import Person
 from dblp_fetcher.util import url_from_string, year_from_string, fetch_data_from_google_sheets, fetch_google_credentials
 
 

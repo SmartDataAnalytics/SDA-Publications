@@ -1,6 +1,6 @@
 from _pytest.fixtures import fixture
 
-from dblp_fetcher.publications import Publication
+from dblp_fetcher.publications.model import Publication
 
 
 @fixture
@@ -9,7 +9,7 @@ def complete_publication() -> Publication:
         "author": "John Doe",
         "title": "A 'title' - with_special - characters 2020",
         "year": "2020",
-        "keywords": "keyword1, keyword2",
+        "keyword": "keyword3 keyword1, keyword2",
         "archiveprefix": "arxiv",
     })
 
@@ -17,6 +17,10 @@ def complete_publication() -> Publication:
 @fixture
 def empty_publication() -> Publication:
     return Publication({})
+
+
+def test_init_normalizes_keywords(complete_publication: Publication):
+    assert complete_publication.bibtex_dict["keywords"] == "keyword1, keyword2, keyword3"
 
 
 def test_archiveprefix_complete(complete_publication: Publication):
@@ -45,7 +49,7 @@ def test_id_empty(empty_publication: Publication):
 
 
 def test_keywords_complete(complete_publication: Publication):
-    assert complete_publication.keywords == {"keyword1", "keyword2"}
+    assert complete_publication.keywords == {"keyword1", "keyword2", "keyword3"}
 
 
 def test_keywords_empty(empty_publication: Publication):
@@ -70,7 +74,7 @@ def test_year_empty(empty_publication: Publication):
 
 def test_add_keyword_with_existing_keyword(complete_publication: Publication):
     complete_publication.add_keyword("keyword1")
-    assert complete_publication.keywords == {"keyword1", "keyword2"}
+    assert complete_publication.keywords == {"keyword1", "keyword2", "keyword3"}
 
 
 def test_add_keyword_with_new_keyword(empty_publication: Publication):

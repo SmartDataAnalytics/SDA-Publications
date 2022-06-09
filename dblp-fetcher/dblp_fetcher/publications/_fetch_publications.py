@@ -1,20 +1,45 @@
 import requests
-from bibtexparser.bibdatabase import BibDatabase
-from bibtexparser.bwriter import BibTexWriter
-from bibtexparser.customization import homogenize_latex_encoding
 
-from dblp_fetcher.persons._fetch_sda_associates import fetch_sda_associates
-from dblp_fetcher.util import is_valid_year
+from dblp_fetcher.persons.model import Person
+from dblp_fetcher.publications.model import Bibliography, Publication
 
 
-# def fetch_publications(author: Person) -> Bibliography:
-#     result = Bibliography()
-#
-#
-#
-#
-#
-#
+def fetch_bibliography(author: Person) -> Bibliography:
+    if not author.has_dblp_profile():
+        return Bibliography()
+
+    bibtex_string = _fetch_bibtex_from_dblp(author.dblp_url)
+    bibliography = Bibliography.from_bibtex(bibtex_string)
+
+    for publication in bibliography.publications:
+        _add_keywords(publication, author)
+
+    return bibliography
+
+
+def _fetch_bibtex_from_dblp(dblp_url: str) -> str:
+    return requests.get(f"{dblp_url}.bib").content.decode("utf-8")
+
+
+def _add_keywords(publication: Publication, author: Person) -> None:
+    """
+    Add author ID as keyword and "sda-pub" if the author was an SDA member at the time of the publication.
+    """
+
+    publication.add_keyword(author.author_id)
+
+    if _is_sda_publication(publication, author):
+        publication.add_keyword("sda-pub")
+
+
+def _is_sda_publication(publication: Publication, author: Person) -> bool:
+    """
+    Whether the publication was written while the author was an SDA member.
+    """
+
+    publication_year = publication.year
+    return publication_year is not None and author.was_sda_member_in_year(publication_year)
+
 #     normalized_title_to_author_ids = {}
 #     sda_publications = set()
 #
@@ -43,8 +68,7 @@ from dblp_fetcher.util import is_valid_year
 #     return Bibliography(result)
 #
 #
-# def fetch_bibtex_from_dblp(dblp_url: str) -> str:
-#     return requests.get(f"{dblp_url}.bib").content.decode("utf-8")
+
 #
 #
 #
@@ -81,19 +105,7 @@ from dblp_fetcher.util import is_valid_year
 #     return ignored_titles
 #
 #
-# def parse_bibtex_file(path: str) -> List[Dict]:
-#     try:
-#         with open(path, "r", encoding="UTF-8") as file:
-#             return create_bibtex_parser().parse_file(file).entries
-#     except IndexError:
-#         return []
-#
-#
-# def parse_blacklisted_titles() -> Set[str]:
-#     with (open(blacklist, "r", encoding="UTF-8")) as file:
-#         return set(map(normalize_title, file))
-#
-#
+
 # def fetch_candidate_publications(ignored_titles: Set[str]) -> List[Dict]:
 #     result = []
 #     normalized_title_to_author_ids = {}
@@ -143,14 +155,7 @@ from dblp_fetcher.util import is_valid_year
 #     normalized_title_to_author_ids[normalized_title].add(author_id)
 #
 #
-# def is_sda_publication(publication, author: Person) -> bool:
-#     if not is_valid_year(publication["year"]):
-#         return True
-#     publication_year = int(publication["year"])
-#
-#     return author.was_sda_member_in_year(publication_year)
-#
-#
+
 # def add_keywords(publications: List[Dict], normalized_title_to_author_ids: Dict[str, Set],
 #                  sda_publications: Set[str]):
 #     for entry in publications:

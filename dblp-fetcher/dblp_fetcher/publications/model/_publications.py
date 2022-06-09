@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 import re
-from typing import Optional, Any
+from typing import Optional
 
 from bibtexparser.bibdatabase import BibDatabase
 from bibtexparser.bparser import BibTexParser
@@ -30,7 +30,10 @@ class Bibliography:
         publications: list[Publication] = [Publication(bibtex_dict) for bibtex_dict in bibtex_dicts]
         return Bibliography(publications)
 
-    def __init__(self, publications: list[Publication]):
+    def __init__(self, publications=None):
+        if publications is None:
+            publications = []
+
         self._publications: dict[str, Publication] = {}
         for publication in publications:
             self.upsert_publication(publication)
@@ -44,13 +47,35 @@ class Bibliography:
 
         return list(self._publications.values())
 
+    def get_publication_by_id(self, publication_id: str) -> Optional[Publication]:
+        """
+        Returns the publication with the given ID, or None if no publication with that ID exists.
+        """
+
+        return self._publications.get(publication_id)
+
     def upsert_publication(self, publication: Publication) -> Bibliography:
         """
         Inserts a publication into this bibliography if no other publication with the same ID exists yet. Otherwise,
         updates the existing publication. Returns this bibliography.
         """
 
-        pass
+        if publication.id in self._publications:
+            self._publications[publication.id].update(publication)
+        else:
+            self._publications[publication.id] = publication
+
+        return self
+
+    def update(self, bibliography: Bibliography) -> Bibliography:
+        """
+        Updates this bibliography with the publications from the given bibliography. Returns this bibliography.
+        """
+
+        for publication in bibliography.publications:
+            self.upsert_publication(publication)
+
+        return self
 
     def to_bibtex(self) -> str:
         """
@@ -70,6 +95,17 @@ class Publication:
     def __init__(self, bibtex_dict: dict[str, str]):
         self.bibtex_dict: dict[str, str] = bibtex_dict
         self._normalize_keywords()
+
+    def _normalize_keywords(self) -> None:
+        """
+        Ensures the "keywords" property exists, that keywords are separated by commas, and that they are sorted.
+        """
+
+        sorted_keywords = sorted(self.keywords)
+        self.bibtex_dict["keywords"] = ", ".join(sorted_keywords)
+
+        if "keyword" in self.bibtex_dict:
+            del self.bibtex_dict["keyword"]
 
     @property
     def archiveprefix(self) -> Optional[str]:
@@ -92,9 +128,11 @@ class Publication:
     def keywords(self) -> set[str]:
         keywords_string = self.bibtex_dict.get("keywords")
         if keywords_string is None:
+            keywords_string = self.bibtex_dict.get("keyword")
+        if keywords_string is None:
             return set()
 
-        keyword_list = re.split(r",", keywords_string)
+        keyword_list = re.split(r"[,\s]", keywords_string)
         non_empty_keyword_list = [keyword for keyword in keyword_list if keyword != ""]
         return set(non_empty_keyword_list)
 
@@ -117,7 +155,7 @@ class Publication:
 
         keyword_set = self.keywords
         keyword_set.add(keyword)
-        self.bibtex_dict["keywords"] = ",".join(keyword_set)
+        self.bibtex_dict["keywords"] = ", ".join(keyword_set)
 
         return self
 
@@ -143,16 +181,6 @@ class Publication:
             self.add_keyword(keyword)
 
         return self
-
-    def _normalize_keywords(self) -> None:
-        """
-        Ensures the keyword property exists and that keywords are separated by commas.
-        """
-
-        keywords_string = self.bibtex_dict.get("keywords", "")
-        keywords_string = re.sub(r"\s", ",", keywords_string)
-        keywords_string = re.sub(r",+", ",", keywords_string)
-        self.bibtex_dict["keywords"] = keywords_string
 
 
 def _create_bibtex_parser() -> BibTexParser:

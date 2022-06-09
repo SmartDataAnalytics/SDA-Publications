@@ -133,6 +133,10 @@ class Publication:
         return normalized_title(self.title)
 
     @property
+    def journal(self) -> Optional[str]:
+        return self.bibtex_dict.get("journal")
+
+    @property
     def keywords(self) -> set[str]:
         keywords_string = self.bibtex_dict.get("keywords")
         if keywords_string is None:
@@ -192,6 +196,16 @@ class Publication:
 
         return self
 
+    def is_arxiv_preprint(self) -> bool:
+        eprinttype = self.eprinttype
+        if eprinttype is not None and eprinttype.lower() == "arxiv":
+            return True
+
+        journal = self.journal
+        if journal is not None and journal.lower() == "corr":
+            return True
+
+        return False
 
 def _create_bibtex_parser() -> BibTexParser:
     """

@@ -11,6 +11,7 @@ def complete_publication() -> Publication:
         "year": "2020",
         "keyword": "keyword3 keyword1, keyword2",
         "eprinttype": "arxiv",
+        "journal": "CoRR",
     })
 
 
@@ -46,6 +47,14 @@ def test_id_complete(complete_publication: Publication):
 
 def test_id_empty(empty_publication: Publication):
     assert empty_publication.id is None
+
+
+def test_journal_complete(complete_publication: Publication):
+    assert complete_publication.journal == "CoRR"
+
+
+def test_journal_empty(empty_publication: Publication):
+    assert empty_publication.journal is None
 
 
 def test_keywords_complete(complete_publication: Publication):
@@ -109,3 +118,12 @@ def test_update(complete_publication: Publication):
     assert complete_publication.year == 2022
     assert complete_publication.keywords == {"keyword1", "keyword2", "keyword3", "keyword4"}
     assert complete_publication.eprinttype == "arxiv"
+    assert complete_publication.journal == "CoRR"
+
+
+def test_is_arxiv_preprint_complete(complete_publication: Publication):
+    assert complete_publication.is_arxiv_preprint()
+
+
+def test_is_arxiv_preprint_empty(empty_publication: Publication):
+    assert not empty_publication.is_arxiv_preprint()

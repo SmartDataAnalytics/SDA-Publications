@@ -1,6 +1,6 @@
 import pytest
 
-from dblp_fetcher.model import Person
+from dblp_fetcher.persons import Person
 
 
 @pytest.mark.parametrize(

@@ -22,7 +22,7 @@ def fetch_data_from_google_sheets(
     return result.get('values', [])
 
 
-def get_credentials(
+def fetch_google_credentials(
         credentials_path: str,
         token_path: str,
         scopes: list[str]

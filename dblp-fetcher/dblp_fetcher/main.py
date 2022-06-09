@@ -1,4 +1,5 @@
 import logging
+import re
 
 from dblp_fetcher.persons import fetch_sda_associates
 
@@ -21,6 +22,8 @@ _BLACKLIST_PATH = "data/blacklist.txt"
 
 
 def main() -> None:
+    logging.basicConfig(level=logging.INFO)
+
     # Fetch all SDA associates.
     logging.info("Fetching SDA associates...")
     sda_associates = fetch_sda_associates(
@@ -60,6 +63,7 @@ def _read_known_publications() -> Bibliography:
 def _postprocess_bibliography(bibliography: Bibliography) -> None:
     _remove_unwanted_publications(bibliography)
     _remove_editor_property(bibliography)
+    _run_global_replacements(bibliography)
 
 
 def _remove_unwanted_publications(bibliography: Bibliography) -> None:
@@ -101,6 +105,26 @@ def _remove_editor_property(bibliography) -> None:
 
     for publication in bibliography.publications:
         publication.remove_property("editor")
+
+
+def _run_global_replacements(bibliography: Bibliography) -> None:
+    """
+    Replaces all occurrences of a string in the bibliography with another string.
+    """
+
+    substitutions = [
+        ("\\\\textasciigrave\\s*", "\\\\textasciigrave{}"),
+        ("\\\\textasciitilde\\s*", "\\\\textasciitilde{}"),
+        ("\\\\textbackslash\\s*", "\\\\textbackslash{}"),
+        ("\\\\textendash\\s*", "\\\\textendash "),
+        ("\\\\textquotesingle\\s*", "\\\\textquotesingle{}"),
+    ]
+
+    for publication in bibliography.publications:
+        for key, value in publication.bibtex_dict.items():
+            for pattern, replacement in substitutions:
+                value = re.sub(pattern, replacement, value)
+            publication.bibtex_dict[key] = value
 
 
 def _write_updated_bibliography(bibliography: Bibliography) -> None:

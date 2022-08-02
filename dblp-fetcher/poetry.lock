@@ -22,14 +22,13 @@ tests_no_zope = ["coverage[toml] (>=5.0.2)", "hypothesis", "pympler", "pytest (>
 
 [[package]]
 name = "bibtexparser"
-version = "1.2.0"
-description = "Bibtex parser for python 2.7 and 3.3 and newer"
+version = "1.3.0"
+description = "Bibtex parser for python 3"
 category = "main"
 optional = false
 python-versions = "*"
 
 [package.dependencies]
-future = ">=0.16.0"
 pyparsing = ">=2.0.3"
 
 [[package]]
@@ -74,14 +73,6 @@ description = "Decorators for Humans"
 category = "main"
 optional = false
 python-versions = ">=3.5"
-
-[[package]]
-name = "future"
-version = "0.18.2"
-description = "Clean single-source support for Python 3 and 2"
-category = "main"
-optional = false
-python-versions = ">=2.6, !=3.0.*, !=3.1.*, !=3.2.*"
 
 [[package]]
 name = "google-api-core"
@@ -406,7 +397,7 @@ test = ["pytest (>=2.2.3)", "flake8 (>=2.4.0)", "isort (>=4.2.2)"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "68418c6644434a71a2c17553c5c1d905dc6dfa95729f5143e7184c570e9dbb9c"
+content-hash = "a36abb5511bbc9d7ec68a30ed37826785236fdc34c4a47fd3e8ebaeff27aa4bc"
 
 [metadata.files]
 atomicwrites = [
@@ -418,7 +409,8 @@ attrs = [
     {file = "attrs-21.4.0.tar.gz", hash = "sha256:626ba8234211db98e869df76230a137c4c40a12d72445c45d5f5b716f076e2fd"},
 ]
 bibtexparser = [
-    {file = "bibtexparser-1.2.0.tar.gz", hash = "sha256:0f9ab94e3fc36ee2ee6a3713c5dd7320d4b6ee52bd66ecbab03c6b06675ae410"},
+    {file = "bibtexparser-1.3.0-py3-none-any.whl", hash = "sha256:d2886789566f2ecbecb5f44309d36ed96162530f29f0b0c07df11630adf17632"},
+    {file = "bibtexparser-1.3.0.tar.gz", hash = "sha256:971a0840700f5282d61b8c119cd4e208b8e546a91f9043ead4e440734fbf9f5e"},
 ]
 cachetools = [
     {file = "cachetools-5.2.0-py3-none-any.whl", hash = "sha256:f9f17d2aec496a9aa6b76f53e3b614c965223c061982d434d160f930c698a9db"},
@@ -439,9 +431,6 @@ colorama = [
 decorator = [
     {file = "decorator-5.1.1-py3-none-any.whl", hash = "sha256:b8c3f85900b9dc423225913c5aace94729fe1fa9763b38939a95226f02d37186"},
     {file = "decorator-5.1.1.tar.gz", hash = "sha256:637996211036b6385ef91435e4fae22989472f9d571faba8927ba8253acbc330"},
-]
-future = [
-    {file = "future-0.18.2.tar.gz", hash = "sha256:b1bead90b70cf6ec3f0710ae53a525360fa360d306a86583adc6bf83a4db537d"},
 ]
 google-api-core = [
     {file = "google-api-core-2.8.1.tar.gz", hash = "sha256:958024c6aa3460b08f35741231076a4dd9a4c819a6a39d44da9627febe8b28f0"},

@@ -125,5 +125,4 @@ def test_to_bibtex(bibliography: Bibliography):
   title     = {{T}itle},
   year      = {2021}
 }
-
 """

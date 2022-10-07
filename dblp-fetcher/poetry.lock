@@ -22,7 +22,7 @@ tests_no_zope = ["cloudpickle", "coverage[toml] (>=5.0.2)", "hypothesis", "mypy"
 
 [[package]]
 name = "bibtexparser"
-version = "1.3.0"
+version = "1.4.0"
 description = "Bibtex parser for python 3"
 category = "main"
 optional = false
@@ -397,7 +397,7 @@ test = ["flake8 (>=2.4.0)", "isort (>=4.2.2)", "pytest (>=2.2.3)"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "17fd5c7d8ab019a9dc0d2721c00ba97cb2a99da899828d878c9490be1aaef89c"
+content-hash = "8409ca2b16fc4163489b46937be1115bac2e272b0fa7904cddba84d5fd1a2cce"
 
 [metadata.files]
 atomicwrites = [
@@ -409,8 +409,7 @@ attrs = [
     {file = "attrs-21.4.0.tar.gz", hash = "sha256:626ba8234211db98e869df76230a137c4c40a12d72445c45d5f5b716f076e2fd"},
 ]
 bibtexparser = [
-    {file = "bibtexparser-1.3.0-py3-none-any.whl", hash = "sha256:d2886789566f2ecbecb5f44309d36ed96162530f29f0b0c07df11630adf17632"},
-    {file = "bibtexparser-1.3.0.tar.gz", hash = "sha256:971a0840700f5282d61b8c119cd4e208b8e546a91f9043ead4e440734fbf9f5e"},
+    {file = "bibtexparser-1.4.0.tar.gz", hash = "sha256:ca7ce2bc34e7c48a678dd49416429bb567441f26dbb13b3609082d8cd109ace6"},
 ]
 cachetools = [
     {file = "cachetools-5.2.0-py3-none-any.whl", hash = "sha256:f9f17d2aec496a9aa6b76f53e3b614c965223c061982d434d160f930c698a9db"},
@@ -481,7 +480,6 @@ pluggy = [
     {file = "pluggy-0.13.1.tar.gz", hash = "sha256:15b2acde666561e1298d71b523007ed7364de07029219b604cf808bfa1c765b0"},
 ]
 protobuf = [
-    {file = "protobuf-3.20.2-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:9f876a69ca55aed879b43c295a328970306e8e80a263ec91cf6e9189243c613b"},
     {file = "protobuf-3.20.2-cp310-cp310-manylinux2014_aarch64.whl", hash = "sha256:09e25909c4297d71d97612f04f41cea8fa8510096864f2835ad2f3b3df5a5559"},
     {file = "protobuf-3.20.2-cp310-cp310-manylinux_2_12_x86_64.manylinux2010_x86_64.whl", hash = "sha256:e8fbc522303e09036c752a0afcc5c0603e917222d8bedc02813fd73b4b4ed804"},
     {file = "protobuf-3.20.2-cp310-cp310-win32.whl", hash = "sha256:84a1544252a933ef07bb0b5ef13afe7c36232a774affa673fc3636f7cee1db6c"},

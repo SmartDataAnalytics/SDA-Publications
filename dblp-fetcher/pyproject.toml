@@ -10,7 +10,7 @@ dblp-fetcher = "dblp_fetcher.main:main"
 [tool.poetry.dependencies]
 python = "^3.10"
 bibtexparser = "^1.4.0"
-google-api-python-client = "^2.86.0"
+google-api-python-client = "^2.88.0"
 google-auth-httplib2 = "^0.1.0"
 google-auth-oauthlib = "^1.0.0"
 requests = "^2.31.0"

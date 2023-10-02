@@ -2,12 +2,12 @@
 
 [[package]]
 name = "bibtexparser"
-version = "1.4.0"
+version = "1.4.1"
 description = "Bibtex parser for python 3"
 optional = false
 python-versions = "*"
 files = [
-    {file = "bibtexparser-1.4.0.tar.gz", hash = "sha256:ca7ce2bc34e7c48a678dd49416429bb567441f26dbb13b3609082d8cd109ace6"},
+    {file = "bibtexparser-1.4.1.tar.gz", hash = "sha256:e00e29e24676c4808e0b4333b37bb55cca9cbb7871a56f63058509281588d789"},
 ]
 
 [package.dependencies]
@@ -486,4 +486,4 @@ tooling-extras = ["pyaml (>=23.7.0)", "pypandoc-binary (>=1.11)", "pytest (>=7.4
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "add40336e9e1a5cef489787ce1d18143eb7402df314d8d399a6ec72d2ba8c2c0"
+content-hash = "f0c6ce364dbf56a916e991f084a4fb0f938cae92fb74e3d14311376fccd05e1c"
